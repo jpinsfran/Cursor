@@ -1,0 +1,10 @@
+{
+  "plugins": {
+    "slack": {
+      "enabled": true
+    },
+    "atlassian": {
+      "enabled": true
+    }
+  }
+}

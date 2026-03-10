@@ -1,0 +1,16 @@
+---
+description: Avalia o prompt do usuário antes de agir; identifica dados/senhas/especificações faltantes e otimiza o entendimento
+alwaysApply: true
+---
+
+# Avaliar prompt antes de executar
+
+Antes de executar o que o usuário pediu:
+
+1. **Usar a skill evaluate-prompt-optimize**: Interpretar a intenção, listar entidades (arquivos, ferramentas, regiões, credenciais) e identificar o que falta (dados, especificações). Nunca pedir senha/token no chat; orientar uso de .env ou config.
+
+2. **Otimizar**: Inferir do contexto (projeto, arquivos abertos) o que for possível. Assumir padrões razoáveis e informar ("Assumindo X"). Fazer no máximo uma pergunta objetiva se algo for indispensável.
+
+3. **Confirmar entendimento**: Resumir em 1–2 frases o que será feito e só então prosseguir (código, comando, etc.).
+
+Skill de referência: `.cursor/skills/evaluate-prompt-optimize/SKILL.md`.

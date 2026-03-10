@@ -1,0 +1,43 @@
+================================================================================
+  MINI BI – NEGÓCIOS PERDIDOS (HUBSPOT)
+================================================================================
+
+O que é
+-------
+Dashboard com visão de negócios perdidos nos pipelines CLOSER e SDR:
+valor total perdido, motivos de perda, features indisponíveis, com filtro
+por pipeline (Todos / CLOSER / SDR).
+
+Requisito
+---------
+Node.js instalado (https://nodejs.org) – qualquer versão LTS serve.
+
+Como abrir o BI
+----------------
+1. Abra o terminal (Prompt de Comando ou PowerShell) nesta pasta.
+
+2. Rode:
+   node servir.cjs
+
+3. No navegador, acesse:
+   http://localhost:3333/mini-bi.html
+
+4. Use o filtro "Pipeline" para ver Todos, só CLOSER ou só SDR.
+
+5. Para encerrar o servidor: pressione Ctrl+C no terminal.
+
+Arquivos desta pasta
+--------------------
+- mini-bi.html                          Página do dashboard
+- hubspot_perdidos_pipeline_CLOSER.csv  Dados perdidos pipeline CLOSER
+- hubspot_perdidos_pipeline_SDR.csv     Dados perdidos pipeline SDR (2000 mais recentes)
+- servir.cjs                            Script para subir o servidor local
+- LEIA-ME.txt                           Este arquivo
+
+Observação
+----------
+Não abra o mini-bi.html dando duplo clique no arquivo. O navegador precisa
+carregar os CSVs por HTTP; por isso é necessário rodar "node servir.cjs"
+e acessar o link no navegador.
+
+================================================================================

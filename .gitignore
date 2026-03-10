@@ -1,0 +1,17 @@
+# Ambiente e segredos
+.env
+.env.local
+*.env
+
+# Supabase
+supabase/.temp
+
+# Node
+node_modules/
+
+# Dados locais / temp
+instagram_chrome_profile/
+instagram_temp/
+
+# Planilhas com dados sensíveis (opcional; descomente se não quiser versionar)
+# *.csv

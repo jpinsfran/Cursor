@@ -1,0 +1,14 @@
+---
+description: Sempre usar a skill code-review-senior ao revisar código ou alterar módulos principais do scrape
+alwaysApply: true
+---
+
+# Usar revisão de código (nível sênior)
+
+Ao revisar código, alterar módulos principais da ferramenta de scrape (scrapeIfoodLeads.js, scrapeInstagram.js, unificaIfoodInstagram.js) ou quando o usuário pedir avaliação de código ou boas práticas:
+
+1. **Aplicar a skill code-review-senior** (`.cursor/skills/code-review-senior/SKILL.md`): ler a skill e seguir a estrutura de revisão (pontos positivos, pontos a melhorar, alinhamento com a visão, prioridade).
+2. **Antes de mudanças grandes** em scrapeIfoodLeads ou scrapeInstagram: considerar uma revisão rápida (checklist: portabilidade, recursos, robustez) e propor melhorias de alta prioridade se fizer sentido.
+3. **Após implementar** alterações nesses módulos: fazer uma passada de revisão (ou mencionar que a skill foi considerada) e sugerir ajustes de prioridade média/baixa se relevante.
+
+Referência de exemplo de revisão no projeto: `REVISAO_CODIGO_SENIOR.md`.

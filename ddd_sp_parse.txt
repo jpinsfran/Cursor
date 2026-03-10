@@ -1,0 +1,499 @@
+﻿Adamantina|18
+Aguaí|19
+Águas da Prata|19
+Águas de Lindóia|19
+Águas de Santa Bárbara|14
+Águas de São Pedro|19
+Agudos|14
+Alambari|15
+Alfredo Marcondes|18
+Altinópolis|16
+Álvares Florence|17
+Álvares Machado|18
+Álvaro de Carvalho|14
+Alvinlândia|14
+Américo Brasiliense|16
+Américo de Campos|17
+Analândia|19
+Andradina|18
+Angatuba|15
+Anhembi|14
+Anhumas|18
+Aparecida d'Oeste|17
+Apiaí|15
+Araçariguama|11
+Araçatuba|18
+Araçoiaba da Serra|15
+Aramina|16
+Arandu|14
+Arapeí|12
+Araraquara|16
+Arealva|14
+Areiópolis|14
+Artur Nogueira|19
+Arujá|11
+Atibaia|11
+Auriflama|17
+Avanhandava|18
+Avaré|14
+Bady Bassitt|17
+Balbinos|14
+Bananal|12
+Barão de Antonina|15
+Bariri|14
+Barra do Chapéu|15
+Barra do Turvo|15
+Barretos|17
+Barrinha|16
+Barueri|11
+Bastos|14
+Batatais|16
+Bauru|14
+Bento de Abreu|18
+Bernardino de Campos|14
+Bertioga|13
+Bilac|18
+Birigui|18
+Biritiba Mirim|11
+Boa Esperança do Sul|16
+Bofete|14
+Boituva|15
+Bom Jesus dos Perdões|11
+Bom Sucesso de Itararé|15
+Borá|18
+Boraceia|14
+Borebi|14
+Botucatu|14
+Bragança Paulista|11
+Brejo Alegre|18
+Brodowski|16
+Buri|15
+Buritama|18
+Buritizal|16
+Cabrália Paulista|14
+Caçapava|12
+Cachoeira Paulista|12
+Caconde|19
+Caiabu|18
+Caieiras|11
+Caiuá|18
+Cajamar|11
+Cajobi|17
+Cajuru|16
+Campina do Monte Alegre|15
+Campinas|19
+Campo Limpo Paulista|11
+Campos do Jordão|12
+Campos Novos Paulista|14
+Cananéia|13
+Cândido Mota|18
+Cândido Rodrigues|16
+Canitar|14
+Capão Bonito|15
+Capela do Alto|15
+Capivari|19
+Caraguatatuba|12
+Carapicuíba|11
+Cardoso|17
+Cássia dos Coqueiros|16
+Catanduva|17
+Catiguá|17
+Cerqueira César|14
+Cerquilho|15
+Cesário Lange|15
+Chavantes|14
+Conchal|19
+Conchas|14
+Cordeirópolis|19
+Coronel Macedo|14
+Corumbataí|19
+Cosmópolis|19
+Cosmorama|17
+Cotia|11
+Cravinhos|16
+Cristais Paulista|16
+Cruzália|18
+Cubatão|13
+Descalvado|19
+Diadema|11
+Dirce Reis|17
+Divinolândia|19
+Dobrada|16
+Dois Córregos|14
+Dolcinópolis|17
+Dracena|18
+Duartina|14
+Dumont|16
+Echaporã|18
+Elias Fausto|19
+Elisiário|17
+Embu das Artes|11
+Embu-Guaçu|11
+Emilianópolis|18
+Engenheiro Coelho|19
+Espírito Santo do Pinhal|19
+Espírito Santo do Turvo|14
+Estiva Gerbi|19
+Estrela d'Oeste|17
+Euclides da Cunha Paulista|18
+Fartura|14
+Fernando Prestes|16
+Fernandópolis|17
+Ferraz de Vasconcelos|11
+Flora Rica|18
+Floreal|17
+Flórida Paulista|18
+Florínea|18
+Franca|16
+Francisco Morato|11
+Franco da Rocha|11
+Gabriel Monteiro|18
+Gavião Peixoto|16
+General Salgado|17
+Getulina|14
+Guaiçara|14
+Guaimbê|14
+Guapiaçu|17
+Guapiara|15
+Guarani d'Oeste|17
+Guararema|11
+Guaratinguetá|12
+Guareí|15
+Guarujá|13
+Guarulhos|11
+Guatapará|16
+Guzolândia|17
+Herculândia|14
+Holambra|19
+Hortolândia|19
+Iacanga|14
+Iacri|14
+Iaras|14
+Ibaté|16
+Ibirá|17
+Ibirarema|14
+Ibitinga|16
+Ibiúna|15
+Icém|17
+Iepê|18
+Igaraçu do Tietê|14
+Igarapava|16
+Igaratá|11
+Iguape|13
+Ilha Comprida|13
+Ilha Solteira|18
+Ilhabela|12
+Indaiatuba|19
+Indiaporã|17
+Inúbia Paulista|18
+Ipaussu|14
+Iperó|15
+Ipeúna|19
+Ipiguá|17
+Iporanga|15
+Ipuã|16
+Iracemápolis|19
+Itaberá|15
+Itaí|14
+Itajobi|17
+Itaju|14
+Itanhaém|13
+Itaoca|15
+Itapecerica da Serra|11
+Itapetininga|15
+Itapevi|11
+Itapira|19
+Itapirapuã Paulista|15
+Itápolis|16
+Itapuí|14
+Itapura|18
+Itaquaquecetuba|11
+Itararé|15
+Itariri|13
+Itatiba|11
+Itatinga|14
+Itirapina|19
+Itirapuã|16
+Itobi|19
+Itu|11
+Itupeva|11
+Ituverava|16
+Jaboticabal|16
+Jacareí|12
+Jacupiranga|13
+Jaguariúna|19
+Jales|17
+Jandira|11
+Jarinu|11
+Jaú|14
+Jeriquara|16
+Joanópolis|11
+Júlio Mesquita|14
+Jumirim|15
+Jundiaí|11
+Junqueirópolis|18
+Juquiá|13
+Juquitiba|11
+Laranjal Paulista|15
+Lavrinhas|12
+Leme|19
+Lençóis Paulista|14
+Limeira|19
+Lindoia|19
+Lins|14
+Lucélia|18
+Lucianópolis|14
+Luiz Antônio|16
+Luiziânia|18
+Lutécia|18
+Macatuba|14
+Macaubal|17
+Magda|17
+Mairinque|11
+Mairiporã|11
+Marabá Paulista|18
+Maracaí|18
+Marapoama|17
+Mariápolis|18
+Marília|14
+Marinópolis|17
+Martinópolis|18
+Matão|16
+Mauá|11
+Mendonça|17
+Mesópolis|17
+Miguelópolis|16
+Mineiros do Tietê|14
+Mira Estrela|17
+Miracatu|13
+Mirandópolis|18
+Mirante do Paranapanema|18
+Mirassol|17
+Mirassolândia|17
+Mococa|19
+Mogi das Cruzes|11
+Mogi Guaçu|19
+Mogi Mirim|19
+Mombuca|19
+Mongaguá|13
+Monte Alegre do Sul|19
+Monte Alto|16
+Monte Aprazível|17
+Monte Azul Paulista|17
+Monte Mor|19
+Morro Agudo|16
+Morungaba|11
+Motuca|16
+Murutinga do Sul|18
+Narandiba|18
+Natividade da Serra|12
+Nazaré Paulista|11
+Neves Paulista|17
+Nhandeara|17
+Nipoã|17
+Nova Aliança|17
+Nova Campina|15
+Nova Canaã Paulista|17
+Nova Castilho|17
+Nova Europa|16
+Nova Guataporanga|18
+Nova Independência|18
+Nova Luzitânia|17
+Nova Odessa|19
+Nuporanga|16
+Ocauçu|14
+Onda Verde|17
+Orindiúva|17
+Orlândia|16
+Osasco|11
+Oscar Bressane|14
+Ourinhos|14
+Ouroeste|17
+Palmares Paulista|17
+Palmeira d'Oeste|17
+Paraguaçu Paulista|18
+Paraibuna|12
+Paranapanema|14
+Paranapuã|17
+Parapuã|18
+Pardinho|14
+Pariquera-Açu|13
+Parisi|17
+Patrocínio Paulista|16
+Paulicéia|18
+Paulínia|19
+Paulistânia|14
+Paulo de Faria|17
+Pederneiras|14
+Pedra Bela|11
+Pedranópolis|17
+Pedregulho|16
+Pedrinhas Paulista|18
+Pedro de Toledo|13
+Penápolis|18
+Pereira Barreto|18
+Pereiras|14
+Peruíbe|13
+Piacatu|18
+Pilar do Sul|15
+Pindamonhangaba|12
+Piquerobi|18
+Piquete|12
+Piracaia|11
+Piracicaba|19
+Piraju|14
+Pirajuí|14
+Pirangi|17
+Pirapora do Bom Jesus|11
+Pirapozinho|18
+Pirassununga|19
+Piratininga|14
+Poá|11
+Poloni|17
+Pongaí|14
+Pontal|16
+Pontalinda|17
+Pontes Gestal|17
+Populina|17
+Porangaba|15
+Porto Feliz|15
+Porto Ferreira|19
+Potim|12
+Potirendaba|17
+Pradópolis|16
+Pratânia|14
+Presidente Alves|14
+Presidente Epitácio|18
+Presidente Prudente|18
+Presidente Venceslau|18
+Promissão|14
+Quatá|18
+Queiroz|14
+Quintana|14
+Rafard|19
+Rancharia|18
+Redenção da Serra|12
+Reginópolis|14
+Ribeirão Bonito|16
+Ribeirão Branco|15
+Ribeirão Corrente|16
+Ribeirão do Sul|14
+Ribeirão dos Índios|18
+Ribeirão Grande|15
+Ribeirão Pires|11
+Ribeirão Preto|16
+Rifaina|16
+Rincão|16
+Rinópolis|18
+Rio das Pedras|19
+Rio Grande da Serra|11
+Riolândia|17
+Riversul|15
+Rosana|18
+Roseira|12
+Rubineia|17
+Sabino|14
+Sales Oliveira|16
+Salesópolis|11
+Salmourão|18
+Salto de Pirapora|15
+Salto Grande|14
+Sandovalina|18
+Santa Adélia|17
+Santa Albertina|17
+Santa Bárbara d'Oeste|19
+Santa Branca|12
+Santa Clara d'Oeste|17
+Santa Cruz da Conceição|19
+Santa Cruz da Esperança|16
+Santa Cruz das Palmeiras|19
+Santa Cruz do Rio Pardo|14
+Santa Ernestina|16
+Santa Fé do Sul|17
+Santa Maria da Serra|19
+Santa Mercedes|18
+Santa Rita do Passa Quatro|19
+Santa Rita d'Oeste|17
+Santa Salete|17
+Santana da Ponte Pensa|17
+Santana de Parnaíba|11
+Santo Antônio da Alegria|16
+Santo Antônio de Posse|19
+Santo Antônio do Aracanguá|18
+Santo Antônio do Jardim|19
+Santo Antônio do Pinhal|12
+Santópolis do Aguapeí|18
+Santos|13
+São Bento do Sapucaí|12
+São Bernardo do Campo|11
+São Caetano do Sul|11
+São João da Boa Vista|19
+São João das Duas Pontes|17
+São João de Iracema|17
+São João do Pau-d'Alho|18
+São Joaquim da Barra|16
+São José da Bela Vista|16
+São José do Barreiro|12
+São José do Rio Pardo|19
+São José do Rio Preto|17
+São José dos Campos|12
+São Lourenço da Serra|11
+São Luiz do Paraitinga|12
+São Manuel|14
+São Paulo|11
+São Pedro do Turvo|14
+São Sebastião da Grama|19
+Sarapuí|15
+Sarutaiá|14
+Sebastianópolis do Sul|17
+Serra Azul|16
+Serrana|16
+Sete Barras|13
+Severínia|17
+Sorocaba|15
+Sumaré|19
+Suzanápolis|18
+Suzano|11
+Tabapuã|17
+Taboão da Serra|11
+Taciba|18
+Taguaí|14
+Taiaçu|16
+Taiúva|16
+Tambaú|19
+Tanabi|17
+Tapiratiba|19
+Taquaral|16
+Taquaritinga|16
+Taquarituba|14
+Taquarivaí|15
+Tarabai|18
+Tatuí|15
+Taubaté|12
+Tejupá|14
+Tietê|15
+Timburi|14
+Torre de Pedra|15
+Torrinha|14
+Trabiju|16
+Tremembé|12
+Três Fronteiras|17
+Tupi Paulista|18
+Turiúba|18
+Ubarana|17
+Ubatuba|12
+Ubirajara|14
+Uchoa|17
+União Paulista|17
+Urupês|17
+Valentim Gentil|17
+Valinhos|19
+Vargem Grande do Sul|19
+Vargem Grande Paulista|11
+Várzea Paulista|11
+Vinhedo|19
+Viradouro|17
+Vista Alegre do Alto|16
+Vitória Brasil|17
+Votorantim|15
+Votuporanga|17

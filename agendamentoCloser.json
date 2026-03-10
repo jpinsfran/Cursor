@@ -1,0 +1,709 @@
+{
+  "name": "Agendamento Closer",
+  "nodes": [
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "nome"
+            },
+            {
+              "name": "horario_inicio"
+            },
+            {
+              "name": "email"
+            },
+            {
+              "name": "horario_fim"
+            },
+            {
+              "name": "resumo"
+            },
+            {
+              "name": "id_event"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "1ce2f2b1-dd83-4f15-9a29-14ce2c2406dc",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.evento }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "notEmpty",
+                      "singleValue": true
+                    },
+                    "id": "33d488c9-869a-4075-bf14-824899a0519d"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "true"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "a4d944ba-4fed-4878-9f5c-ef7661486d43",
+                    "leftValue": "={{ $json.evento }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "empty",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "false"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.3,
+      "position": [
+        608,
+        0
+      ],
+      "id": "ef770652-884c-4ecf-b1d0-ca6fe9d218fc",
+      "name": "Reagendar?"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "calendar": {
+          "__rl": true,
+          "value": "bruna.reis@arcca.io",
+          "mode": "list",
+          "cachedResultName": "bruna.reis@arcca.io"
+        },
+        "eventId": "={{ $('Normalizar').item.json.id_event }}",
+        "updateFields": {
+          "end": "={{ $('Normalizar').item.json.horario_fim }}",
+          "sendUpdates": "all",
+          "start": "={{ $('Normalizar').item.json.horario_inicio }}"
+        }
+      },
+      "type": "n8n-nodes-base.googleCalendar",
+      "typeVersion": 1.3,
+      "position": [
+        832,
+        -112
+      ],
+      "id": "c3e3c5ad-4318-4ddc-ac51-26701afada98",
+      "name": "Update",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "733hyeugHpiQ13Rt",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "calendar": {
+          "__rl": true,
+          "value": "bruna.reis@arcca.io",
+          "mode": "list",
+          "cachedResultName": "bruna.reis@arcca.io"
+        },
+        "start": "={{ $('Normalizar').item.json.horario_inicio }}",
+        "end": "={{ $('Normalizar').item.json.horario_fim }}",
+        "additionalFields": {
+          "attendees": [
+            "desenvolvimento@nidigital.com.br",
+            "={{ $('Normalizar').item.json.email }}",
+            "henrique@nidigital.com.br"
+          ],
+          "conferenceDataUi": {
+            "conferenceDataValues": {
+              "conferenceSolution": "=hangoutsMeet"
+            }
+          },
+          "description": "={{ $('Normalizar').item.json.resumo }}",
+          "guestsCanModify": true,
+          "sendUpdates": "all",
+          "summary": "=Henrique & {{ $('Normalizar').item.json.nome }} - Bate papo IA "
+        }
+      },
+      "type": "n8n-nodes-base.googleCalendar",
+      "typeVersion": 1.3,
+      "position": [
+        1248,
+        96
+      ],
+      "id": "b85817f1-f405-499e-b695-a87c9c61d097",
+      "name": "Created",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "733hyeugHpiQ13Rt",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4018c100-8f25-4721-be64-cf00ae45385f",
+              "name": "Ação",
+              "value": "Reagendamento realizado",
+              "type": "string"
+            },
+            {
+              "id": "5efb1caf-b995-40a9-96d2-243ed5151b81",
+              "name": "Inicio reunião",
+              "value": "={{ $('Update').item.json.start.dateTime }}",
+              "type": "string"
+            },
+            {
+              "id": "be5cfeef-1f42-4632-ae14-96e445f2a936",
+              "name": "start.timeZone",
+              "value": "={{ $('Update').item.json.start.timeZone }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1184,
+        -112
+      ],
+      "id": "75de22a9-d0e4-45af-830c-5035a9dd90fc",
+      "name": "Reagendamento"
+    },
+    {
+      "parameters": {
+        "resource": "calendar",
+        "calendar": {
+          "__rl": true,
+          "value": "bruna.reis@arcca.io",
+          "mode": "list",
+          "cachedResultName": "bruna.reis@arcca.io"
+        },
+        "timeMin": "={{ $('Normalizar').item.json.horario_inicio }}",
+        "timeMax": "={{ $('Normalizar').item.json.horario_fim }}",
+        "options": {
+          "timezone": {
+            "__rl": true,
+            "value": "America/Sao_Paulo",
+            "mode": "list",
+            "cachedResultName": "America/Sao_Paulo"
+          }
+        }
+      },
+      "type": "n8n-nodes-base.googleCalendar",
+      "typeVersion": 1.3,
+      "position": [
+        832,
+        112
+      ],
+      "id": "f2b8dfd6-383b-4e2b-8c57-a64cb9f91200",
+      "name": "Verificar",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "733hyeugHpiQ13Rt",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\nreturn [{ json: { available: items.length === 0 } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [928, 112],
+      "id": "disp-bruna-001",
+      "name": "Disponível Bruna?"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d92a9bf3-5c96-447c-8125-fbc000f479a5",
+              "leftValue": "={{ $json.available }}",
+              "rightValue": false,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1024,
+        112
+      ],
+      "id": "ed7550d4-52f4-4806-9d54-1df110b411e5",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "ea665e73-ea53-4261-816a-115cde832d30",
+              "name": "response",
+              "value": "=O dia e horário sugeridos não está disponível para agendamento. Use a tool de buscar_disponibilidade para oferecer outros horários para o lead, inclusive, podendo ser em outro dia, a depender da disponibilidade do lead. RACIONE ANTES DE RESPONDER",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1696,
+        416
+      ],
+      "id": "77469c0c-fc1a-456b-8c7a-72ea9dc51490",
+      "name": "Não disponível"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "53ca9ed9-36de-46c7-86a0-e0c90f914029",
+              "name": "horario_inicio",
+              "value": "={{ $json.horario_inicio }}",
+              "type": "string"
+            },
+            {
+              "id": "a1b0dd49-19b6-4c11-8e2f-c5551f148f50",
+              "name": "horario_fim",
+              "value": "={{ $json.horario_fim }}",
+              "type": "string"
+            },
+            {
+              "id": "64702316-c08d-47bc-a9a1-a761e1fa86c2",
+              "name": "nome",
+              "value": "={{ $json.nome }}",
+              "type": "string"
+            },
+            {
+              "id": "78d8770d-41de-46ca-9476-d542b83f37e3",
+              "name": "email",
+              "value": "={{ $json.email }}",
+              "type": "string"
+            },
+            {
+              "id": "resumo-norm-001",
+              "name": "resumo",
+              "value": "={{ $json.resumo ?? '' }}",
+              "type": "string"
+            },
+            {
+              "id": "id-event-norm-001",
+              "name": "id_event",
+              "value": "={{ $json.id_event ?? '' }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        208,
+        0
+      ],
+      "id": "b772c478-aba5-4038-9f30-60fe7bb78f51",
+      "name": "Normalizar"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "propertyName": "evento",
+        "key": "=evento_{{ $json.email }}",
+        "keyType": "string",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        416,
+        0
+      ],
+      "id": "539ca6f8-b58e-4e27-9324-4b15bab93568",
+      "name": "Redis",
+      "credentials": {
+        "redis": {
+          "id": "Sm4LbhXjWJzNmJrx",
+          "name": "Redis account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "calendar",
+        "calendar": {
+          "__rl": true,
+          "value": "pedro.vasconcellos@arcca.io",
+          "mode": "list",
+          "cachedResultName": "pedro.vasconcellos@arcca.io"
+        },
+        "timeMin": "={{ $('Normalizar').item.json.horario_inicio }}",
+        "timeMax": "={{ $('Normalizar').item.json.horario_fim }}",
+        "options": {
+          "timezone": {
+            "__rl": true,
+            "value": "America/Sao_Paulo",
+            "mode": "list",
+            "cachedResultName": "America/Sao_Paulo"
+          }
+        }
+      },
+      "type": "n8n-nodes-base.googleCalendar",
+      "typeVersion": 1.3,
+      "position": [
+        1248,
+        240
+      ],
+      "id": "767b5684-c6a6-4dba-9efb-61150dd18e07",
+      "name": "Verificar1",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "733hyeugHpiQ13Rt",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\nreturn [{ json: { available: items.length === 0 } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1360, 240],
+      "id": "disp-pedro-001",
+      "name": "Disponível Pedro?"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d92a9bf3-5c96-447c-8125-fbc000f479a5",
+              "leftValue": "={{ $json.available }}",
+              "rightValue": false,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "ignoreCase": true
+        }
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1520,
+        240
+      ],
+      "id": "1d97f0c2-67dd-4b94-b03a-fef7f2b6e859",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "calendar": {
+          "__rl": true,
+          "value": "=pedro.vasconcellos@arcca.io",
+          "mode": "id",
+          "__regex": "(^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*)"
+        },
+        "start": "={{ $('Normalizar').item.json.horario_inicio }}",
+        "end": "={{ $('Normalizar').item.json.horario_fim }}",
+        "additionalFields": {
+          "attendees": [
+            "desenvolvimento@nidigital.com.br",
+            "={{ $('Normalizar').item.json.email }}",
+            "henrique@nidigital.com.br"
+          ],
+          "conferenceDataUi": {
+            "conferenceDataValues": {
+              "conferenceSolution": "=hangoutsMeet"
+            }
+          },
+          "description": "={{ $('Normalizar').item.json.resumo }}",
+          "guestsCanModify": true,
+          "sendUpdates": "all",
+          "summary": "=Henrique & {{ $('Normalizar').item.json.nome }} - Bate papo IA "
+        }
+      },
+      "type": "n8n-nodes-base.googleCalendar",
+      "typeVersion": 1.3,
+      "position": [
+        1696,
+        224
+      ],
+      "id": "66268b85-3e4b-4427-a5b5-6129b5a95d31",
+      "name": "Created1",
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "733hyeugHpiQ13Rt",
+          "name": "Google Calendar account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "set",
+        "key": "=evento_{{ $('Normalizar').item.json.email }}",
+        "value": "Sim"
+      },
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        1040,
+        -112
+      ],
+      "id": "652d4cc5-a93f-43dc-8dcb-715bf7958c51",
+      "name": "Redis1",
+      "credentials": {
+        "redis": {
+          "id": "Sm4LbhXjWJzNmJrx",
+          "name": "Redis account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Reagendar?": {
+      "main": [
+        [
+          {
+            "node": "Update",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Verificar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update": {
+      "main": [
+        [
+          {
+            "node": "Redis1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Verificar": {
+      "main": [
+        [
+          {
+            "node": "Disponível Bruna?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Disponível Bruna?": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Created",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Verificar1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "Normalizar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalizar": {
+      "main": [
+        [
+          {
+            "node": "Redis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redis": {
+      "main": [
+        [
+          {
+            "node": "Reagendar?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Verificar1": {
+      "main": [
+        [
+          {
+            "node": "Disponível Pedro?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Disponível Pedro?": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Created1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Não disponível",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redis1": {
+      "main": [
+        [
+          {
+            "node": "Reagendamento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "31eb97a6-589c-42f9-970f-1656a1fded64",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "d1f52a457e514ce2201985f6587cd93d53c424879b2d79f604947b4a5e7424de"
+  },
+  "id": "NPZIsry7lCS4DHzD",
+  "tags": []
+}

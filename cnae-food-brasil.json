@@ -1,0 +1,92 @@
+{
+  "fonte": "IBGE/Concla - CNAE 2.3 (versão 10)",
+  "atualizado": "2026",
+  "descricao": "Códigos CNAE brasileiros do ramo de alimentação para PDV: restaurantes, cafeterias, bares, delivery, catering, ambulantes e comércio varejista de alimentos.",
+  "divisao_56_alimentacao": {
+    "secao": "I - ALOJAMENTO E ALIMENTAÇÃO",
+    "divisao": "56 - ALIMENTAÇÃO",
+    "grupos": [
+      {
+        "grupo": "56.1",
+        "nome": "Restaurantes e outros serviços de alimentação e bebidas",
+        "classes": [
+          {
+            "classe": "56.11-2",
+            "nome": "Restaurantes e outros estabelecimentos de serviços de alimentação e bebidas",
+            "subclasses": [
+              { "codigo": "5611-2/01", "descricao": "Restaurantes e similares" },
+              { "codigo": "5611-2/03", "descricao": "Lanchonetes, casas de chá, de sucos e similares" },
+              { "codigo": "5611-2/04", "descricao": "Bares e outros estabelecimentos especializados em servir bebidas, sem entretenimento" },
+              { "codigo": "5611-2/05", "descricao": "Bares e outros estabelecimentos especializados em servir bebidas, com entretenimento" }
+            ]
+          },
+          {
+            "classe": "56.12-1",
+            "nome": "Serviços ambulantes de alimentação",
+            "subclasses": [
+              { "codigo": "5612-1/00", "descricao": "Serviços ambulantes de alimentação" }
+            ]
+          }
+        ]
+      },
+      {
+        "grupo": "56.2",
+        "nome": "Serviços de catering, bufê e outros serviços de comida preparada",
+        "classes": [
+          {
+            "classe": "56.20-1",
+            "nome": "Serviços de catering, bufê e outros serviços de comida preparada",
+            "subclasses": [
+              { "codigo": "5620-1/01", "descricao": "Fornecimento de alimentos preparados preponderantemente para empresas" },
+              { "codigo": "5620-1/02", "descricao": "Serviços de alimentação para eventos e recepções - bufê" },
+              { "codigo": "5620-1/03", "descricao": "Cantinas - serviços de alimentação privativos" },
+              { "codigo": "5620-1/04", "descricao": "Fornecimento de alimentos preparados preponderantemente para consumo domiciliar (delivery)" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "lista_planas_56": [
+    "5611201",
+    "5611203",
+    "5611204",
+    "5611205",
+    "5612100",
+    "5620101",
+    "5620102",
+    "5620103",
+    "5620104"
+  ],
+  "codigos_sem_traco_56": [
+    "5611201",
+    "5611203",
+    "5611204",
+    "5611205",
+    "5612100",
+    "5620101",
+    "5620102",
+    "5620103",
+    "5620104"
+  ],
+  "comercio_varejista_alimentos": {
+    "nota": "Seção G - Comércio. Úteis para PDV que atende mercearias, padarias, supermercados, etc.",
+    "grupo_47": [
+      { "codigo": "4711-3/01", "descricao": "Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios - minimercados, mercearias e armazéns" },
+      { "codigo": "4711-3/02", "descricao": "Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios - supermercados" },
+      { "codigo": "4711-3/03", "descricao": "Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios - hipermercados" },
+      { "codigo": "4721-1/01", "descricao": "Comércio varejista de produtos de padaria, laticínios, doces, balas e semelhantes" },
+      { "codigo": "4721-1/02", "descricao": "Comércio varejista de laticínios e queijos" },
+      { "codigo": "4722-3/01", "descricao": "Comércio varejista de carnes - açougue" },
+      { "codigo": "4722-3/02", "descricao": "Comércio varejista de carnes - peixaria" },
+      { "codigo": "4723-1/00", "descricao": "Comércio varejista de bebidas" },
+      { "codigo": "4729-6/99", "descricao": "Comércio varejista de produtos alimentícios em geral ou especializado em produtos alimentícios não especificados" }
+    ]
+  },
+  "resumo_uso_pdv": {
+    "restaurantes_cafeterias_bares": ["5611201", "5611203", "5611204", "5611205"],
+    "food_truck_ambulante_quiosque": ["5612100"],
+    "delivery_catering_bufe": ["5620101", "5620102", "5620103", "5620104"],
+    "todos_servicos_alimentacao": ["5611201", "5611203", "5611204", "5611205", "5612100", "5620101", "5620102", "5620103", "5620104"]
+  }
+}

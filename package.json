@@ -1,0 +1,21 @@
+{
+  "name": "nola",
+  "version": "1.0.0",
+  "main": "scrapeIfoodLeads.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "csvtojson": "^2.0.14",
+    "dotenv": "^16.4.5",
+    "json-2-csv": "^5.5.10",
+    "playwright": "^1.58.2",
+    "puppeteer": "^24.37.5"
+  }
+}

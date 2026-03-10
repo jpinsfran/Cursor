@@ -1,0 +1,4 @@
+# Para análise de imagens e resumo (instagram_ai.py, instagram_profile_ai.py)
+# Uso: pip install -r requirements-instagram-ai.txt
+openai>=1.0.0
+python-dotenv>=1.0.0

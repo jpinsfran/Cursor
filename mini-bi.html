@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini BI – Perdidos HubSpot</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    :root { --bg: #0f1419; --card: #1a2332; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --lost: #f85149; }
+    * { box-sizing: border-box; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 1.5rem; }
+    h1 { font-size: 1.35rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .filters { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .filters label { color: var(--muted); font-size: 0.9rem; }
+    .filters select { background: var(--card); color: var(--text); border: 1px solid #30363d; border-radius: 8px; padding: 0.5rem 1rem; font-size: 0.95rem; cursor: pointer; }
+    .filters select:hover, .filters select:focus { border-color: var(--accent); outline: none; }
+    .status { color: var(--muted); font-size: 0.85rem; margin-bottom: 1.5rem; }
+    .status.loading { color: var(--accent); }
+    .status.error { color: var(--lost); }
+    .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+    .kpi { background: var(--card); border-radius: 10px; padding: 1rem 1.25rem; border: 1px solid #30363d; }
+    .kpi .label { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+    .kpi .value { font-size: 1.6rem; font-weight: 700; margin-top: 0.25rem; color: var(--lost); }
+    .kpi .sub { font-size: 0.85rem; color: var(--muted); margin-top: 0.25rem; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+    .card { background: var(--card); border-radius: 10px; padding: 1rem; border: 1px solid #30363d; }
+    .card h2 { font-size: 1rem; margin: 0 0 1rem; color: var(--muted); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid #30363d; }
+    th { color: var(--muted); font-weight: 500; }
+    .chart-wrap { height: 280px; position: relative; }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <h1>Mini BI – Negócios perdidos (HubSpot)</h1>
+  <div class="filters">
+    <label for="filterPipeline">Pipeline:</label>
+    <select id="filterPipeline">
+      <option value="todos">Todos</option>
+      <option value="CLOSER">CLOSER</option>
+      <option value="SDR">SDR</option>
+    </select>
+  </div>
+  <p id="status" class="status">Carregando planilhas…</p>
+
+  <div id="dashboard" class="hidden">
+    <div class="kpis">
+      <div class="kpi">
+        <div class="label">Valor total perdido</div>
+        <div id="kpiTotal" class="value">—</div>
+        <div id="kpiTotalSub" class="sub">—</div>
+      </div>
+      <div class="kpi">
+        <div class="label">CLOSER</div>
+        <div id="kpiCloser" class="value">—</div>
+        <div id="kpiCloserSub" class="sub">—</div>
+      </div>
+      <div class="kpi">
+        <div class="label">SDR</div>
+        <div id="kpiSdr" class="value">—</div>
+        <div id="kpiSdrSub" class="sub">—</div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h2>Top motivos de perda (quantidade)</h2>
+        <div class="chart-wrap"><canvas id="chartReasons"></canvas></div>
+      </div>
+      <div class="card">
+        <h2>Top features indisponíveis (quantidade)</h2>
+        <div class="chart-wrap"><canvas id="chartFeatures"></canvas></div>
+      </div>
+    </div>
+    <div class="card" style="margin-top: 1.5rem;">
+      <h2>Motivos de perda (detalhe)</h2>
+      <div id="tableReasonsWrap"><table><thead><tr><th>Motivo</th><th>Qtd</th></tr></thead><tbody id="tableReasons"></tbody></table></div>
+    </div>
+    <div class="card" style="margin-top: 1.5rem;">
+      <h2>Features indisponíveis (detalhe)</h2>
+      <div id="tableFeaturesWrap"><table><thead><tr><th>Feature</th><th>Qtd</th><th>Valor estimado (R$)</th></tr></thead><tbody id="tableFeatures"></tbody></table></div>
+    </div>
+  </div>
+
+  <script>
+(function() {
+  const CSV_CLOSER = 'hubspot_perdidos_pipeline_CLOSER.csv';
+  const CSV_SDR = 'hubspot_perdidos_pipeline_SDR.csv';
+
+  function parseCsvLine(line) {
+    const out = [];
+    let cur = '';
+    let inQuotes = false;
+    for (let i = 0; i < line.length; i++) {
+      const c = line[i];
+      if (c === '"') {
+        if (inQuotes && line[i + 1] === '"') { cur += '"'; i++; }
+        else inQuotes = !inQuotes;
+      } else if (c === ',' && !inQuotes) {
+        out.push(cur);
+        cur = '';
+      } else cur += c;
+    }
+    out.push(cur);
+    return out;
+  }
+
+  function parseCsv(text) {
+    const raw = text.charCodeAt(0) === 0xFEFF ? text.slice(1) : text;
+    const lines = raw.split(/\r?\n/).filter(Boolean);
+    if (lines.length < 2) return [];
+    const headers = parseCsvLine(lines[0]);
+    const rows = [];
+    for (let i = 1; i < lines.length; i++) {
+      const cells = parseCsvLine(lines[i]);
+      const row = {};
+      headers.forEach((h, j) => { row[h] = (cells[j] || '').trim(); });
+      rows.push(row);
+    }
+    return rows;
+  }
+
+  function num(v) {
+    if (v == null || v === '') return 0;
+    const n = parseFloat(String(v).replace(',', '.').replace(/[^\d.-]/g, ''));
+    return isNaN(n) ? 0 : n;
+  }
+
+  function normalizeFeature(s) {
+    if (!s || !String(s).trim()) return '(sem feature)';
+    return String(s).trim();
+  }
+
+  function splitFeatures(s) {
+    if (!s || !String(s).trim()) return ['(sem feature)'];
+    return String(s).split(';').map(function(x) { return x.trim(); }).filter(Boolean);
+  }
+
+  function aggregate(rows) {
+    let totalAmount = 0;
+    const byReason = {};
+    const byFeature = {};
+    const byPipeline = { CLOSER: { count: 0, amount: 0 }, SDR: { count: 0, amount: 0 } };
+    for (let i = 0; i < rows.length; i++) {
+      const r = rows[i];
+      const amt = num(r['Valor do negócio']);
+      totalAmount += amt;
+      const reason = (r['Motivo fechamento perdido'] || '(sem motivo)').trim() || '(sem motivo)';
+      byReason[reason] = (byReason[reason] || 0) + 1;
+      const feats = splitFeatures(r['Qual feature está indisponível']);
+      for (let j = 0; j < feats.length; j++) {
+        const key = normalizeFeature(feats[j]);
+        if (!byFeature[key]) byFeature[key] = { count: 0, amount: 0 };
+        byFeature[key].count += 1;
+        byFeature[key].amount += amt / feats.length;
+      }
+      const pipe = r.pipeline || 'SDR';
+      if (byPipeline[pipe]) {
+        byPipeline[pipe].count += 1;
+        byPipeline[pipe].amount += amt;
+      }
+    }
+    return { totalAmount, byReason, byFeature, byPipeline, totalRows: rows.length };
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  let allRows = [];
+  let chartReasons = null;
+  let chartFeatures = null;
+
+  function setStatus(msg, className) {
+    const el = document.getElementById('status');
+    el.textContent = msg;
+    el.className = 'status ' + (className || '');
+  }
+
+  const HIDE_FROM_CHART_REASONS = ['Limpeza de Funil'];
+  const HIDE_FROM_CHART_FEATURES = ['(sem feature)'];
+
+  function render(agg) {
+    const topReasons = Object.entries(agg.byReason).sort(function(a, b) { return b[1] - a[1]; }).slice(0, 15);
+    const topFeatures = Object.entries(agg.byFeature).sort(function(a, b) { return b[1].count - a[1].count; }).slice(0, 20);
+    const chartReasonsData = topReasons.filter(function(x) { return HIDE_FROM_CHART_REASONS.indexOf(x[0]) === -1; });
+    const chartFeaturesData = topFeatures.filter(function(x) { return HIDE_FROM_CHART_FEATURES.indexOf(x[0]) === -1; });
+
+    document.getElementById('kpiTotal').textContent = 'R$ ' + agg.totalAmount.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    document.getElementById('kpiTotalSub').textContent = agg.totalRows + ' negócios';
+    document.getElementById('kpiCloser').textContent = 'R$ ' + agg.byPipeline.CLOSER.amount.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    document.getElementById('kpiCloserSub').textContent = agg.byPipeline.CLOSER.count + ' perdidos';
+    document.getElementById('kpiSdr').textContent = 'R$ ' + agg.byPipeline.SDR.amount.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    document.getElementById('kpiSdrSub').textContent = agg.byPipeline.SDR.count + ' perdidos';
+
+    document.getElementById('tableReasons').innerHTML = topReasons.map(function(x) {
+      return '<tr><td>' + escapeHtml(x[0]) + '</td><td>' + x[1] + '</td></tr>';
+    }).join('');
+    document.getElementById('tableFeatures').innerHTML = topFeatures.map(function(x) {
+      return '<tr><td>' + escapeHtml(x[0]) + '</td><td>' + x[1].count + '</td><td>' + x[1].amount.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '</td></tr>';
+    }).join('');
+
+    if (chartReasons) chartReasons.destroy();
+    chartReasons = new Chart(document.getElementById('chartReasons'), {
+      type: 'bar',
+      data: {
+        labels: chartReasonsData.map(function(x) { return x[0]; }),
+        datasets: [{ label: 'Qtd', data: chartReasonsData.map(function(x) { return x[1]; }), backgroundColor: '#58a6ff80', borderColor: '#58a6ff', borderWidth: 1 }]
+      },
+      options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { beginAtZero: true } } }
+    });
+    if (chartFeatures) chartFeatures.destroy();
+    chartFeatures = new Chart(document.getElementById('chartFeatures'), {
+      type: 'bar',
+      data: {
+        labels: chartFeaturesData.map(function(x) { return x[0]; }),
+        datasets: [{ label: 'Qtd', data: chartFeaturesData.map(function(x) { return x[1].count; }), backgroundColor: '#f8514980', borderColor: '#f85149', borderWidth: 1 }]
+      },
+      options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { beginAtZero: true } } }
+    });
+  }
+
+  function applyFilter() {
+    const filter = document.getElementById('filterPipeline').value;
+    let rows = allRows;
+    if (filter === 'CLOSER') rows = allRows.filter(function(r) { return r.pipeline === 'CLOSER'; });
+    else if (filter === 'SDR') rows = allRows.filter(function(r) { return r.pipeline === 'SDR'; });
+    const agg = aggregate(rows);
+    render(agg);
+  }
+
+  var fetchOpts = { cache: 'no-store' };
+
+  function load() {
+    fetch(CSV_CLOSER, fetchOpts)
+      .then(function(r) { if (!r.ok) throw new Error(CSV_CLOSER + ': ' + r.status); return r.text(); })
+      .then(function(text) {
+        var rows = parseCsv(text);
+        rows.forEach(function(r) { r.pipeline = 'CLOSER'; });
+        return rows;
+      })
+      .then(function(closerRows) {
+        return fetch(CSV_SDR, fetchOpts)
+          .then(function(r) { if (!r.ok) throw new Error(CSV_SDR + ': ' + r.status); return r.text(); })
+          .then(function(text) {
+            var sdrRows = parseCsv(text);
+            sdrRows.forEach(function(r) { r.pipeline = 'SDR'; });
+            allRows = closerRows.concat(sdrRows);
+            setStatus('Dados carregados: ' + closerRows.length + ' CLOSER, ' + sdrRows.length + ' SDR. Filtro: pipeline.');
+            document.getElementById('dashboard').classList.remove('hidden');
+            document.getElementById('filterPipeline').addEventListener('change', applyFilter);
+            applyFilter();
+          });
+      })
+      .catch(function(err) {
+        setStatus('Erro ao carregar: ' + err.message + '. Abra esta página via servidor local (ex.: npx serve . na pasta do projeto e acesse /mini-bi.html).', 'error');
+      });
+  }
+
+  load();
+})();
+  </script>
+</body>
+</html>

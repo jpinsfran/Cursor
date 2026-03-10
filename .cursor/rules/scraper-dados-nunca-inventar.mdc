@@ -1,0 +1,32 @@
+---
+description: Regras de integridade de dados do scraper iFood + Instagram; nunca inventar informação; preencher só com fonte segura
+alwaysApply: true
+globs: ["**/scrapeInstagram.js", "**/instagram_ai.py", "**/instagram_profile_ai.py", "**/unificaIfoodInstagram.js", "**/scraperFoodDefinitivo.js"]
+---
+
+# Regras do Scraper – Dados e fontes
+
+Ao alterar ou estender o fluxo de scraping (Instagram, iFood, planilha unificada):
+
+## 1. Nunca inventar informação
+
+- **Sob nenhuma hipótese** preencher campos com dados que não tenham vindo de uma **fonte segura** (página acessada, API, resposta da IA sobre conteúdo realmente fornecido, arquivo lido).
+- Se não houver certeza ou dado disponível, **deixar o campo vazio** (string vazia, não texto genérico como "Perfil Instagram", "N/A", "Sem dados" a menos que seja literalmente o que a fonte retornou).
+
+## 2. Fontes consideradas seguras
+
+- Conteúdo extraído da página (HTML, texto visível, atributos).
+- Resposta de API (ex.: OpenAI) quando o input foi apenas o que foi extraído (legenda, imagem, texto da página).
+- Dados do CSV de entrada (iFood, etc.).
+- Nada que seja **inferido** ou **adivinhado** sem base explícita na fonte.
+
+## 3. Comportamento em código
+
+- **Fallbacks:** usar apenas dados já extraídos (ex.: legenda + alt da imagem). Não concatenar com frases genéricas inventadas.
+- **IA (Python):** prompts devem instruir explicitamente a usar **apenas** o conteúdo fornecido e a retornar string vazia se não houver informação suficiente. Em erro ou resposta vazia, retornar `""`.
+- **Campos vazios:** preferir `""` em vez de placeholders como "[Não disponível]", "[Configure API]", etc., exceto quando for mensagem de erro técnico para o desenvolvedor (log), não para a planilha final.
+
+## 4. Planilha unificada
+
+- Cada coluna deve refletir **somente** o que foi obtido da fonte correspondente (iFood, perfil Instagram, link externo, etc.).
+- Colunas como `perfil`, `tema_da_loja`, `ultimo_post`, `destaques`, `posts`, `link_externo_resumo`: preencher só com conteúdo extraído ou resumo fiel do que foi extraído; caso contrário, deixar vazio.
