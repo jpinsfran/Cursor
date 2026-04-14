@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "main": "scrapeIfoodLeads.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "audit:phones": "node auditPhonesSupabase.js",
+    "audit:phones:fix": "node auditPhonesSupabase.js --fix",
+    "analyze:conversas": "node scripts/analyzeConversasTraction.js",
+    "analyze:conversas:report": "node scripts/analyzeConversasTraction.js --html docs/conversas-tracao-report.html --json docs/conversas-tracao-metrics.json",
+    "analyze:conversas:deep": "node scripts/analyzeConversasDeep.js --html docs/conversas-tracao-deep-report.html --json docs/conversas-tracao-deep-metrics.json --sessoes conversas/sessoes.csv"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +21,7 @@
     "dotenv": "^16.4.5",
     "json-2-csv": "^5.5.10",
     "playwright": "^1.58.2",
-    "puppeteer": "^24.37.5"
+    "puppeteer": "^24.37.5",
+    "xlsx": "^0.18.5"
   }
 }

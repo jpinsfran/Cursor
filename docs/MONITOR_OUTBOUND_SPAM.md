@@ -11,6 +11,7 @@
 ## Supabase
 
 - Rodar consultas em [`FORENSE_OUTBOUND_CADENCIA.sql`](FORENSE_OUTBOUND_CADENCIA.sql) (rajadas, inbound x outbound, timeline).
+- Verificar migrations 015/016 aplicadas: [`../supabase/verify_outbound_migrations_015_016.sql`](../supabase/verify_outbound_migrations_015_016.sql).
 
 ## Após deploy do lease (migration 015)
 

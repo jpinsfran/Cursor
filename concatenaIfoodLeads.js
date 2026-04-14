@@ -10,6 +10,8 @@ import { readdir, writeFile } from "fs/promises";
 import path from "path";
 import csv from "csvtojson";
 import { json2csv } from "json-2-csv";
+import { normalizeLeadRows } from "./lib/leadDataUtils.js";
+import { dedupeRowsByCanonicalPhone } from "./lib/dedupePhoneCsv.js";
 
 const DIR = process.cwd();
 const PREFIX = "ifoodLeads_";
@@ -54,11 +56,13 @@ async function main() {
     });
   });
 
-  const csvContent = await json2csv(allRows, { emptyFieldValue: "" });
+  let normalizedRows = normalizeLeadRows(allRows);
+  normalizedRows = dedupeRowsByCanonicalPhone(normalizedRows);
+  const csvContent = await json2csv(normalizedRows, { emptyFieldValue: "" });
   const outPath = path.join(DIR, outName);
   await writeFile(outPath, "\uFEFF" + csvContent, "utf8");
 
-  console.log("Salvo:", outPath, "| Total de linhas:", allRows.length);
+  console.log("Salvo:", outPath, "| Linhas (após dedup telefone):", normalizedRows.length, "| antes:", allRows.length);
 }
 
 main().catch((e) => {

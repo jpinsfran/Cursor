@@ -10,6 +10,7 @@ import { readFile, writeFile } from "fs/promises";
 import path from "path";
 import csv from "csvtojson";
 import { json2csv } from "json-2-csv";
+import { dedupeRowsByCanonicalPhone } from "./lib/dedupePhoneCsv.js";
 
 const DIR = process.cwd();
 const FILES = [
@@ -49,11 +50,12 @@ async function main() {
     }
   }
 
-  const csvContent = await json2csv(allRows, { emptyFieldValue: "" });
+  const deduped = dedupeRowsByCanonicalPhone(allRows);
+  const csvContent = await json2csv(deduped, { emptyFieldValue: "" });
   await writeFile(outPath, "\uFEFF" + csvContent, "utf8");
 
   const sum = counts.map((c) => c.n).join(" + ");
-  console.log("Concatenado:", sum, "=", allRows.length, "linhas");
+  console.log("Concatenado:", sum, "=", allRows.length, "linhas brutas →", deduped.length, "após dedup telefone");
   counts.forEach((c) => console.log("  ", c.file, ":", c.n));
   console.log("Salvo:", outPath);
 }

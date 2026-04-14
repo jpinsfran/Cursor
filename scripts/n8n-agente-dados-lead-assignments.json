@@ -1,0 +1,182 @@
+[
+  {
+    "id": "dl1",
+    "name": "nome_negocio",
+    "value": "={{ $('Buscar Sessão').item.json.nome_negocio }}",
+    "type": "string"
+  },
+  {
+    "id": "dl2",
+    "name": "nome",
+    "value": "={{ $('Buscar Sessão').item.json.nome_lead || $('Dados').item.json.nome }}",
+    "type": "string"
+  },
+  {
+    "id": "dl3",
+    "name": "regiao",
+    "value": "={{ $('Buscar Sessão').item.json.regiao }}",
+    "type": "string"
+  },
+  {
+    "id": "dl4",
+    "name": "perfil_do_lead",
+    "value": "={{ $('Buscar Sessão').item.json.perfil_do_lead }}",
+    "type": "string"
+  },
+  {
+    "id": "dl5",
+    "name": "telefone",
+    "value": "={{ $('Dados').item.json.phone }}",
+    "type": "string"
+  },
+  {
+    "id": "dl6",
+    "name": "priceRange",
+    "value": "={{ $('Buscar Sessão').item.json.price_range }}",
+    "type": "string"
+  },
+  {
+    "id": "dl7",
+    "name": "rating",
+    "value": "={{ $('Buscar Sessão').item.json.rating }}",
+    "type": "string"
+  },
+  {
+    "id": "dl8",
+    "name": "rapport",
+    "value": "={{ $('Buscar Sessão').item.json.rapport }}",
+    "type": "string"
+  },
+  {
+    "id": "dl9",
+    "name": "cuisine",
+    "value": "={{ $('Buscar Sessão').item.json.cuisine }}",
+    "type": "string"
+  },
+  {
+    "id": "dl10",
+    "name": "email",
+    "value": "={{ $('Buscar Sessão').item.json.email }}",
+    "type": "string"
+  },
+  {
+    "id": "dl11",
+    "name": "seguidores",
+    "value": "={{ $('Buscar Sessão').item.json.seguidores }}",
+    "type": "string"
+  },
+  {
+    "id": "dl12",
+    "name": "instagram_profile_url",
+    "value": "={{ $('Buscar Sessão').item.json.instagram_profile_url }}",
+    "type": "string"
+  },
+  {
+    "id": "dl13",
+    "name": "ifood_url",
+    "value": "={{ $('Buscar Sessão').item.json.ifood_url }}",
+    "type": "string"
+  },
+  {
+    "id": "dl14",
+    "name": "address",
+    "value": "={{ $('Buscar Sessão').item.json.bairro }}",
+    "type": "string"
+  },
+  {
+    "id": "dl15",
+    "name": "cnpj",
+    "value": "={{ $('Buscar Sessão').item.json.cnpj }}",
+    "type": "string"
+  },
+  {
+    "id": "dl16",
+    "name": "classificacao",
+    "value": "={{ $('Buscar Sessão').item.json.classificacao }}",
+    "type": "string"
+  },
+  {
+    "id": "dl17",
+    "name": "mensagem",
+    "value": "={{ $('Call Agrupar Mensagens Recebidas').item.json.message || $('Dados').item.json.mensagem }}",
+    "type": "string"
+  },
+  {
+    "id": "dl18",
+    "name": "score_geral",
+    "value": "={{ $('Buscar Sessão').item.json.radar_score_geral }}",
+    "type": "string"
+  },
+  {
+    "id": "dl19",
+    "name": "score_reputacao",
+    "value": "={{ $('Buscar Sessão').item.json.radar_score_reputacao }}",
+    "type": "string"
+  },
+  {
+    "id": "dl20",
+    "name": "score_digital",
+    "value": "={{ $('Buscar Sessão').item.json.radar_score_digital }}",
+    "type": "string"
+  },
+  {
+    "id": "dl21",
+    "name": "score_competitivo",
+    "value": "={{ $('Buscar Sessão').item.json.radar_score_competitivo }}",
+    "type": "string"
+  },
+  {
+    "id": "dl22",
+    "name": "score_financeiro",
+    "value": "={{ $('Buscar Sessão').item.json.radar_score_financeiro }}",
+    "type": "string"
+  },
+  {
+    "id": "dl23",
+    "name": "oportunidade_min",
+    "value": "={{ $('Buscar Sessão').item.json.radar_oportunidade_min }}",
+    "type": "string"
+  },
+  {
+    "id": "dl24",
+    "name": "oportunidade_max",
+    "value": "={{ $('Buscar Sessão').item.json.radar_oportunidade_max }}",
+    "type": "string"
+  },
+  {
+    "id": "dl25",
+    "name": "radar_url",
+    "value": "={{ $('Buscar Sessão').item.json.radar_url }}",
+    "type": "string"
+  },
+  {
+    "id": "dl26",
+    "name": "neighborhood",
+    "value": "={{ $('Buscar Sessão').item.json.bairro }}",
+    "type": "string"
+  },
+  {
+    "id": "dl27",
+    "name": "session_id",
+    "value": "={{ $('Buscar Sessão').item.json.id }}",
+    "type": "string"
+  },
+  {
+    "id": "dl28",
+    "name": "radar_enviado",
+    "value": "={{ $json.radar_enviado === true || $json.radar_enviado === 'true' }}",
+    "type": "boolean"
+  },
+  {
+    "id": "dl29",
+    "name": "radar_enviado_em",
+    "value": "={{ $json.radar_enviado_em }}",
+    "type": "string"
+  },
+  {
+    "id": "dl30",
+    "name": "d1_abertura_variacao",
+    "value": "={{ $('Buscar Sessão').item.json.d1_abertura_variacao }}",
+    "type": "string"
+  }
+]

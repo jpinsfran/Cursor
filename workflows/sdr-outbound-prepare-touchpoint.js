@@ -4,6 +4,8 @@
  * and outputs all session data flat for the AI Agent prompt.
  *
  * Contrato follow-up (012): reforço ~1h e follow-up D+1 9h têm prioridade sobre a cadência D3+.
+ * Quebra de silêncio (016): em em_conversa, 3h sem resposta do lead → até 2 mensagens WH;
+ *   após a 2ª, status em_cadencia e próximo slot da cadência (head atual).
  *
  * Cadência (anti-spam): próximo envio usa dia relativo (ORDER[].dia) a partir de dia_referencia
  * ou primeiro_contato_at em America/Sao_Paulo, não mais +1h após D1. Intervalo mínimo de 72h
@@ -277,6 +279,8 @@ if (followup && followup.action === 'aguardar_followup_d1_9h') {
       rapport: item.rapport || '',
       radar_score_geral: item.radar_score_geral || '',
       ultimo_evento_aguardando_resposta_at: item.ultimo_evento_aguardando_resposta_at || item.ultima_outbound_at || null,
+      patch_quebra_silencio_tentativas: Number(item.quebra_silencio_tentativas || 0),
+      cadencia_pausada: item.cadencia_pausada === true,
     },
   }];
 }
@@ -291,7 +295,61 @@ if (followup && (followup.action === 'enviar_reforco_1h' || followup.action === 
   } else {
     proximoAt = hoursFromNow(48);
   }
-  const touchDone = Array.isArray(item.touchpoints_executados) ? [...item.touchpoints_executados] : [];
+  const touchDoneBase = Array.isArray(item.touchpoints_executados) ? [...item.touchpoints_executados] : [];
+
+  /** Orquestrador: nenhum envio automático fora de 8–18h America/Sao_Paulo. */
+  if (!inSendWindow) {
+    return [{
+      json: {
+        ai_context_version: 'v2_contract',
+        session_id: item.id,
+        touchpoint_id: tp,
+        canal: 'whatsapp',
+        skip: true,
+        skipReason: 'fora_janela_08_18_sp',
+        throttle_applies: false,
+        is_initial_disparo: false,
+        in_send_window: inSendWindow,
+        daily_cap_reached: dailyCapReached,
+        can_send_now: false,
+        timezone_operacional: 'America/Sao_Paulo',
+        janela_envio_inicio_hora: sendWindowStartHour,
+        janela_envio_fim_hora_exclusiva: sendWindowEndHourExclusive,
+        sp_hora_atual: nowSpHour(now),
+        disparos_enviados_hoje_combined: sentTodayCombined,
+        limite_disparos_dia_combined: maxCombinedDailySends,
+        followup_action: followup.action,
+        followup_message_kind: mk,
+        followup_next_check_at: followup.next_check_at,
+        outbound_message_kind: null,
+        patch_reforco_1h_at: item.reforco_1h_enviado_at || null,
+        patch_followup_d1_9h_at: item.followup_d1_9h_enviado_at || null,
+        phone_e164: phone,
+        proximo_touchpoint_id: item.proximo_touchpoint_id,
+        proximo_envio_at: nextWindowStartSp(now, sendWindowStartHour),
+        status_final: item.status || 'em_cadencia',
+        touchpoints_executados: touchDoneBase,
+        d1_abertura_variacao:
+          item.d1_abertura_variacao != null && item.d1_abertura_variacao !== ''
+            ? Number(item.d1_abertura_variacao)
+            : null,
+        nome_lead: item.nome_lead || '',
+        nome_negocio: item.nome_negocio || '',
+        regiao: item.regiao || '',
+        bairro: item.bairro || '',
+        cuisine: item.cuisine || '',
+        rating: item.rating || '',
+        perfil_do_lead: item.perfil_do_lead || '',
+        rapport: item.rapport || '',
+        radar_score_geral: item.radar_score_geral || '',
+        ultimo_evento_aguardando_resposta_at: item.ultimo_evento_aguardando_resposta_at || item.ultima_outbound_at || null,
+        patch_quebra_silencio_tentativas: Number(item.quebra_silencio_tentativas || 0),
+        cadencia_pausada: item.cadencia_pausada === true,
+      },
+    }];
+  }
+
+  const touchDone = [...touchDoneBase];
   if (!touchDone.includes(tp)) touchDone.push(tp);
 
   return [{
@@ -360,6 +418,8 @@ if (followup && (followup.action === 'enviar_reforco_1h' || followup.action === 
       hubspot_deal_id: item.hubspot_deal_id || '',
       _retomada: item._retomada || false,
       primeira_mensagem_enviada_at_candidate: null,
+      patch_quebra_silencio_tentativas: Number(item.quebra_silencio_tentativas || 0),
+      cadencia_pausada: item.cadencia_pausada === true,
       ai_context_minimo: {
         session_id: item.id,
         touchpoint_id: tp,
@@ -370,6 +430,181 @@ if (followup && (followup.action === 'enviar_reforco_1h' || followup.action === 
             : null,
         status_sessao: item.status || 'novo',
         followup_action: followup.action,
+        ultimo_response_actor: item.ultimo_response_actor || null,
+        flag_resposta_bot: Boolean(item.flag_resposta_bot),
+        flag_contato_errado: Boolean(item.flag_contato_errado),
+        flag_numero_inexistente: Boolean(item.flag_numero_inexistente),
+      },
+    },
+  }];
+}
+
+/** Quebra de silêncio (em_conversa): Filtrar vencidos marca _retomada + _quebra_silencio_indice 1 ou 2. */
+if (
+  item.status === 'em_conversa' &&
+  item._retomada &&
+  (item._quebra_silencio_indice === 1 || item._quebra_silencio_indice === 2)
+) {
+  const idx = Number(item._quebra_silencio_indice);
+  const tpQ = idx === 1 ? 'QUEBRA_SILENCIO_1' : 'QUEBRA_SILENCIO_2';
+  const touchDoneQ = Array.isArray(item.touchpoints_executados) ? [...item.touchpoints_executados] : [];
+
+  /** Orquestrador: quebra de silêncio só dentro da janela 8–18h SP. */
+  if (!inSendWindow) {
+    return [{
+      json: {
+        ai_context_version: 'v2_contract',
+        session_id: item.id,
+        touchpoint_id: tpQ,
+        canal: 'whatsapp',
+        skip: true,
+        skipReason: 'fora_janela_08_18_sp',
+        throttle_applies: false,
+        is_initial_disparo: false,
+        in_send_window: inSendWindow,
+        daily_cap_reached: dailyCapReached,
+        can_send_now: false,
+        timezone_operacional: 'America/Sao_Paulo',
+        janela_envio_inicio_hora: sendWindowStartHour,
+        janela_envio_fim_hora_exclusiva: sendWindowEndHourExclusive,
+        sp_hora_atual: nowSpHour(now),
+        disparos_enviados_hoje_combined: sentTodayCombined,
+        limite_disparos_dia_combined: maxCombinedDailySends,
+        followup_action: null,
+        followup_message_kind: null,
+        followup_next_check_at: null,
+        outbound_message_kind: null,
+        patch_reforco_1h_at: item.reforco_1h_enviado_at || null,
+        patch_followup_d1_9h_at: item.followup_d1_9h_enviado_at || null,
+        patch_quebra_silencio_tentativas: Number(item.quebra_silencio_tentativas || 0),
+        phone_e164: phone,
+        proximo_touchpoint_id: item.proximo_touchpoint_id || ORDER[0].id,
+        proximo_envio_at: nextWindowStartSp(now, sendWindowStartHour),
+        status_final: item.status || 'em_conversa',
+        touchpoints_executados: touchDoneQ,
+        cadencia_pausada: item.cadencia_pausada === true,
+        nome_lead: item.nome_lead || '',
+        nome_negocio: item.nome_negocio || '',
+        regiao: item.regiao || '',
+        bairro: item.bairro || '',
+        cuisine: item.cuisine || '',
+        rating: item.rating || '',
+        d1_abertura_variacao:
+          item.d1_abertura_variacao != null && item.d1_abertura_variacao !== ''
+            ? Number(item.d1_abertura_variacao)
+            : null,
+        _retomada: item._retomada || false,
+      },
+    }];
+  }
+
+  if (!touchDoneQ.includes(tpQ)) touchDoneQ.push(tpQ);
+
+  let proximoAtQ;
+  let statusFinalQ;
+  let proximoTpHead = item.proximo_touchpoint_id || ORDER[0].id;
+
+  if (idx === 1) {
+    proximoAtQ = hoursFromNow(3);
+    statusFinalQ = 'em_conversa';
+  } else {
+    statusFinalQ = 'em_cadencia';
+    let tpc = item.proximo_touchpoint_id || ORDER[0].id;
+    let guardQ = 0;
+    while (guardQ++ < 24) {
+      const d0 = ORDER.find((o) => o.id === tpc) || ORDER[0];
+      if (!isUnsupportedInV1(d0)) break;
+      const n0 = nextSlotAfter(tpc, tier, email, linkedin);
+      if (!n0) break;
+      tpc = n0.id;
+    }
+    const dHead = ORDER.find((o) => o.id === tpc) || ORDER[0];
+    const anchorQ = getCadenceAnchorSp(item);
+    const diaCad = Number.isFinite(dHead.dia) ? dHead.dia : 1;
+    let slotCad = cadenceSlotIsoForDiaRelativo(anchorQ, diaCad, sendWindowStartHour);
+    const minPorGap = new Date(now.getTime() + MIN_MS_BETWEEN_CADENCE_OUTBOUND).toISOString();
+    proximoAtQ = maxIsoString(slotCad, minPorGap);
+    proximoTpHead = tpc;
+  }
+
+  return [{
+    json: {
+      ai_context_version: 'v2_contract',
+      session_id: item.id,
+      touchpoint_id: tpQ,
+      canal: 'whatsapp',
+      skip: false,
+      skipReason: '',
+      throttle_applies: false,
+      is_initial_disparo: false,
+      in_send_window: inSendWindow,
+      daily_cap_reached: dailyCapReached,
+      can_send_now: true,
+      timezone_operacional: 'America/Sao_Paulo',
+      janela_envio_inicio_hora: sendWindowStartHour,
+      janela_envio_fim_hora_exclusiva: sendWindowEndHourExclusive,
+      sp_hora_atual: nowSpHour(now),
+      disparos_enviados_hoje_combined: sentTodayCombined,
+      limite_disparos_dia_combined: maxCombinedDailySends,
+      followup_action: null,
+      followup_message_kind: null,
+      followup_next_check_at: null,
+      outbound_message_kind: 'quebra_silencio',
+      patch_reforco_1h_at: item.reforco_1h_enviado_at || null,
+      patch_followup_d1_9h_at: item.followup_d1_9h_enviado_at || null,
+      patch_quebra_silencio_tentativas: idx,
+      ultimo_evento_aguardando_resposta_id: item.ultimo_evento_aguardando_resposta_id || null,
+      ultimo_evento_aguardando_resposta_at: item.ultimo_evento_aguardando_resposta_at || item.ultima_outbound_at || null,
+      ultimo_evento_aguardando_resposta_tipo: item.ultimo_evento_aguardando_resposta_tipo || null,
+      reforco_1h_enviado_at: item.reforco_1h_enviado_at || null,
+      followup_d1_9h_enviado_at: item.followup_d1_9h_enviado_at || null,
+      phone_e164: phone,
+      proximo_touchpoint_id: proximoTpHead,
+      proximo_envio_at: proximoAtQ,
+      status_final: statusFinalQ,
+      touchpoints_executados: touchDoneQ,
+      cadencia_pausada: idx === 2 ? false : item.cadencia_pausada === true,
+      d1_abertura_variacao:
+        item.d1_abertura_variacao != null && item.d1_abertura_variacao !== ''
+          ? Number(item.d1_abertura_variacao)
+          : null,
+      nome_lead: item.nome_lead || '',
+      nome_negocio: item.nome_negocio || '',
+      regiao: item.regiao || '',
+      bairro: item.bairro || '',
+      cuisine: item.cuisine || '',
+      price_range: item.price_range || '',
+      rating: item.rating || '',
+      cnpj: item.cnpj || '',
+      email: item.email || '',
+      perfil_do_lead: item.perfil_do_lead || '',
+      rapport: item.rapport || '',
+      seguidores: item.seguidores || '',
+      instagram_profile_url: item.instagram_profile_url || '',
+      ifood_url: item.ifood_url || '',
+      classificacao: item.classificacao || '',
+      radar_url: item.radar_url || '',
+      radar_score_geral: item.radar_score_geral || '',
+      radar_score_reputacao: item.radar_score_reputacao || '',
+      radar_score_digital: item.radar_score_digital || '',
+      radar_score_competitivo: item.radar_score_competitivo || '',
+      radar_score_financeiro: item.radar_score_financeiro || '',
+      radar_oportunidade_min: item.radar_oportunidade_min || '',
+      radar_oportunidade_max: item.radar_oportunidade_max || '',
+      hubspot_contact_id: item.hubspot_contact_id || '',
+      hubspot_deal_id: item.hubspot_deal_id || '',
+      _retomada: true,
+      primeira_mensagem_enviada_at_candidate: null,
+      ai_context_minimo: {
+        session_id: item.id,
+        touchpoint_id: tpQ,
+        canal: 'whatsapp',
+        d1_abertura_variacao:
+          item.d1_abertura_variacao != null && item.d1_abertura_variacao !== ''
+            ? Number(item.d1_abertura_variacao)
+            : null,
+        status_sessao: item.status || 'novo',
+        followup_action: null,
         ultimo_response_actor: item.ultimo_response_actor || null,
         flag_resposta_bot: Boolean(item.flag_resposta_bot),
         flag_contato_errado: Boolean(item.flag_contato_errado),
@@ -404,14 +639,23 @@ if (def.id === 'D13_LIG' && tier !== 'A') { skip = true; skipReason = 'tier_nao_
 if (def.canal === 'ligacao') { skip = true; skipReason = 'ligacao_manual'; }
 if (throttleApplies && !inSendWindow) { skip = true; skipReason = 'fora_janela_08_18_sp'; }
 if (throttleApplies && dailyCapReached) { skip = true; skipReason = 'limite_15_disparos_dia_atingido'; }
+/** Cadência WhatsApp (D3+, etc.): mesma janela 8–18h SP que D1 inicial. */
+if (!skip && def.canal === 'whatsapp' && !throttleApplies && !inSendWindow) {
+  skip = true;
+  skipReason = 'fora_janela_08_18_sp';
+}
 
 const next = skip ? null : nextSlotAfter(tp, tier, email, linkedin);
 
 let proximoAt;
 if (skip) {
-  proximoAt = throttleApplies
-    ? (inSendWindow ? hoursFromNow(1) : nextWindowStartSp(now, sendWindowStartHour))
-    : hoursFromNow(1);
+  if (skipReason === 'fora_janela_08_18_sp') {
+    proximoAt = nextWindowStartSp(now, sendWindowStartHour);
+  } else if (throttleApplies) {
+    proximoAt = inSendWindow ? hoursFromNow(1) : nextWindowStartSp(now, sendWindowStartHour);
+  } else {
+    proximoAt = hoursFromNow(1);
+  }
 } else if (!skip && next) {
   const nextDef = ORDER.find((o) => o.id === next.id);
   const anchor = getCadenceAnchorSp(item);
@@ -499,6 +743,8 @@ return [{
     hubspot_contact_id: item.hubspot_contact_id || '',
     hubspot_deal_id: item.hubspot_deal_id || '',
     _retomada: item._retomada || false,
+    patch_quebra_silencio_tentativas: Number(item.quebra_silencio_tentativas || 0),
+    cadencia_pausada: item.cadencia_pausada === true,
     ai_context_minimo: {
       session_id: item.id,
       touchpoint_id: tp,

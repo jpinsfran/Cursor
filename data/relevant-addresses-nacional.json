@@ -1,0 +1,7018 @@
+{
+  "generated_at": "2026-03-23T14:46:20.860Z",
+  "total_records": 701,
+  "total_cities": 336,
+  "missing_geocode": [],
+  "records": [
+    {
+      "address": "Centro, Rio Branco, AC, Brasil",
+      "uf": "AC",
+      "city": "Rio Branco",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 387852
+    },
+    {
+      "address": "Centro, Maceió, AL, Brasil",
+      "uf": "AL",
+      "city": "Maceió",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 994464
+    },
+    {
+      "address": "Zona Norte, Maceió, AL, Brasil",
+      "uf": "AL",
+      "city": "Maceió",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 994464
+    },
+    {
+      "address": "Zona Sul, Maceió, AL, Brasil",
+      "uf": "AL",
+      "city": "Maceió",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 994464
+    },
+    {
+      "address": "Zona Leste, Maceió, AL, Brasil",
+      "uf": "AL",
+      "city": "Maceió",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 994464
+    },
+    {
+      "address": "Zona Oeste, Maceió, AL, Brasil",
+      "uf": "AL",
+      "city": "Maceió",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 994464
+    },
+    {
+      "address": "Área Central, Maceió, AL, Brasil",
+      "uf": "AL",
+      "city": "Maceió",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 994464
+    },
+    {
+      "address": "Área Comercial, Maceió, AL, Brasil",
+      "uf": "AL",
+      "city": "Maceió",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 994464
+    },
+    {
+      "address": "Área Residencial, Maceió, AL, Brasil",
+      "uf": "AL",
+      "city": "Maceió",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 994464
+    },
+    {
+      "address": "Centro, Arapiraca, AL, Brasil",
+      "uf": "AL",
+      "city": "Arapiraca",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 243661
+    },
+    {
+      "address": "Centro, Macapá, AP, Brasil",
+      "uf": "AP",
+      "city": "Macapá",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 487200
+    },
+    {
+      "address": "Centro, Santana, AP, Brasil",
+      "uf": "AP",
+      "city": "Santana",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 118353
+    },
+    {
+      "address": "Centro, Manaus, AM, Brasil",
+      "uf": "AM",
+      "city": "Manaus",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2279686
+    },
+    {
+      "address": "Adrianópolis, Manaus, AM, Brasil",
+      "uf": "AM",
+      "city": "Manaus",
+      "label": "segmento_02",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2279686
+    },
+    {
+      "address": "Vieiralves, Manaus, AM, Brasil",
+      "uf": "AM",
+      "city": "Manaus",
+      "label": "segmento_03",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2279686
+    },
+    {
+      "address": "Cidade Nova, Manaus, AM, Brasil",
+      "uf": "AM",
+      "city": "Manaus",
+      "label": "segmento_04",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2279686
+    },
+    {
+      "address": "Alvorada, Manaus, AM, Brasil",
+      "uf": "AM",
+      "city": "Manaus",
+      "label": "segmento_05",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2279686
+    },
+    {
+      "address": "Compensa, Manaus, AM, Brasil",
+      "uf": "AM",
+      "city": "Manaus",
+      "label": "segmento_06",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2279686
+    },
+    {
+      "address": "Japiim, Manaus, AM, Brasil",
+      "uf": "AM",
+      "city": "Manaus",
+      "label": "segmento_07",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2279686
+    },
+    {
+      "address": "Ponta Negra, Manaus, AM, Brasil",
+      "uf": "AM",
+      "city": "Manaus",
+      "label": "segmento_08",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2279686
+    },
+    {
+      "address": "Flores, Manaus, AM, Brasil",
+      "uf": "AM",
+      "city": "Manaus",
+      "label": "segmento_09",
+      "execution_order": 9,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2279686
+    },
+    {
+      "address": "Mauazinho, Manaus, AM, Brasil",
+      "uf": "AM",
+      "city": "Manaus",
+      "label": "segmento_10",
+      "execution_order": 10,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2279686
+    },
+    {
+      "address": "Centro, Itacoatiara, AM, Brasil",
+      "uf": "AM",
+      "city": "Itacoatiara",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 112520
+    },
+    {
+      "address": "Centro, Manacapuru, AM, Brasil",
+      "uf": "AM",
+      "city": "Manacapuru",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 110691
+    },
+    {
+      "address": "Centro, Parintins, AM, Brasil",
+      "uf": "AM",
+      "city": "Parintins",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 101956
+    },
+    {
+      "address": "Centro, Salvador, BA, Brasil",
+      "uf": "BA",
+      "city": "Salvador",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2568928
+    },
+    {
+      "address": "Barra, Salvador, BA, Brasil",
+      "uf": "BA",
+      "city": "Salvador",
+      "label": "segmento_02",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2568928
+    },
+    {
+      "address": "Pituba, Salvador, BA, Brasil",
+      "uf": "BA",
+      "city": "Salvador",
+      "label": "segmento_03",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2568928
+    },
+    {
+      "address": "Brotas, Salvador, BA, Brasil",
+      "uf": "BA",
+      "city": "Salvador",
+      "label": "segmento_04",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2568928
+    },
+    {
+      "address": "Itapuã, Salvador, BA, Brasil",
+      "uf": "BA",
+      "city": "Salvador",
+      "label": "segmento_05",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2568928
+    },
+    {
+      "address": "Cajazeiras, Salvador, BA, Brasil",
+      "uf": "BA",
+      "city": "Salvador",
+      "label": "segmento_06",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2568928
+    },
+    {
+      "address": "Paralela, Salvador, BA, Brasil",
+      "uf": "BA",
+      "city": "Salvador",
+      "label": "segmento_07",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2568928
+    },
+    {
+      "address": "Comércio, Salvador, BA, Brasil",
+      "uf": "BA",
+      "city": "Salvador",
+      "label": "segmento_08",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2568928
+    },
+    {
+      "address": "Rio Vermelho, Salvador, BA, Brasil",
+      "uf": "BA",
+      "city": "Salvador",
+      "label": "segmento_09",
+      "execution_order": 9,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2568928
+    },
+    {
+      "address": "Lapa, Salvador, BA, Brasil",
+      "uf": "BA",
+      "city": "Salvador",
+      "label": "segmento_10",
+      "execution_order": 10,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2568928
+    },
+    {
+      "address": "Centro, Feira de Santana, BA, Brasil",
+      "uf": "BA",
+      "city": "Feira de Santana",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 657948
+    },
+    {
+      "address": "Zona Norte, Feira de Santana, BA, Brasil",
+      "uf": "BA",
+      "city": "Feira de Santana",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 657948
+    },
+    {
+      "address": "Zona Sul, Feira de Santana, BA, Brasil",
+      "uf": "BA",
+      "city": "Feira de Santana",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 657948
+    },
+    {
+      "address": "Zona Leste, Feira de Santana, BA, Brasil",
+      "uf": "BA",
+      "city": "Feira de Santana",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 657948
+    },
+    {
+      "address": "Zona Oeste, Feira de Santana, BA, Brasil",
+      "uf": "BA",
+      "city": "Feira de Santana",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 657948
+    },
+    {
+      "address": "Área Central, Feira de Santana, BA, Brasil",
+      "uf": "BA",
+      "city": "Feira de Santana",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 657948
+    },
+    {
+      "address": "Área Comercial, Feira de Santana, BA, Brasil",
+      "uf": "BA",
+      "city": "Feira de Santana",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 657948
+    },
+    {
+      "address": "Área Residencial, Feira de Santana, BA, Brasil",
+      "uf": "BA",
+      "city": "Feira de Santana",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 657948
+    },
+    {
+      "address": "Centro, Vitória da Conquista, BA, Brasil",
+      "uf": "BA",
+      "city": "Vitória da Conquista",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 394024
+    },
+    {
+      "address": "Centro, Camaçari, BA, Brasil",
+      "uf": "BA",
+      "city": "Camaçari",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 319394
+    },
+    {
+      "address": "Centro, Juazeiro, BA, Brasil",
+      "uf": "BA",
+      "city": "Juazeiro",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 254481
+    },
+    {
+      "address": "Centro, Lauro de Freitas, BA, Brasil",
+      "uf": "BA",
+      "city": "Lauro de Freitas",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 217960
+    },
+    {
+      "address": "Centro, Itabuna, BA, Brasil",
+      "uf": "BA",
+      "city": "Itabuna",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 196676
+    },
+    {
+      "address": "Centro, Ilhéus, BA, Brasil",
+      "uf": "BA",
+      "city": "Ilhéus",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 189028
+    },
+    {
+      "address": "Centro, Porto Seguro, BA, Brasil",
+      "uf": "BA",
+      "city": "Porto Seguro",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 181007
+    },
+    {
+      "address": "Centro, Barreiras, BA, Brasil",
+      "uf": "BA",
+      "city": "Barreiras",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 170667
+    },
+    {
+      "address": "Centro, Jequié, BA, Brasil",
+      "uf": "BA",
+      "city": "Jequié",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 168733
+    },
+    {
+      "address": "Centro, Alagoinhas, BA, Brasil",
+      "uf": "BA",
+      "city": "Alagoinhas",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 160662
+    },
+    {
+      "address": "Centro, Teixeira de Freitas, BA, Brasil",
+      "uf": "BA",
+      "city": "Teixeira de Freitas",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 153332
+    },
+    {
+      "address": "Centro, Eunápolis, BA, Brasil",
+      "uf": "BA",
+      "city": "Eunápolis",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 120515
+    },
+    {
+      "address": "Centro, Simões Filho, BA, Brasil",
+      "uf": "BA",
+      "city": "Simões Filho",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 120394
+    },
+    {
+      "address": "Centro, Paulo Afonso, BA, Brasil",
+      "uf": "BA",
+      "city": "Paulo Afonso",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 119128
+    },
+    {
+      "address": "Centro, Luís Eduardo Magalhães, BA, Brasil",
+      "uf": "BA",
+      "city": "Luís Eduardo Magalhães",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 116662
+    },
+    {
+      "address": "Centro, Santo Antônio de Jesus, BA, Brasil",
+      "uf": "BA",
+      "city": "Santo Antônio de Jesus",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 109267
+    },
+    {
+      "address": "Centro, Fortaleza, CE, Brasil",
+      "uf": "CE",
+      "city": "Fortaleza",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2574412
+    },
+    {
+      "address": "Aldeota, Fortaleza, CE, Brasil",
+      "uf": "CE",
+      "city": "Fortaleza",
+      "label": "segmento_02",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2574412
+    },
+    {
+      "address": "Meireles, Fortaleza, CE, Brasil",
+      "uf": "CE",
+      "city": "Fortaleza",
+      "label": "segmento_03",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2574412
+    },
+    {
+      "address": "Montese, Fortaleza, CE, Brasil",
+      "uf": "CE",
+      "city": "Fortaleza",
+      "label": "segmento_04",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2574412
+    },
+    {
+      "address": "Parangaba, Fortaleza, CE, Brasil",
+      "uf": "CE",
+      "city": "Fortaleza",
+      "label": "segmento_05",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2574412
+    },
+    {
+      "address": "Messejana, Fortaleza, CE, Brasil",
+      "uf": "CE",
+      "city": "Fortaleza",
+      "label": "segmento_06",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2574412
+    },
+    {
+      "address": "Benfica, Fortaleza, CE, Brasil",
+      "uf": "CE",
+      "city": "Fortaleza",
+      "label": "segmento_07",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2574412
+    },
+    {
+      "address": "Papicu, Fortaleza, CE, Brasil",
+      "uf": "CE",
+      "city": "Fortaleza",
+      "label": "segmento_08",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2574412
+    },
+    {
+      "address": "Varjota, Fortaleza, CE, Brasil",
+      "uf": "CE",
+      "city": "Fortaleza",
+      "label": "segmento_09",
+      "execution_order": 9,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2574412
+    },
+    {
+      "address": "Cocó, Fortaleza, CE, Brasil",
+      "uf": "CE",
+      "city": "Fortaleza",
+      "label": "segmento_10",
+      "execution_order": 10,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2574412
+    },
+    {
+      "address": "Centro, Caucaia, CE, Brasil",
+      "uf": "CE",
+      "city": "Caucaia",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 375730
+    },
+    {
+      "address": "Centro, Juazeiro do Norte, CE, Brasil",
+      "uf": "CE",
+      "city": "Juazeiro do Norte",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 303004
+    },
+    {
+      "address": "Centro, Maracanaú, CE, Brasil",
+      "uf": "CE",
+      "city": "Maracanaú",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 249684
+    },
+    {
+      "address": "Centro, Sobral, CE, Brasil",
+      "uf": "CE",
+      "city": "Sobral",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 215286
+    },
+    {
+      "address": "Centro, Crato, CE, Brasil",
+      "uf": "CE",
+      "city": "Crato",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 138232
+    },
+    {
+      "address": "Centro, Itapipoca, CE, Brasil",
+      "uf": "CE",
+      "city": "Itapipoca",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 137892
+    },
+    {
+      "address": "Centro, Maranguape, CE, Brasil",
+      "uf": "CE",
+      "city": "Maranguape",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 108937
+    },
+    {
+      "address": "Centro, Iguatu, CE, Brasil",
+      "uf": "CE",
+      "city": "Iguatu",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 102251
+    },
+    {
+      "address": "Centro, Brasília, DF, Brasil",
+      "uf": "DF",
+      "city": "Brasília",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2982818
+    },
+    {
+      "address": "Asa Sul, Brasília, DF, Brasil",
+      "uf": "DF",
+      "city": "Brasília",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2982818
+    },
+    {
+      "address": "Asa Norte, Brasília, DF, Brasil",
+      "uf": "DF",
+      "city": "Brasília",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2982818
+    },
+    {
+      "address": "Taguatinga, Brasília, DF, Brasil",
+      "uf": "DF",
+      "city": "Brasília",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2982818
+    },
+    {
+      "address": "Ceilândia, Brasília, DF, Brasil",
+      "uf": "DF",
+      "city": "Brasília",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2982818
+    },
+    {
+      "address": "Águas Claras, Brasília, DF, Brasil",
+      "uf": "DF",
+      "city": "Brasília",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2982818
+    },
+    {
+      "address": "Samambaia, Brasília, DF, Brasil",
+      "uf": "DF",
+      "city": "Brasília",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2982818
+    },
+    {
+      "address": "Plano Piloto, Brasília, DF, Brasil",
+      "uf": "DF",
+      "city": "Brasília",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2982818
+    },
+    {
+      "address": "Guará, Brasília, DF, Brasil",
+      "uf": "DF",
+      "city": "Brasília",
+      "label": "segmento_08",
+      "execution_order": 9,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2982818
+    },
+    {
+      "address": "Gama, Brasília, DF, Brasil",
+      "uf": "DF",
+      "city": "Brasília",
+      "label": "segmento_09",
+      "execution_order": 10,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2982818
+    },
+    {
+      "address": "Sobradinho, Brasília, DF, Brasil",
+      "uf": "DF",
+      "city": "Brasília",
+      "label": "segmento_10",
+      "execution_order": 11,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2982818
+    },
+    {
+      "address": "Centro, Serra, ES, Brasil",
+      "uf": "ES",
+      "city": "Serra",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 572274
+    },
+    {
+      "address": "Zona Norte, Serra, ES, Brasil",
+      "uf": "ES",
+      "city": "Serra",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 572274
+    },
+    {
+      "address": "Zona Sul, Serra, ES, Brasil",
+      "uf": "ES",
+      "city": "Serra",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 572274
+    },
+    {
+      "address": "Zona Leste, Serra, ES, Brasil",
+      "uf": "ES",
+      "city": "Serra",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 572274
+    },
+    {
+      "address": "Zona Oeste, Serra, ES, Brasil",
+      "uf": "ES",
+      "city": "Serra",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 572274
+    },
+    {
+      "address": "Área Central, Serra, ES, Brasil",
+      "uf": "ES",
+      "city": "Serra",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 572274
+    },
+    {
+      "address": "Área Comercial, Serra, ES, Brasil",
+      "uf": "ES",
+      "city": "Serra",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 572274
+    },
+    {
+      "address": "Área Residencial, Serra, ES, Brasil",
+      "uf": "ES",
+      "city": "Serra",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 572274
+    },
+    {
+      "address": "Centro, Vila Velha, ES, Brasil",
+      "uf": "ES",
+      "city": "Vila Velha",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 502899
+    },
+    {
+      "address": "Zona Norte, Vila Velha, ES, Brasil",
+      "uf": "ES",
+      "city": "Vila Velha",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 502899
+    },
+    {
+      "address": "Zona Sul, Vila Velha, ES, Brasil",
+      "uf": "ES",
+      "city": "Vila Velha",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 502899
+    },
+    {
+      "address": "Zona Leste, Vila Velha, ES, Brasil",
+      "uf": "ES",
+      "city": "Vila Velha",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 502899
+    },
+    {
+      "address": "Zona Oeste, Vila Velha, ES, Brasil",
+      "uf": "ES",
+      "city": "Vila Velha",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 502899
+    },
+    {
+      "address": "Área Central, Vila Velha, ES, Brasil",
+      "uf": "ES",
+      "city": "Vila Velha",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 502899
+    },
+    {
+      "address": "Área Comercial, Vila Velha, ES, Brasil",
+      "uf": "ES",
+      "city": "Vila Velha",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 502899
+    },
+    {
+      "address": "Área Residencial, Vila Velha, ES, Brasil",
+      "uf": "ES",
+      "city": "Vila Velha",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 502899
+    },
+    {
+      "address": "Centro, Cariacica, ES, Brasil",
+      "uf": "ES",
+      "city": "Cariacica",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 375485
+    },
+    {
+      "address": "Centro, Vitória, ES, Brasil",
+      "uf": "ES",
+      "city": "Vitória",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 342800
+    },
+    {
+      "address": "Centro, Cachoeiro de Itapemirim, ES, Brasil",
+      "uf": "ES",
+      "city": "Cachoeiro de Itapemirim",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 198323
+    },
+    {
+      "address": "Centro, Linhares, ES, Brasil",
+      "uf": "ES",
+      "city": "Linhares",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 181912
+    },
+    {
+      "address": "Centro, Guarapari, ES, Brasil",
+      "uf": "ES",
+      "city": "Guarapari",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 134944
+    },
+    {
+      "address": "Centro, São Mateus, ES, Brasil",
+      "uf": "ES",
+      "city": "São Mateus",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 133359
+    },
+    {
+      "address": "Centro, Colatina, ES, Brasil",
+      "uf": "ES",
+      "city": "Colatina",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 128622
+    },
+    {
+      "address": "Centro, Aracruz, ES, Brasil",
+      "uf": "ES",
+      "city": "Aracruz",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 102410
+    },
+    {
+      "address": "Centro, Goiânia, GO, Brasil",
+      "uf": "GO",
+      "city": "Goiânia",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1494599
+    },
+    {
+      "address": "Zona Norte, Goiânia, GO, Brasil",
+      "uf": "GO",
+      "city": "Goiânia",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1494599
+    },
+    {
+      "address": "Zona Sul, Goiânia, GO, Brasil",
+      "uf": "GO",
+      "city": "Goiânia",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1494599
+    },
+    {
+      "address": "Zona Leste, Goiânia, GO, Brasil",
+      "uf": "GO",
+      "city": "Goiânia",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1494599
+    },
+    {
+      "address": "Zona Oeste, Goiânia, GO, Brasil",
+      "uf": "GO",
+      "city": "Goiânia",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1494599
+    },
+    {
+      "address": "Área Central, Goiânia, GO, Brasil",
+      "uf": "GO",
+      "city": "Goiânia",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1494599
+    },
+    {
+      "address": "Área Comercial, Goiânia, GO, Brasil",
+      "uf": "GO",
+      "city": "Goiânia",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1494599
+    },
+    {
+      "address": "Área Residencial, Goiânia, GO, Brasil",
+      "uf": "GO",
+      "city": "Goiânia",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1494599
+    },
+    {
+      "address": "Centro, Aparecida de Goiânia, GO, Brasil",
+      "uf": "GO",
+      "city": "Aparecida de Goiânia",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 550925
+    },
+    {
+      "address": "Zona Norte, Aparecida de Goiânia, GO, Brasil",
+      "uf": "GO",
+      "city": "Aparecida de Goiânia",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 550925
+    },
+    {
+      "address": "Zona Sul, Aparecida de Goiânia, GO, Brasil",
+      "uf": "GO",
+      "city": "Aparecida de Goiânia",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 550925
+    },
+    {
+      "address": "Zona Leste, Aparecida de Goiânia, GO, Brasil",
+      "uf": "GO",
+      "city": "Aparecida de Goiânia",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 550925
+    },
+    {
+      "address": "Zona Oeste, Aparecida de Goiânia, GO, Brasil",
+      "uf": "GO",
+      "city": "Aparecida de Goiânia",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 550925
+    },
+    {
+      "address": "Área Central, Aparecida de Goiânia, GO, Brasil",
+      "uf": "GO",
+      "city": "Aparecida de Goiânia",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 550925
+    },
+    {
+      "address": "Área Comercial, Aparecida de Goiânia, GO, Brasil",
+      "uf": "GO",
+      "city": "Aparecida de Goiânia",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 550925
+    },
+    {
+      "address": "Área Residencial, Aparecida de Goiânia, GO, Brasil",
+      "uf": "GO",
+      "city": "Aparecida de Goiânia",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 550925
+    },
+    {
+      "address": "Centro, Anápolis, GO, Brasil",
+      "uf": "GO",
+      "city": "Anápolis",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 415847
+    },
+    {
+      "address": "Centro, Águas Lindas de Goiás, GO, Brasil",
+      "uf": "GO",
+      "city": "Águas Lindas de Goiás",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 240613
+    },
+    {
+      "address": "Centro, Rio Verde, GO, Brasil",
+      "uf": "GO",
+      "city": "Rio Verde",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 238025
+    },
+    {
+      "address": "Centro, Luziânia, GO, Brasil",
+      "uf": "GO",
+      "city": "Luziânia",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 218872
+    },
+    {
+      "address": "Centro, Valparaíso de Goiás, GO, Brasil",
+      "uf": "GO",
+      "city": "Valparaíso de Goiás",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 213506
+    },
+    {
+      "address": "Centro, Senador Canedo, GO, Brasil",
+      "uf": "GO",
+      "city": "Senador Canedo",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 169849
+    },
+    {
+      "address": "Centro, Trindade, GO, Brasil",
+      "uf": "GO",
+      "city": "Trindade",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 150858
+    },
+    {
+      "address": "Centro, Catalão, GO, Brasil",
+      "uf": "GO",
+      "city": "Catalão",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 120789
+    },
+    {
+      "address": "Centro, Formosa, GO, Brasil",
+      "uf": "GO",
+      "city": "Formosa",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 120478
+    },
+    {
+      "address": "Centro, Itumbiara, GO, Brasil",
+      "uf": "GO",
+      "city": "Itumbiara",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 112289
+    },
+    {
+      "address": "Centro, Planaltina, GO, Brasil",
+      "uf": "GO",
+      "city": "Planaltina",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 110619
+    },
+    {
+      "address": "Centro, Jataí, GO, Brasil",
+      "uf": "GO",
+      "city": "Jataí",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 110404
+    },
+    {
+      "address": "Centro, Novo Gama, GO, Brasil",
+      "uf": "GO",
+      "city": "Novo Gama",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 107092
+    },
+    {
+      "address": "Centro, Caldas Novas, GO, Brasil",
+      "uf": "GO",
+      "city": "Caldas Novas",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 104788
+    },
+    {
+      "address": "Centro, São Luís, MA, Brasil",
+      "uf": "MA",
+      "city": "São Luís",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1088057
+    },
+    {
+      "address": "Zona Norte, São Luís, MA, Brasil",
+      "uf": "MA",
+      "city": "São Luís",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1088057
+    },
+    {
+      "address": "Zona Sul, São Luís, MA, Brasil",
+      "uf": "MA",
+      "city": "São Luís",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1088057
+    },
+    {
+      "address": "Zona Leste, São Luís, MA, Brasil",
+      "uf": "MA",
+      "city": "São Luís",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1088057
+    },
+    {
+      "address": "Zona Oeste, São Luís, MA, Brasil",
+      "uf": "MA",
+      "city": "São Luís",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1088057
+    },
+    {
+      "address": "Área Central, São Luís, MA, Brasil",
+      "uf": "MA",
+      "city": "São Luís",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1088057
+    },
+    {
+      "address": "Área Comercial, São Luís, MA, Brasil",
+      "uf": "MA",
+      "city": "São Luís",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1088057
+    },
+    {
+      "address": "Área Residencial, São Luís, MA, Brasil",
+      "uf": "MA",
+      "city": "São Luís",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1088057
+    },
+    {
+      "address": "Centro, Imperatriz, MA, Brasil",
+      "uf": "MA",
+      "city": "Imperatriz",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 285146
+    },
+    {
+      "address": "Centro, São José de Ribamar, MA, Brasil",
+      "uf": "MA",
+      "city": "São José de Ribamar",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 257414
+    },
+    {
+      "address": "Centro, Timon, MA, Brasil",
+      "uf": "MA",
+      "city": "Timon",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 182241
+    },
+    {
+      "address": "Centro, Caxias, MA, Brasil",
+      "uf": "MA",
+      "city": "Caxias",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 163428
+    },
+    {
+      "address": "Centro, Paço do Lumiar, MA, Brasil",
+      "uf": "MA",
+      "city": "Paço do Lumiar",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 152306
+    },
+    {
+      "address": "Centro, Codó, MA, Brasil",
+      "uf": "MA",
+      "city": "Codó",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 118295
+    },
+    {
+      "address": "Centro, Açailândia, MA, Brasil",
+      "uf": "MA",
+      "city": "Açailândia",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 110506
+    },
+    {
+      "address": "Centro, Bacabal, MA, Brasil",
+      "uf": "MA",
+      "city": "Bacabal",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 107620
+    },
+    {
+      "address": "Centro, Balsas, MA, Brasil",
+      "uf": "MA",
+      "city": "Balsas",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 106094
+    },
+    {
+      "address": "Centro, Cuiabá, MT, Brasil",
+      "uf": "MT",
+      "city": "Cuiabá",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 682932
+    },
+    {
+      "address": "Zona Norte, Cuiabá, MT, Brasil",
+      "uf": "MT",
+      "city": "Cuiabá",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 682932
+    },
+    {
+      "address": "Zona Sul, Cuiabá, MT, Brasil",
+      "uf": "MT",
+      "city": "Cuiabá",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 682932
+    },
+    {
+      "address": "Zona Leste, Cuiabá, MT, Brasil",
+      "uf": "MT",
+      "city": "Cuiabá",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 682932
+    },
+    {
+      "address": "Zona Oeste, Cuiabá, MT, Brasil",
+      "uf": "MT",
+      "city": "Cuiabá",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 682932
+    },
+    {
+      "address": "Área Central, Cuiabá, MT, Brasil",
+      "uf": "MT",
+      "city": "Cuiabá",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 682932
+    },
+    {
+      "address": "Área Comercial, Cuiabá, MT, Brasil",
+      "uf": "MT",
+      "city": "Cuiabá",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 682932
+    },
+    {
+      "address": "Área Residencial, Cuiabá, MT, Brasil",
+      "uf": "MT",
+      "city": "Cuiabá",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 682932
+    },
+    {
+      "address": "Centro, Várzea Grande, MT, Brasil",
+      "uf": "MT",
+      "city": "Várzea Grande",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 314627
+    },
+    {
+      "address": "Centro, Rondonópolis, MT, Brasil",
+      "uf": "MT",
+      "city": "Rondonópolis",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 259167
+    },
+    {
+      "address": "Centro, Sinop, MT, Brasil",
+      "uf": "MT",
+      "city": "Sinop",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 216029
+    },
+    {
+      "address": "Centro, Sorriso, MT, Brasil",
+      "uf": "MT",
+      "city": "Sorriso",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 120561
+    },
+    {
+      "address": "Centro, Tangará da Serra, MT, Brasil",
+      "uf": "MT",
+      "city": "Tangará da Serra",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 112547
+    },
+    {
+      "address": "Centro, Campo Grande, MS, Brasil",
+      "uf": "MS",
+      "city": "Campo Grande",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 954537
+    },
+    {
+      "address": "Zona Norte, Campo Grande, MS, Brasil",
+      "uf": "MS",
+      "city": "Campo Grande",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 954537
+    },
+    {
+      "address": "Zona Sul, Campo Grande, MS, Brasil",
+      "uf": "MS",
+      "city": "Campo Grande",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 954537
+    },
+    {
+      "address": "Zona Leste, Campo Grande, MS, Brasil",
+      "uf": "MS",
+      "city": "Campo Grande",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 954537
+    },
+    {
+      "address": "Zona Oeste, Campo Grande, MS, Brasil",
+      "uf": "MS",
+      "city": "Campo Grande",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 954537
+    },
+    {
+      "address": "Área Central, Campo Grande, MS, Brasil",
+      "uf": "MS",
+      "city": "Campo Grande",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 954537
+    },
+    {
+      "address": "Área Comercial, Campo Grande, MS, Brasil",
+      "uf": "MS",
+      "city": "Campo Grande",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 954537
+    },
+    {
+      "address": "Área Residencial, Campo Grande, MS, Brasil",
+      "uf": "MS",
+      "city": "Campo Grande",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 954537
+    },
+    {
+      "address": "Centro, Dourados, MS, Brasil",
+      "uf": "MS",
+      "city": "Dourados",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 260640
+    },
+    {
+      "address": "Centro, Três Lagoas, MS, Brasil",
+      "uf": "MS",
+      "city": "Três Lagoas",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 141435
+    },
+    {
+      "address": "Centro, Belo Horizonte, MG, Brasil",
+      "uf": "MG",
+      "city": "Belo Horizonte",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2416339
+    },
+    {
+      "address": "Savassi, Belo Horizonte, MG, Brasil",
+      "uf": "MG",
+      "city": "Belo Horizonte",
+      "label": "segmento_02",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2416339
+    },
+    {
+      "address": "Pampulha, Belo Horizonte, MG, Brasil",
+      "uf": "MG",
+      "city": "Belo Horizonte",
+      "label": "segmento_03",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2416339
+    },
+    {
+      "address": "Buritis, Belo Horizonte, MG, Brasil",
+      "uf": "MG",
+      "city": "Belo Horizonte",
+      "label": "segmento_04",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2416339
+    },
+    {
+      "address": "Venda Nova, Belo Horizonte, MG, Brasil",
+      "uf": "MG",
+      "city": "Belo Horizonte",
+      "label": "segmento_05",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2416339
+    },
+    {
+      "address": "Lourdes, Belo Horizonte, MG, Brasil",
+      "uf": "MG",
+      "city": "Belo Horizonte",
+      "label": "segmento_06",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2416339
+    },
+    {
+      "address": "Barreiro, Belo Horizonte, MG, Brasil",
+      "uf": "MG",
+      "city": "Belo Horizonte",
+      "label": "segmento_07",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2416339
+    },
+    {
+      "address": "Santa Efigênia, Belo Horizonte, MG, Brasil",
+      "uf": "MG",
+      "city": "Belo Horizonte",
+      "label": "segmento_08",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2416339
+    },
+    {
+      "address": "Cidade Nova, Belo Horizonte, MG, Brasil",
+      "uf": "MG",
+      "city": "Belo Horizonte",
+      "label": "segmento_09",
+      "execution_order": 9,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2416339
+    },
+    {
+      "address": "Carlos Prates, Belo Horizonte, MG, Brasil",
+      "uf": "MG",
+      "city": "Belo Horizonte",
+      "label": "segmento_10",
+      "execution_order": 10,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 2416339
+    },
+    {
+      "address": "Centro, Uberlândia, MG, Brasil",
+      "uf": "MG",
+      "city": "Uberlândia",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 754954
+    },
+    {
+      "address": "Zona Norte, Uberlândia, MG, Brasil",
+      "uf": "MG",
+      "city": "Uberlândia",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 754954
+    },
+    {
+      "address": "Zona Sul, Uberlândia, MG, Brasil",
+      "uf": "MG",
+      "city": "Uberlândia",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 754954
+    },
+    {
+      "address": "Zona Leste, Uberlândia, MG, Brasil",
+      "uf": "MG",
+      "city": "Uberlândia",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 754954
+    },
+    {
+      "address": "Zona Oeste, Uberlândia, MG, Brasil",
+      "uf": "MG",
+      "city": "Uberlândia",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 754954
+    },
+    {
+      "address": "Área Central, Uberlândia, MG, Brasil",
+      "uf": "MG",
+      "city": "Uberlândia",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 754954
+    },
+    {
+      "address": "Área Comercial, Uberlândia, MG, Brasil",
+      "uf": "MG",
+      "city": "Uberlândia",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 754954
+    },
+    {
+      "address": "Área Residencial, Uberlândia, MG, Brasil",
+      "uf": "MG",
+      "city": "Uberlândia",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 754954
+    },
+    {
+      "address": "Centro, Contagem, MG, Brasil",
+      "uf": "MG",
+      "city": "Contagem",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 649975
+    },
+    {
+      "address": "Zona Norte, Contagem, MG, Brasil",
+      "uf": "MG",
+      "city": "Contagem",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 649975
+    },
+    {
+      "address": "Zona Sul, Contagem, MG, Brasil",
+      "uf": "MG",
+      "city": "Contagem",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 649975
+    },
+    {
+      "address": "Zona Leste, Contagem, MG, Brasil",
+      "uf": "MG",
+      "city": "Contagem",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 649975
+    },
+    {
+      "address": "Zona Oeste, Contagem, MG, Brasil",
+      "uf": "MG",
+      "city": "Contagem",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 649975
+    },
+    {
+      "address": "Área Central, Contagem, MG, Brasil",
+      "uf": "MG",
+      "city": "Contagem",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 649975
+    },
+    {
+      "address": "Área Comercial, Contagem, MG, Brasil",
+      "uf": "MG",
+      "city": "Contagem",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 649975
+    },
+    {
+      "address": "Área Residencial, Contagem, MG, Brasil",
+      "uf": "MG",
+      "city": "Contagem",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 649975
+    },
+    {
+      "address": "Centro, Juiz de Fora, MG, Brasil",
+      "uf": "MG",
+      "city": "Juiz de Fora",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 565764
+    },
+    {
+      "address": "Zona Norte, Juiz de Fora, MG, Brasil",
+      "uf": "MG",
+      "city": "Juiz de Fora",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 565764
+    },
+    {
+      "address": "Zona Sul, Juiz de Fora, MG, Brasil",
+      "uf": "MG",
+      "city": "Juiz de Fora",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 565764
+    },
+    {
+      "address": "Zona Leste, Juiz de Fora, MG, Brasil",
+      "uf": "MG",
+      "city": "Juiz de Fora",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 565764
+    },
+    {
+      "address": "Zona Oeste, Juiz de Fora, MG, Brasil",
+      "uf": "MG",
+      "city": "Juiz de Fora",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 565764
+    },
+    {
+      "address": "Área Central, Juiz de Fora, MG, Brasil",
+      "uf": "MG",
+      "city": "Juiz de Fora",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 565764
+    },
+    {
+      "address": "Área Comercial, Juiz de Fora, MG, Brasil",
+      "uf": "MG",
+      "city": "Juiz de Fora",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 565764
+    },
+    {
+      "address": "Área Residencial, Juiz de Fora, MG, Brasil",
+      "uf": "MG",
+      "city": "Juiz de Fora",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 565764
+    },
+    {
+      "address": "Centro, Montes Claros, MG, Brasil",
+      "uf": "MG",
+      "city": "Montes Claros",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 434321
+    },
+    {
+      "address": "Centro, Betim, MG, Brasil",
+      "uf": "MG",
+      "city": "Betim",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 429236
+    },
+    {
+      "address": "Centro, Uberaba, MG, Brasil",
+      "uf": "MG",
+      "city": "Uberaba",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 354142
+    },
+    {
+      "address": "Centro, Ribeirão das Neves, MG, Brasil",
+      "uf": "MG",
+      "city": "Ribeirão das Neves",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 344828
+    },
+    {
+      "address": "Centro, Governador Valadares, MG, Brasil",
+      "uf": "MG",
+      "city": "Governador Valadares",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 266649
+    },
+    {
+      "address": "Centro, Divinópolis, MG, Brasil",
+      "uf": "MG",
+      "city": "Divinópolis",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 242328
+    },
+    {
+      "address": "Centro, Sete Lagoas, MG, Brasil",
+      "uf": "MG",
+      "city": "Sete Lagoas",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 237931
+    },
+    {
+      "address": "Centro, Ipatinga, MG, Brasil",
+      "uf": "MG",
+      "city": "Ipatinga",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 235445
+    },
+    {
+      "address": "Centro, Santa Luzia, MG, Brasil",
+      "uf": "MG",
+      "city": "Santa Luzia",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 229483
+    },
+    {
+      "address": "Centro, Ibirité, MG, Brasil",
+      "uf": "MG",
+      "city": "Ibirité",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 178713
+    },
+    {
+      "address": "Centro, Poços de Caldas, MG, Brasil",
+      "uf": "MG",
+      "city": "Poços de Caldas",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 171533
+    },
+    {
+      "address": "Centro, Patos de Minas, MG, Brasil",
+      "uf": "MG",
+      "city": "Patos de Minas",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 167870
+    },
+    {
+      "address": "Centro, Pouso Alegre, MG, Brasil",
+      "uf": "MG",
+      "city": "Pouso Alegre",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 160751
+    },
+    {
+      "address": "Centro, Varginha, MG, Brasil",
+      "uf": "MG",
+      "city": "Varginha",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 142802
+    },
+    {
+      "address": "Centro, Teófilo Otoni, MG, Brasil",
+      "uf": "MG",
+      "city": "Teófilo Otoni",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 142571
+    },
+    {
+      "address": "Centro, Conselheiro Lafaiete, MG, Brasil",
+      "uf": "MG",
+      "city": "Conselheiro Lafaiete",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 137980
+    },
+    {
+      "address": "Centro, Vespasiano, MG, Brasil",
+      "uf": "MG",
+      "city": "Vespasiano",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 136826
+    },
+    {
+      "address": "Centro, Sabará, MG, Brasil",
+      "uf": "MG",
+      "city": "Sabará",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 134286
+    },
+    {
+      "address": "Centro, Barbacena, MG, Brasil",
+      "uf": "MG",
+      "city": "Barbacena",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 129630
+    },
+    {
+      "address": "Centro, Araguari, MG, Brasil",
+      "uf": "MG",
+      "city": "Araguari",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 122874
+    },
+    {
+      "address": "Centro, Nova Lima, MG, Brasil",
+      "uf": "MG",
+      "city": "Nova Lima",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 119142
+    },
+    {
+      "address": "Centro, Itabira, MG, Brasil",
+      "uf": "MG",
+      "city": "Itabira",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 117747
+    },
+    {
+      "address": "Centro, Araxá, MG, Brasil",
+      "uf": "MG",
+      "city": "Araxá",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 117677
+    },
+    {
+      "address": "Centro, Passos, MG, Brasil",
+      "uf": "MG",
+      "city": "Passos",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 116530
+    },
+    {
+      "address": "Centro, Nova Serrana, MG, Brasil",
+      "uf": "MG",
+      "city": "Nova Serrana",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 112910
+    },
+    {
+      "address": "Centro, Lavras, MG, Brasil",
+      "uf": "MG",
+      "city": "Lavras",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 109884
+    },
+    {
+      "address": "Centro, Coronel Fabriciano, MG, Brasil",
+      "uf": "MG",
+      "city": "Coronel Fabriciano",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 108551
+    },
+    {
+      "address": "Centro, Muriaé, MG, Brasil",
+      "uf": "MG",
+      "city": "Muriaé",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 108161
+    },
+    {
+      "address": "Centro, Ubá, MG, Brasil",
+      "uf": "MG",
+      "city": "Ubá",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 107222
+    },
+    {
+      "address": "Centro, Ituiutaba, MG, Brasil",
+      "uf": "MG",
+      "city": "Ituiutaba",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 106397
+    },
+    {
+      "address": "Centro, Itaúna, MG, Brasil",
+      "uf": "MG",
+      "city": "Itaúna",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 102500
+    },
+    {
+      "address": "Centro, Pará de Minas, MG, Brasil",
+      "uf": "MG",
+      "city": "Pará de Minas",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 102033
+    },
+    {
+      "address": "Centro, Belém, PA, Brasil",
+      "uf": "PA",
+      "city": "Belém",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1398531
+    },
+    {
+      "address": "Zona Norte, Belém, PA, Brasil",
+      "uf": "PA",
+      "city": "Belém",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1398531
+    },
+    {
+      "address": "Zona Sul, Belém, PA, Brasil",
+      "uf": "PA",
+      "city": "Belém",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1398531
+    },
+    {
+      "address": "Zona Leste, Belém, PA, Brasil",
+      "uf": "PA",
+      "city": "Belém",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1398531
+    },
+    {
+      "address": "Zona Oeste, Belém, PA, Brasil",
+      "uf": "PA",
+      "city": "Belém",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1398531
+    },
+    {
+      "address": "Área Central, Belém, PA, Brasil",
+      "uf": "PA",
+      "city": "Belém",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1398531
+    },
+    {
+      "address": "Área Comercial, Belém, PA, Brasil",
+      "uf": "PA",
+      "city": "Belém",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1398531
+    },
+    {
+      "address": "Área Residencial, Belém, PA, Brasil",
+      "uf": "PA",
+      "city": "Belém",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1398531
+    },
+    {
+      "address": "Centro, Ananindeua, PA, Brasil",
+      "uf": "PA",
+      "city": "Ananindeua",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 507838
+    },
+    {
+      "address": "Zona Norte, Ananindeua, PA, Brasil",
+      "uf": "PA",
+      "city": "Ananindeua",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 507838
+    },
+    {
+      "address": "Zona Sul, Ananindeua, PA, Brasil",
+      "uf": "PA",
+      "city": "Ananindeua",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 507838
+    },
+    {
+      "address": "Zona Leste, Ananindeua, PA, Brasil",
+      "uf": "PA",
+      "city": "Ananindeua",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 507838
+    },
+    {
+      "address": "Zona Oeste, Ananindeua, PA, Brasil",
+      "uf": "PA",
+      "city": "Ananindeua",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 507838
+    },
+    {
+      "address": "Área Central, Ananindeua, PA, Brasil",
+      "uf": "PA",
+      "city": "Ananindeua",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 507838
+    },
+    {
+      "address": "Área Comercial, Ananindeua, PA, Brasil",
+      "uf": "PA",
+      "city": "Ananindeua",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 507838
+    },
+    {
+      "address": "Área Residencial, Ananindeua, PA, Brasil",
+      "uf": "PA",
+      "city": "Ananindeua",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 507838
+    },
+    {
+      "address": "Centro, Santarém, PA, Brasil",
+      "uf": "PA",
+      "city": "Santarém",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 357311
+    },
+    {
+      "address": "Centro, Parauapebas, PA, Brasil",
+      "uf": "PA",
+      "city": "Parauapebas",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 298854
+    },
+    {
+      "address": "Centro, Marabá, PA, Brasil",
+      "uf": "PA",
+      "city": "Marabá",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 288513
+    },
+    {
+      "address": "Centro, Castanhal, PA, Brasil",
+      "uf": "PA",
+      "city": "Castanhal",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 207603
+    },
+    {
+      "address": "Centro, Abaetetuba, PA, Brasil",
+      "uf": "PA",
+      "city": "Abaetetuba",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 170999
+    },
+    {
+      "address": "Centro, Cametá, PA, Brasil",
+      "uf": "PA",
+      "city": "Cametá",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 143837
+    },
+    {
+      "address": "Centro, Barcarena, PA, Brasil",
+      "uf": "PA",
+      "city": "Barcarena",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 137331
+    },
+    {
+      "address": "Centro, Altamira, PA, Brasil",
+      "uf": "PA",
+      "city": "Altamira",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 136982
+    },
+    {
+      "address": "Centro, Itaituba, PA, Brasil",
+      "uf": "PA",
+      "city": "Itaituba",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 133684
+    },
+    {
+      "address": "Centro, Bragança, PA, Brasil",
+      "uf": "PA",
+      "city": "Bragança",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 131679
+    },
+    {
+      "address": "Centro, Marituba, PA, Brasil",
+      "uf": "PA",
+      "city": "Marituba",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 118998
+    },
+    {
+      "address": "Centro, Breves, PA, Brasil",
+      "uf": "PA",
+      "city": "Breves",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 115051
+    },
+    {
+      "address": "Centro, Paragominas, PA, Brasil",
+      "uf": "PA",
+      "city": "Paragominas",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 112843
+    },
+    {
+      "address": "Centro, João Pessoa, PB, Brasil",
+      "uf": "PB",
+      "city": "João Pessoa",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 888679
+    },
+    {
+      "address": "Zona Norte, João Pessoa, PB, Brasil",
+      "uf": "PB",
+      "city": "João Pessoa",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 888679
+    },
+    {
+      "address": "Zona Sul, João Pessoa, PB, Brasil",
+      "uf": "PB",
+      "city": "João Pessoa",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 888679
+    },
+    {
+      "address": "Zona Leste, João Pessoa, PB, Brasil",
+      "uf": "PB",
+      "city": "João Pessoa",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 888679
+    },
+    {
+      "address": "Zona Oeste, João Pessoa, PB, Brasil",
+      "uf": "PB",
+      "city": "João Pessoa",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 888679
+    },
+    {
+      "address": "Área Central, João Pessoa, PB, Brasil",
+      "uf": "PB",
+      "city": "João Pessoa",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 888679
+    },
+    {
+      "address": "Área Comercial, João Pessoa, PB, Brasil",
+      "uf": "PB",
+      "city": "João Pessoa",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 888679
+    },
+    {
+      "address": "Área Residencial, João Pessoa, PB, Brasil",
+      "uf": "PB",
+      "city": "João Pessoa",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 888679
+    },
+    {
+      "address": "Centro, Campina Grande, PB, Brasil",
+      "uf": "PB",
+      "city": "Campina Grande",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 440939
+    },
+    {
+      "address": "Centro, Santa Rita, PB, Brasil",
+      "uf": "PB",
+      "city": "Santa Rita",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 159121
+    },
+    {
+      "address": "Centro, Patos, PB, Brasil",
+      "uf": "PB",
+      "city": "Patos",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 107774
+    },
+    {
+      "address": "Centro, Curitiba, PR, Brasil",
+      "uf": "PR",
+      "city": "Curitiba",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1829225
+    },
+    {
+      "address": "Batel, Curitiba, PR, Brasil",
+      "uf": "PR",
+      "city": "Curitiba",
+      "label": "segmento_02",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1829225
+    },
+    {
+      "address": "Água Verde, Curitiba, PR, Brasil",
+      "uf": "PR",
+      "city": "Curitiba",
+      "label": "segmento_03",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1829225
+    },
+    {
+      "address": "Santa Felicidade, Curitiba, PR, Brasil",
+      "uf": "PR",
+      "city": "Curitiba",
+      "label": "segmento_04",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1829225
+    },
+    {
+      "address": "Boqueirão, Curitiba, PR, Brasil",
+      "uf": "PR",
+      "city": "Curitiba",
+      "label": "segmento_05",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1829225
+    },
+    {
+      "address": "Portão, Curitiba, PR, Brasil",
+      "uf": "PR",
+      "city": "Curitiba",
+      "label": "segmento_06",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1829225
+    },
+    {
+      "address": "Cabral, Curitiba, PR, Brasil",
+      "uf": "PR",
+      "city": "Curitiba",
+      "label": "segmento_07",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1829225
+    },
+    {
+      "address": "CIC, Curitiba, PR, Brasil",
+      "uf": "PR",
+      "city": "Curitiba",
+      "label": "segmento_08",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1829225
+    },
+    {
+      "address": "Pinheirinho, Curitiba, PR, Brasil",
+      "uf": "PR",
+      "city": "Curitiba",
+      "label": "segmento_09",
+      "execution_order": 9,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1829225
+    },
+    {
+      "address": "Bigorrilho, Curitiba, PR, Brasil",
+      "uf": "PR",
+      "city": "Curitiba",
+      "label": "segmento_10",
+      "execution_order": 10,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1829225
+    },
+    {
+      "address": "Centro, Londrina, PR, Brasil",
+      "uf": "PR",
+      "city": "Londrina",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 577318
+    },
+    {
+      "address": "Zona Norte, Londrina, PR, Brasil",
+      "uf": "PR",
+      "city": "Londrina",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 577318
+    },
+    {
+      "address": "Zona Sul, Londrina, PR, Brasil",
+      "uf": "PR",
+      "city": "Londrina",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 577318
+    },
+    {
+      "address": "Zona Leste, Londrina, PR, Brasil",
+      "uf": "PR",
+      "city": "Londrina",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 577318
+    },
+    {
+      "address": "Zona Oeste, Londrina, PR, Brasil",
+      "uf": "PR",
+      "city": "Londrina",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 577318
+    },
+    {
+      "address": "Área Central, Londrina, PR, Brasil",
+      "uf": "PR",
+      "city": "Londrina",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 577318
+    },
+    {
+      "address": "Área Comercial, Londrina, PR, Brasil",
+      "uf": "PR",
+      "city": "Londrina",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 577318
+    },
+    {
+      "address": "Área Residencial, Londrina, PR, Brasil",
+      "uf": "PR",
+      "city": "Londrina",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 577318
+    },
+    {
+      "address": "Centro, Maringá, PR, Brasil",
+      "uf": "PR",
+      "city": "Maringá",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 425983
+    },
+    {
+      "address": "Centro, Ponta Grossa, PR, Brasil",
+      "uf": "PR",
+      "city": "Ponta Grossa",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 372562
+    },
+    {
+      "address": "Centro, Cascavel, PR, Brasil",
+      "uf": "PR",
+      "city": "Cascavel",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 364104
+    },
+    {
+      "address": "Centro, São José dos Pinhais, PR, Brasil",
+      "uf": "PR",
+      "city": "São José dos Pinhais",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 345644
+    },
+    {
+      "address": "Centro, Foz do Iguaçu, PR, Brasil",
+      "uf": "PR",
+      "city": "Foz do Iguaçu",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 295500
+    },
+    {
+      "address": "Centro, Colombo, PR, Brasil",
+      "uf": "PR",
+      "city": "Colombo",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 240720
+    },
+    {
+      "address": "Centro, Guarapuava, PR, Brasil",
+      "uf": "PR",
+      "city": "Guarapuava",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 188710
+    },
+    {
+      "address": "Centro, Fazenda Rio Grande, PR, Brasil",
+      "uf": "PR",
+      "city": "Fazenda Rio Grande",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 161506
+    },
+    {
+      "address": "Centro, Araucária, PR, Brasil",
+      "uf": "PR",
+      "city": "Araucária",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 160038
+    },
+    {
+      "address": "Centro, Toledo, PR, Brasil",
+      "uf": "PR",
+      "city": "Toledo",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 158620
+    },
+    {
+      "address": "Centro, Paranaguá, PR, Brasil",
+      "uf": "PR",
+      "city": "Paranaguá",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 149819
+    },
+    {
+      "address": "Centro, Campo Largo, PR, Brasil",
+      "uf": "PR",
+      "city": "Campo Largo",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 142695
+    },
+    {
+      "address": "Centro, Apucarana, PR, Brasil",
+      "uf": "PR",
+      "city": "Apucarana",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 134306
+    },
+    {
+      "address": "Centro, Pinhais, PR, Brasil",
+      "uf": "PR",
+      "city": "Pinhais",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 131199
+    },
+    {
+      "address": "Centro, Sarandi, PR, Brasil",
+      "uf": "PR",
+      "city": "Sarandi",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 125785
+    },
+    {
+      "address": "Centro, Piraquara, PR, Brasil",
+      "uf": "PR",
+      "city": "Piraquara",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 124934
+    },
+    {
+      "address": "Centro, Almirante Tamandaré, PR, Brasil",
+      "uf": "PR",
+      "city": "Almirante Tamandaré",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 124788
+    },
+    {
+      "address": "Centro, Arapongas, PR, Brasil",
+      "uf": "PR",
+      "city": "Arapongas",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 123863
+    },
+    {
+      "address": "Centro, Umuarama, PR, Brasil",
+      "uf": "PR",
+      "city": "Umuarama",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 121972
+    },
+    {
+      "address": "Centro, Cambé, PR, Brasil",
+      "uf": "PR",
+      "city": "Cambé",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 111009
+    },
+    {
+      "address": "Centro, Campo Mourão, PR, Brasil",
+      "uf": "PR",
+      "city": "Campo Mourão",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 103340
+    },
+    {
+      "address": "Centro, Francisco Beltrão, PR, Brasil",
+      "uf": "PR",
+      "city": "Francisco Beltrão",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 101302
+    },
+    {
+      "address": "Centro, Recife, PE, Brasil",
+      "uf": "PE",
+      "city": "Recife",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1587707
+    },
+    {
+      "address": "Boa Viagem, Recife, PE, Brasil",
+      "uf": "PE",
+      "city": "Recife",
+      "label": "segmento_02",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1587707
+    },
+    {
+      "address": "Casa Forte, Recife, PE, Brasil",
+      "uf": "PE",
+      "city": "Recife",
+      "label": "segmento_03",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1587707
+    },
+    {
+      "address": "Espinheiro, Recife, PE, Brasil",
+      "uf": "PE",
+      "city": "Recife",
+      "label": "segmento_04",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1587707
+    },
+    {
+      "address": "Madalena, Recife, PE, Brasil",
+      "uf": "PE",
+      "city": "Recife",
+      "label": "segmento_05",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1587707
+    },
+    {
+      "address": "Afogados, Recife, PE, Brasil",
+      "uf": "PE",
+      "city": "Recife",
+      "label": "segmento_06",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1587707
+    },
+    {
+      "address": "Imbiribeira, Recife, PE, Brasil",
+      "uf": "PE",
+      "city": "Recife",
+      "label": "segmento_07",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1587707
+    },
+    {
+      "address": "Pina, Recife, PE, Brasil",
+      "uf": "PE",
+      "city": "Recife",
+      "label": "segmento_08",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1587707
+    },
+    {
+      "address": "Santo Amaro, Recife, PE, Brasil",
+      "uf": "PE",
+      "city": "Recife",
+      "label": "segmento_09",
+      "execution_order": 9,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1587707
+    },
+    {
+      "address": "Boa Vista, Recife, PE, Brasil",
+      "uf": "PE",
+      "city": "Recife",
+      "label": "segmento_10",
+      "execution_order": 10,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1587707
+    },
+    {
+      "address": "Centro, Jaboatão dos Guararapes, PE, Brasil",
+      "uf": "PE",
+      "city": "Jaboatão dos Guararapes",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 683285
+    },
+    {
+      "address": "Zona Norte, Jaboatão dos Guararapes, PE, Brasil",
+      "uf": "PE",
+      "city": "Jaboatão dos Guararapes",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 683285
+    },
+    {
+      "address": "Zona Sul, Jaboatão dos Guararapes, PE, Brasil",
+      "uf": "PE",
+      "city": "Jaboatão dos Guararapes",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 683285
+    },
+    {
+      "address": "Zona Leste, Jaboatão dos Guararapes, PE, Brasil",
+      "uf": "PE",
+      "city": "Jaboatão dos Guararapes",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 683285
+    },
+    {
+      "address": "Zona Oeste, Jaboatão dos Guararapes, PE, Brasil",
+      "uf": "PE",
+      "city": "Jaboatão dos Guararapes",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 683285
+    },
+    {
+      "address": "Área Central, Jaboatão dos Guararapes, PE, Brasil",
+      "uf": "PE",
+      "city": "Jaboatão dos Guararapes",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 683285
+    },
+    {
+      "address": "Área Comercial, Jaboatão dos Guararapes, PE, Brasil",
+      "uf": "PE",
+      "city": "Jaboatão dos Guararapes",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 683285
+    },
+    {
+      "address": "Área Residencial, Jaboatão dos Guararapes, PE, Brasil",
+      "uf": "PE",
+      "city": "Jaboatão dos Guararapes",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 683285
+    },
+    {
+      "address": "Centro, Petrolina, PE, Brasil",
+      "uf": "PE",
+      "city": "Petrolina",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 414083
+    },
+    {
+      "address": "Centro, Caruaru, PE, Brasil",
+      "uf": "PE",
+      "city": "Caruaru",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 402290
+    },
+    {
+      "address": "Centro, Olinda, PE, Brasil",
+      "uf": "PE",
+      "city": "Olinda",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 365402
+    },
+    {
+      "address": "Centro, Paulista, PE, Brasil",
+      "uf": "PE",
+      "city": "Paulista",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 362960
+    },
+    {
+      "address": "Centro, Cabo de Santo Agostinho, PE, Brasil",
+      "uf": "PE",
+      "city": "Cabo de Santo Agostinho",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 216969
+    },
+    {
+      "address": "Centro, Camaragibe, PE, Brasil",
+      "uf": "PE",
+      "city": "Camaragibe",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 155771
+    },
+    {
+      "address": "Centro, Garanhuns, PE, Brasil",
+      "uf": "PE",
+      "city": "Garanhuns",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 151064
+    },
+    {
+      "address": "Centro, Vitória de Santo Antão, PE, Brasil",
+      "uf": "PE",
+      "city": "Vitória de Santo Antão",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 143799
+    },
+    {
+      "address": "Centro, Igarassu, PE, Brasil",
+      "uf": "PE",
+      "city": "Igarassu",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 122312
+    },
+    {
+      "address": "Centro, São Lourenço da Mata, PE, Brasil",
+      "uf": "PE",
+      "city": "São Lourenço da Mata",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 117759
+    },
+    {
+      "address": "Centro, Ipojuca, PE, Brasil",
+      "uf": "PE",
+      "city": "Ipojuca",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 105638
+    },
+    {
+      "address": "Centro, Santa Cruz do Capibaribe, PE, Brasil",
+      "uf": "PE",
+      "city": "Santa Cruz do Capibaribe",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 104277
+    },
+    {
+      "address": "Centro, Abreu e Lima, PE, Brasil",
+      "uf": "PE",
+      "city": "Abreu e Lima",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 103945
+    },
+    {
+      "address": "Centro, Teresina, PI, Brasil",
+      "uf": "PI",
+      "city": "Teresina",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 902644
+    },
+    {
+      "address": "Zona Norte, Teresina, PI, Brasil",
+      "uf": "PI",
+      "city": "Teresina",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 902644
+    },
+    {
+      "address": "Zona Sul, Teresina, PI, Brasil",
+      "uf": "PI",
+      "city": "Teresina",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 902644
+    },
+    {
+      "address": "Zona Leste, Teresina, PI, Brasil",
+      "uf": "PI",
+      "city": "Teresina",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 902644
+    },
+    {
+      "address": "Zona Oeste, Teresina, PI, Brasil",
+      "uf": "PI",
+      "city": "Teresina",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 902644
+    },
+    {
+      "address": "Área Central, Teresina, PI, Brasil",
+      "uf": "PI",
+      "city": "Teresina",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 902644
+    },
+    {
+      "address": "Área Comercial, Teresina, PI, Brasil",
+      "uf": "PI",
+      "city": "Teresina",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 902644
+    },
+    {
+      "address": "Área Residencial, Teresina, PI, Brasil",
+      "uf": "PI",
+      "city": "Teresina",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 902644
+    },
+    {
+      "address": "Centro, Parnaíba, PI, Brasil",
+      "uf": "PI",
+      "city": "Parnaíba",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 169552
+    },
+    {
+      "address": "Centro, Rio de Janeiro, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Rio de Janeiro",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 6729894
+    },
+    {
+      "address": "Copacabana, Rio de Janeiro, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Rio de Janeiro",
+      "label": "segmento_02",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 6729894
+    },
+    {
+      "address": "Barra da Tijuca, Rio de Janeiro, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Rio de Janeiro",
+      "label": "segmento_03",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 6729894
+    },
+    {
+      "address": "Tijuca, Rio de Janeiro, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Rio de Janeiro",
+      "label": "segmento_04",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 6729894
+    },
+    {
+      "address": "Botafogo, Rio de Janeiro, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Rio de Janeiro",
+      "label": "segmento_05",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 6729894
+    },
+    {
+      "address": "Méier, Rio de Janeiro, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Rio de Janeiro",
+      "label": "segmento_06",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 6729894
+    },
+    {
+      "address": "Campo Grande, Rio de Janeiro, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Rio de Janeiro",
+      "label": "segmento_07",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 6729894
+    },
+    {
+      "address": "Jacarepaguá, Rio de Janeiro, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Rio de Janeiro",
+      "label": "segmento_08",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 6729894
+    },
+    {
+      "address": "Madureira, Rio de Janeiro, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Rio de Janeiro",
+      "label": "segmento_09",
+      "execution_order": 9,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 6729894
+    },
+    {
+      "address": "Recreio dos Bandeirantes, Rio de Janeiro, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Rio de Janeiro",
+      "label": "segmento_10",
+      "execution_order": 10,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 6729894
+    },
+    {
+      "address": "Ipanema, Rio de Janeiro, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Rio de Janeiro",
+      "label": "segmento_11",
+      "execution_order": 11,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 6729894
+    },
+    {
+      "address": "Bangu, Rio de Janeiro, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Rio de Janeiro",
+      "label": "segmento_12",
+      "execution_order": 12,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 6729894
+    },
+    {
+      "address": "Centro, São Gonçalo, RJ, Brasil",
+      "uf": "RJ",
+      "city": "São Gonçalo",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 960652
+    },
+    {
+      "address": "Zona Norte, São Gonçalo, RJ, Brasil",
+      "uf": "RJ",
+      "city": "São Gonçalo",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 960652
+    },
+    {
+      "address": "Zona Sul, São Gonçalo, RJ, Brasil",
+      "uf": "RJ",
+      "city": "São Gonçalo",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 960652
+    },
+    {
+      "address": "Zona Leste, São Gonçalo, RJ, Brasil",
+      "uf": "RJ",
+      "city": "São Gonçalo",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 960652
+    },
+    {
+      "address": "Zona Oeste, São Gonçalo, RJ, Brasil",
+      "uf": "RJ",
+      "city": "São Gonçalo",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 960652
+    },
+    {
+      "address": "Área Central, São Gonçalo, RJ, Brasil",
+      "uf": "RJ",
+      "city": "São Gonçalo",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 960652
+    },
+    {
+      "address": "Área Comercial, São Gonçalo, RJ, Brasil",
+      "uf": "RJ",
+      "city": "São Gonçalo",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 960652
+    },
+    {
+      "address": "Área Residencial, São Gonçalo, RJ, Brasil",
+      "uf": "RJ",
+      "city": "São Gonçalo",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 960652
+    },
+    {
+      "address": "Centro, Duque de Caxias, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Duque de Caxias",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 866347
+    },
+    {
+      "address": "Zona Norte, Duque de Caxias, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Duque de Caxias",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 866347
+    },
+    {
+      "address": "Zona Sul, Duque de Caxias, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Duque de Caxias",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 866347
+    },
+    {
+      "address": "Zona Leste, Duque de Caxias, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Duque de Caxias",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 866347
+    },
+    {
+      "address": "Zona Oeste, Duque de Caxias, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Duque de Caxias",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 866347
+    },
+    {
+      "address": "Área Central, Duque de Caxias, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Duque de Caxias",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 866347
+    },
+    {
+      "address": "Área Comercial, Duque de Caxias, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Duque de Caxias",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 866347
+    },
+    {
+      "address": "Área Residencial, Duque de Caxias, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Duque de Caxias",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 866347
+    },
+    {
+      "address": "Centro, Nova Iguaçu, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Nova Iguaçu",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 843046
+    },
+    {
+      "address": "Zona Norte, Nova Iguaçu, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Nova Iguaçu",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 843046
+    },
+    {
+      "address": "Zona Sul, Nova Iguaçu, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Nova Iguaçu",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 843046
+    },
+    {
+      "address": "Zona Leste, Nova Iguaçu, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Nova Iguaçu",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 843046
+    },
+    {
+      "address": "Zona Oeste, Nova Iguaçu, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Nova Iguaçu",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 843046
+    },
+    {
+      "address": "Área Central, Nova Iguaçu, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Nova Iguaçu",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 843046
+    },
+    {
+      "address": "Área Comercial, Nova Iguaçu, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Nova Iguaçu",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 843046
+    },
+    {
+      "address": "Área Residencial, Nova Iguaçu, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Nova Iguaçu",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 843046
+    },
+    {
+      "address": "Centro, Campos dos Goytacazes, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Campos dos Goytacazes",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 519011
+    },
+    {
+      "address": "Zona Norte, Campos dos Goytacazes, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Campos dos Goytacazes",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 519011
+    },
+    {
+      "address": "Zona Sul, Campos dos Goytacazes, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Campos dos Goytacazes",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 519011
+    },
+    {
+      "address": "Zona Leste, Campos dos Goytacazes, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Campos dos Goytacazes",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 519011
+    },
+    {
+      "address": "Zona Oeste, Campos dos Goytacazes, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Campos dos Goytacazes",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 519011
+    },
+    {
+      "address": "Área Central, Campos dos Goytacazes, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Campos dos Goytacazes",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 519011
+    },
+    {
+      "address": "Área Comercial, Campos dos Goytacazes, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Campos dos Goytacazes",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 519011
+    },
+    {
+      "address": "Área Residencial, Campos dos Goytacazes, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Campos dos Goytacazes",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 519011
+    },
+    {
+      "address": "Centro, Belford Roxo, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Belford Roxo",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 518263
+    },
+    {
+      "address": "Zona Norte, Belford Roxo, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Belford Roxo",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 518263
+    },
+    {
+      "address": "Zona Sul, Belford Roxo, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Belford Roxo",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 518263
+    },
+    {
+      "address": "Zona Leste, Belford Roxo, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Belford Roxo",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 518263
+    },
+    {
+      "address": "Zona Oeste, Belford Roxo, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Belford Roxo",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 518263
+    },
+    {
+      "address": "Área Central, Belford Roxo, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Belford Roxo",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 518263
+    },
+    {
+      "address": "Área Comercial, Belford Roxo, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Belford Roxo",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 518263
+    },
+    {
+      "address": "Área Residencial, Belford Roxo, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Belford Roxo",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 518263
+    },
+    {
+      "address": "Centro, Niterói, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Niterói",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 516720
+    },
+    {
+      "address": "Zona Norte, Niterói, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Niterói",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 516720
+    },
+    {
+      "address": "Zona Sul, Niterói, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Niterói",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 516720
+    },
+    {
+      "address": "Zona Leste, Niterói, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Niterói",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 516720
+    },
+    {
+      "address": "Zona Oeste, Niterói, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Niterói",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 516720
+    },
+    {
+      "address": "Área Central, Niterói, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Niterói",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 516720
+    },
+    {
+      "address": "Área Comercial, Niterói, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Niterói",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 516720
+    },
+    {
+      "address": "Área Residencial, Niterói, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Niterói",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 516720
+    },
+    {
+      "address": "Centro, São João de Meriti, RJ, Brasil",
+      "uf": "RJ",
+      "city": "São João de Meriti",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 466536
+    },
+    {
+      "address": "Centro, Petrópolis, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Petrópolis",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 294983
+    },
+    {
+      "address": "Centro, Volta Redonda, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Volta Redonda",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 279898
+    },
+    {
+      "address": "Centro, Macaé, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Macaé",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 264138
+    },
+    {
+      "address": "Centro, Magé, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Magé",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 244092
+    },
+    {
+      "address": "Centro, Itaboraí, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Itaboraí",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 240040
+    },
+    {
+      "address": "Centro, Cabo Frio, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Cabo Frio",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 238166
+    },
+    {
+      "address": "Centro, Maricá, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Maricá",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 211986
+    },
+    {
+      "address": "Centro, Nova Friburgo, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Nova Friburgo",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 203328
+    },
+    {
+      "address": "Centro, Barra Mansa, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Barra Mansa",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 181688
+    },
+    {
+      "address": "Centro, Angra dos Reis, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Angra dos Reis",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 179120
+    },
+    {
+      "address": "Centro, Mesquita, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Mesquita",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 178803
+    },
+    {
+      "address": "Centro, Teresópolis, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Teresópolis",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 176692
+    },
+    {
+      "address": "Centro, Rio das Ostras, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Rio das Ostras",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 168099
+    },
+    {
+      "address": "Centro, Nilópolis, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Nilópolis",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 155544
+    },
+    {
+      "address": "Centro, Queimados, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Queimados",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 149093
+    },
+    {
+      "address": "Centro, Araruama, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Araruama",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 137773
+    },
+    {
+      "address": "Centro, Resende, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Resende",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 137612
+    },
+    {
+      "address": "Centro, Itaguaí, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Itaguaí",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 123980
+    },
+    {
+      "address": "Centro, São Pedro da Aldeia, RJ, Brasil",
+      "uf": "RJ",
+      "city": "São Pedro da Aldeia",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 110556
+    },
+    {
+      "address": "Centro, Itaperuna, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Itaperuna",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 107246
+    },
+    {
+      "address": "Centro, Japeri, RJ, Brasil",
+      "uf": "RJ",
+      "city": "Japeri",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 102149
+    },
+    {
+      "address": "Centro, Natal, RN, Brasil",
+      "uf": "RN",
+      "city": "Natal",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 785368
+    },
+    {
+      "address": "Zona Norte, Natal, RN, Brasil",
+      "uf": "RN",
+      "city": "Natal",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 785368
+    },
+    {
+      "address": "Zona Sul, Natal, RN, Brasil",
+      "uf": "RN",
+      "city": "Natal",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 785368
+    },
+    {
+      "address": "Zona Leste, Natal, RN, Brasil",
+      "uf": "RN",
+      "city": "Natal",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 785368
+    },
+    {
+      "address": "Zona Oeste, Natal, RN, Brasil",
+      "uf": "RN",
+      "city": "Natal",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 785368
+    },
+    {
+      "address": "Área Central, Natal, RN, Brasil",
+      "uf": "RN",
+      "city": "Natal",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 785368
+    },
+    {
+      "address": "Área Comercial, Natal, RN, Brasil",
+      "uf": "RN",
+      "city": "Natal",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 785368
+    },
+    {
+      "address": "Área Residencial, Natal, RN, Brasil",
+      "uf": "RN",
+      "city": "Natal",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 785368
+    },
+    {
+      "address": "Centro, Mossoró, RN, Brasil",
+      "uf": "RN",
+      "city": "Mossoró",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 278034
+    },
+    {
+      "address": "Centro, Parnamirim, RN, Brasil",
+      "uf": "RN",
+      "city": "Parnamirim",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 269298
+    },
+    {
+      "address": "Centro, São Gonçalo do Amarante, RN, Brasil",
+      "uf": "RN",
+      "city": "São Gonçalo do Amarante",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 123207
+    },
+    {
+      "address": "Centro, Porto Alegre, RS, Brasil",
+      "uf": "RS",
+      "city": "Porto Alegre",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1389322
+    },
+    {
+      "address": "Moinhos de Vento, Porto Alegre, RS, Brasil",
+      "uf": "RS",
+      "city": "Porto Alegre",
+      "label": "segmento_02",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1389322
+    },
+    {
+      "address": "Menino Deus, Porto Alegre, RS, Brasil",
+      "uf": "RS",
+      "city": "Porto Alegre",
+      "label": "segmento_03",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1389322
+    },
+    {
+      "address": "Petrópolis, Porto Alegre, RS, Brasil",
+      "uf": "RS",
+      "city": "Porto Alegre",
+      "label": "segmento_04",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1389322
+    },
+    {
+      "address": "Partenon, Porto Alegre, RS, Brasil",
+      "uf": "RS",
+      "city": "Porto Alegre",
+      "label": "segmento_05",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1389322
+    },
+    {
+      "address": "Sarandi, Porto Alegre, RS, Brasil",
+      "uf": "RS",
+      "city": "Porto Alegre",
+      "label": "segmento_06",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1389322
+    },
+    {
+      "address": "Zona Sul, Porto Alegre, RS, Brasil",
+      "uf": "RS",
+      "city": "Porto Alegre",
+      "label": "segmento_07",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1389322
+    },
+    {
+      "address": "Azenha, Porto Alegre, RS, Brasil",
+      "uf": "RS",
+      "city": "Porto Alegre",
+      "label": "segmento_08",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1389322
+    },
+    {
+      "address": "Passo D'Areia, Porto Alegre, RS, Brasil",
+      "uf": "RS",
+      "city": "Porto Alegre",
+      "label": "segmento_09",
+      "execution_order": 9,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1389322
+    },
+    {
+      "address": "Tristeza, Porto Alegre, RS, Brasil",
+      "uf": "RS",
+      "city": "Porto Alegre",
+      "label": "segmento_10",
+      "execution_order": 10,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1389322
+    },
+    {
+      "address": "Centro, Caxias do Sul, RS, Brasil",
+      "uf": "RS",
+      "city": "Caxias do Sul",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 479256
+    },
+    {
+      "address": "Centro, Canoas, RS, Brasil",
+      "uf": "RS",
+      "city": "Canoas",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 359554
+    },
+    {
+      "address": "Centro, Pelotas, RS, Brasil",
+      "uf": "RS",
+      "city": "Pelotas",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 336131
+    },
+    {
+      "address": "Centro, Santa Maria, RS, Brasil",
+      "uf": "RS",
+      "city": "Santa Maria",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 282244
+    },
+    {
+      "address": "Centro, Gravataí, RS, Brasil",
+      "uf": "RS",
+      "city": "Gravataí",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 275294
+    },
+    {
+      "address": "Centro, Novo Hamburgo, RS, Brasil",
+      "uf": "RS",
+      "city": "Novo Hamburgo",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 235879
+    },
+    {
+      "address": "Centro, Viamão, RS, Brasil",
+      "uf": "RS",
+      "city": "Viamão",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 232113
+    },
+    {
+      "address": "Centro, São Leopoldo, RS, Brasil",
+      "uf": "RS",
+      "city": "São Leopoldo",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 225669
+    },
+    {
+      "address": "Centro, Passo Fundo, RS, Brasil",
+      "uf": "RS",
+      "city": "Passo Fundo",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 214564
+    },
+    {
+      "address": "Centro, Rio Grande, RS, Brasil",
+      "uf": "RS",
+      "city": "Rio Grande",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 198958
+    },
+    {
+      "address": "Centro, Alvorada, RS, Brasil",
+      "uf": "RS",
+      "city": "Alvorada",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 194116
+    },
+    {
+      "address": "Centro, Cachoeirinha, RS, Brasil",
+      "uf": "RS",
+      "city": "Cachoeirinha",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 141303
+    },
+    {
+      "address": "Centro, Santa Cruz do Sul, RS, Brasil",
+      "uf": "RS",
+      "city": "Santa Cruz do Sul",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 138104
+    },
+    {
+      "address": "Centro, Sapucaia do Sul, RS, Brasil",
+      "uf": "RS",
+      "city": "Sapucaia do Sul",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 136542
+    },
+    {
+      "address": "Centro, Bento Gonçalves, RS, Brasil",
+      "uf": "RS",
+      "city": "Bento Gonçalves",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 127775
+    },
+    {
+      "address": "Centro, Bagé, RS, Brasil",
+      "uf": "RS",
+      "city": "Bagé",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 121900
+    },
+    {
+      "address": "Centro, Uruguaiana, RS, Brasil",
+      "uf": "RS",
+      "city": "Uruguaiana",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 120885
+    },
+    {
+      "address": "Centro, Erechim, RS, Brasil",
+      "uf": "RS",
+      "city": "Erechim",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 109497
+    },
+    {
+      "address": "Centro, Porto Velho, RO, Brasil",
+      "uf": "RO",
+      "city": "Porto Velho",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 514873
+    },
+    {
+      "address": "Zona Norte, Porto Velho, RO, Brasil",
+      "uf": "RO",
+      "city": "Porto Velho",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 514873
+    },
+    {
+      "address": "Zona Sul, Porto Velho, RO, Brasil",
+      "uf": "RO",
+      "city": "Porto Velho",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 514873
+    },
+    {
+      "address": "Zona Leste, Porto Velho, RO, Brasil",
+      "uf": "RO",
+      "city": "Porto Velho",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 514873
+    },
+    {
+      "address": "Zona Oeste, Porto Velho, RO, Brasil",
+      "uf": "RO",
+      "city": "Porto Velho",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 514873
+    },
+    {
+      "address": "Área Central, Porto Velho, RO, Brasil",
+      "uf": "RO",
+      "city": "Porto Velho",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 514873
+    },
+    {
+      "address": "Área Comercial, Porto Velho, RO, Brasil",
+      "uf": "RO",
+      "city": "Porto Velho",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 514873
+    },
+    {
+      "address": "Área Residencial, Porto Velho, RO, Brasil",
+      "uf": "RO",
+      "city": "Porto Velho",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 514873
+    },
+    {
+      "address": "Centro, Ji-Paraná, RO, Brasil",
+      "uf": "RO",
+      "city": "Ji-Paraná",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 139359
+    },
+    {
+      "address": "Centro, Ariquemes, RO, Brasil",
+      "uf": "RO",
+      "city": "Ariquemes",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 108573
+    },
+    {
+      "address": "Centro, Vilhena, RO, Brasil",
+      "uf": "RO",
+      "city": "Vilhena",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 108528
+    },
+    {
+      "address": "Centro, Boa Vista, RR, Brasil",
+      "uf": "RR",
+      "city": "Boa Vista",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 470169
+    },
+    {
+      "address": "Centro, Joinville, SC, Brasil",
+      "uf": "SC",
+      "city": "Joinville",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 654888
+    },
+    {
+      "address": "Zona Norte, Joinville, SC, Brasil",
+      "uf": "SC",
+      "city": "Joinville",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 654888
+    },
+    {
+      "address": "Zona Sul, Joinville, SC, Brasil",
+      "uf": "SC",
+      "city": "Joinville",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 654888
+    },
+    {
+      "address": "Zona Leste, Joinville, SC, Brasil",
+      "uf": "SC",
+      "city": "Joinville",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 654888
+    },
+    {
+      "address": "Zona Oeste, Joinville, SC, Brasil",
+      "uf": "SC",
+      "city": "Joinville",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 654888
+    },
+    {
+      "address": "Área Central, Joinville, SC, Brasil",
+      "uf": "SC",
+      "city": "Joinville",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 654888
+    },
+    {
+      "address": "Área Comercial, Joinville, SC, Brasil",
+      "uf": "SC",
+      "city": "Joinville",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 654888
+    },
+    {
+      "address": "Área Residencial, Joinville, SC, Brasil",
+      "uf": "SC",
+      "city": "Joinville",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 654888
+    },
+    {
+      "address": "Centro, Florianópolis, SC, Brasil",
+      "uf": "SC",
+      "city": "Florianópolis",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 576361
+    },
+    {
+      "address": "Zona Norte, Florianópolis, SC, Brasil",
+      "uf": "SC",
+      "city": "Florianópolis",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 576361
+    },
+    {
+      "address": "Zona Sul, Florianópolis, SC, Brasil",
+      "uf": "SC",
+      "city": "Florianópolis",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 576361
+    },
+    {
+      "address": "Zona Leste, Florianópolis, SC, Brasil",
+      "uf": "SC",
+      "city": "Florianópolis",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 576361
+    },
+    {
+      "address": "Zona Oeste, Florianópolis, SC, Brasil",
+      "uf": "SC",
+      "city": "Florianópolis",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 576361
+    },
+    {
+      "address": "Área Central, Florianópolis, SC, Brasil",
+      "uf": "SC",
+      "city": "Florianópolis",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 576361
+    },
+    {
+      "address": "Área Comercial, Florianópolis, SC, Brasil",
+      "uf": "SC",
+      "city": "Florianópolis",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 576361
+    },
+    {
+      "address": "Área Residencial, Florianópolis, SC, Brasil",
+      "uf": "SC",
+      "city": "Florianópolis",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 576361
+    },
+    {
+      "address": "Centro, Blumenau, SC, Brasil",
+      "uf": "SC",
+      "city": "Blumenau",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 380597
+    },
+    {
+      "address": "Centro, São José, SC, Brasil",
+      "uf": "SC",
+      "city": "São José",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 289949
+    },
+    {
+      "address": "Centro, Itajaí, SC, Brasil",
+      "uf": "SC",
+      "city": "Itajaí",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 287289
+    },
+    {
+      "address": "Centro, Chapecó, SC, Brasil",
+      "uf": "SC",
+      "city": "Chapecó",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 275959
+    },
+    {
+      "address": "Centro, Palhoça, SC, Brasil",
+      "uf": "SC",
+      "city": "Palhoça",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 245477
+    },
+    {
+      "address": "Centro, Criciúma, SC, Brasil",
+      "uf": "SC",
+      "city": "Criciúma",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 225281
+    },
+    {
+      "address": "Centro, Jaraguá do Sul, SC, Brasil",
+      "uf": "SC",
+      "city": "Jaraguá do Sul",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 195753
+    },
+    {
+      "address": "Centro, Lages, SC, Brasil",
+      "uf": "SC",
+      "city": "Lages",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 171609
+    },
+    {
+      "address": "Centro, Brusque, SC, Brasil",
+      "uf": "SC",
+      "city": "Brusque",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 151949
+    },
+    {
+      "address": "Centro, Balneário Camboriú, SC, Brasil",
+      "uf": "SC",
+      "city": "Balneário Camboriú",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 148758
+    },
+    {
+      "address": "Centro, Tubarão, SC, Brasil",
+      "uf": "SC",
+      "city": "Tubarão",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 115495
+    },
+    {
+      "address": "Centro, Camboriú, SC, Brasil",
+      "uf": "SC",
+      "city": "Camboriú",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 113525
+    },
+    {
+      "address": "Centro, São Paulo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Paulo",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 11895578
+    },
+    {
+      "address": "Sé, São Paulo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Paulo",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 11895578
+    },
+    {
+      "address": "Paulista, São Paulo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Paulo",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 11895578
+    },
+    {
+      "address": "Pinheiros, São Paulo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Paulo",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 11895578
+    },
+    {
+      "address": "Vila Mariana, São Paulo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Paulo",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 11895578
+    },
+    {
+      "address": "Moema, São Paulo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Paulo",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 11895578
+    },
+    {
+      "address": "Santana, São Paulo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Paulo",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 11895578
+    },
+    {
+      "address": "Tatuapé, São Paulo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Paulo",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 11895578
+    },
+    {
+      "address": "Itaquera, São Paulo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Paulo",
+      "label": "segmento_08",
+      "execution_order": 9,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 11895578
+    },
+    {
+      "address": "Lapa, São Paulo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Paulo",
+      "label": "segmento_09",
+      "execution_order": 10,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 11895578
+    },
+    {
+      "address": "Santo Amaro, São Paulo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Paulo",
+      "label": "segmento_10",
+      "execution_order": 11,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 11895578
+    },
+    {
+      "address": "Campo Limpo, São Paulo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Paulo",
+      "label": "segmento_11",
+      "execution_order": 12,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 11895578
+    },
+    {
+      "address": "Butantã, São Paulo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Paulo",
+      "label": "segmento_12",
+      "execution_order": 13,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 11895578
+    },
+    {
+      "address": "Ipiranga, São Paulo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Paulo",
+      "label": "segmento_13",
+      "execution_order": 14,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 11895578
+    },
+    {
+      "address": "Vila Madalena, São Paulo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Paulo",
+      "label": "segmento_14",
+      "execution_order": 15,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 11895578
+    },
+    {
+      "address": "Liberdade, São Paulo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Paulo",
+      "label": "segmento_15",
+      "execution_order": 16,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 11895578
+    },
+    {
+      "address": "Centro, Guarulhos, SP, Brasil",
+      "uf": "SP",
+      "city": "Guarulhos",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1345364
+    },
+    {
+      "address": "Zona Norte, Guarulhos, SP, Brasil",
+      "uf": "SP",
+      "city": "Guarulhos",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1345364
+    },
+    {
+      "address": "Zona Sul, Guarulhos, SP, Brasil",
+      "uf": "SP",
+      "city": "Guarulhos",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1345364
+    },
+    {
+      "address": "Zona Leste, Guarulhos, SP, Brasil",
+      "uf": "SP",
+      "city": "Guarulhos",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1345364
+    },
+    {
+      "address": "Zona Oeste, Guarulhos, SP, Brasil",
+      "uf": "SP",
+      "city": "Guarulhos",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1345364
+    },
+    {
+      "address": "Área Central, Guarulhos, SP, Brasil",
+      "uf": "SP",
+      "city": "Guarulhos",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1345364
+    },
+    {
+      "address": "Área Comercial, Guarulhos, SP, Brasil",
+      "uf": "SP",
+      "city": "Guarulhos",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1345364
+    },
+    {
+      "address": "Área Residencial, Guarulhos, SP, Brasil",
+      "uf": "SP",
+      "city": "Guarulhos",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1345364
+    },
+    {
+      "address": "Centro, Campinas, SP, Brasil",
+      "uf": "SP",
+      "city": "Campinas",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1185977
+    },
+    {
+      "address": "Zona Norte, Campinas, SP, Brasil",
+      "uf": "SP",
+      "city": "Campinas",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1185977
+    },
+    {
+      "address": "Zona Sul, Campinas, SP, Brasil",
+      "uf": "SP",
+      "city": "Campinas",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1185977
+    },
+    {
+      "address": "Zona Leste, Campinas, SP, Brasil",
+      "uf": "SP",
+      "city": "Campinas",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1185977
+    },
+    {
+      "address": "Zona Oeste, Campinas, SP, Brasil",
+      "uf": "SP",
+      "city": "Campinas",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1185977
+    },
+    {
+      "address": "Área Central, Campinas, SP, Brasil",
+      "uf": "SP",
+      "city": "Campinas",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1185977
+    },
+    {
+      "address": "Área Comercial, Campinas, SP, Brasil",
+      "uf": "SP",
+      "city": "Campinas",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1185977
+    },
+    {
+      "address": "Área Residencial, Campinas, SP, Brasil",
+      "uf": "SP",
+      "city": "Campinas",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 1185977
+    },
+    {
+      "address": "Centro, São Bernardo do Campo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Bernardo do Campo",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 840499
+    },
+    {
+      "address": "Zona Norte, São Bernardo do Campo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Bernardo do Campo",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 840499
+    },
+    {
+      "address": "Zona Sul, São Bernardo do Campo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Bernardo do Campo",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 840499
+    },
+    {
+      "address": "Zona Leste, São Bernardo do Campo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Bernardo do Campo",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 840499
+    },
+    {
+      "address": "Zona Oeste, São Bernardo do Campo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Bernardo do Campo",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 840499
+    },
+    {
+      "address": "Área Central, São Bernardo do Campo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Bernardo do Campo",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 840499
+    },
+    {
+      "address": "Área Comercial, São Bernardo do Campo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Bernardo do Campo",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 840499
+    },
+    {
+      "address": "Área Residencial, São Bernardo do Campo, SP, Brasil",
+      "uf": "SP",
+      "city": "São Bernardo do Campo",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 840499
+    },
+    {
+      "address": "Centro, Santo André, SP, Brasil",
+      "uf": "SP",
+      "city": "Santo André",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 778711
+    },
+    {
+      "address": "Zona Norte, Santo André, SP, Brasil",
+      "uf": "SP",
+      "city": "Santo André",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 778711
+    },
+    {
+      "address": "Zona Sul, Santo André, SP, Brasil",
+      "uf": "SP",
+      "city": "Santo André",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 778711
+    },
+    {
+      "address": "Zona Leste, Santo André, SP, Brasil",
+      "uf": "SP",
+      "city": "Santo André",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 778711
+    },
+    {
+      "address": "Zona Oeste, Santo André, SP, Brasil",
+      "uf": "SP",
+      "city": "Santo André",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 778711
+    },
+    {
+      "address": "Área Central, Santo André, SP, Brasil",
+      "uf": "SP",
+      "city": "Santo André",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 778711
+    },
+    {
+      "address": "Área Comercial, Santo André, SP, Brasil",
+      "uf": "SP",
+      "city": "Santo André",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 778711
+    },
+    {
+      "address": "Área Residencial, Santo André, SP, Brasil",
+      "uf": "SP",
+      "city": "Santo André",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 778711
+    },
+    {
+      "address": "Centro, Sorocaba, SP, Brasil",
+      "uf": "SP",
+      "city": "Sorocaba",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 757459
+    },
+    {
+      "address": "Zona Norte, Sorocaba, SP, Brasil",
+      "uf": "SP",
+      "city": "Sorocaba",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 757459
+    },
+    {
+      "address": "Zona Sul, Sorocaba, SP, Brasil",
+      "uf": "SP",
+      "city": "Sorocaba",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 757459
+    },
+    {
+      "address": "Zona Leste, Sorocaba, SP, Brasil",
+      "uf": "SP",
+      "city": "Sorocaba",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 757459
+    },
+    {
+      "address": "Zona Oeste, Sorocaba, SP, Brasil",
+      "uf": "SP",
+      "city": "Sorocaba",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 757459
+    },
+    {
+      "address": "Área Central, Sorocaba, SP, Brasil",
+      "uf": "SP",
+      "city": "Sorocaba",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 757459
+    },
+    {
+      "address": "Área Comercial, Sorocaba, SP, Brasil",
+      "uf": "SP",
+      "city": "Sorocaba",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 757459
+    },
+    {
+      "address": "Área Residencial, Sorocaba, SP, Brasil",
+      "uf": "SP",
+      "city": "Sorocaba",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 757459
+    },
+    {
+      "address": "Centro, Osasco, SP, Brasil",
+      "uf": "SP",
+      "city": "Osasco",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 756952
+    },
+    {
+      "address": "Zona Norte, Osasco, SP, Brasil",
+      "uf": "SP",
+      "city": "Osasco",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 756952
+    },
+    {
+      "address": "Zona Sul, Osasco, SP, Brasil",
+      "uf": "SP",
+      "city": "Osasco",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 756952
+    },
+    {
+      "address": "Zona Leste, Osasco, SP, Brasil",
+      "uf": "SP",
+      "city": "Osasco",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 756952
+    },
+    {
+      "address": "Zona Oeste, Osasco, SP, Brasil",
+      "uf": "SP",
+      "city": "Osasco",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 756952
+    },
+    {
+      "address": "Área Central, Osasco, SP, Brasil",
+      "uf": "SP",
+      "city": "Osasco",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 756952
+    },
+    {
+      "address": "Área Comercial, Osasco, SP, Brasil",
+      "uf": "SP",
+      "city": "Osasco",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 756952
+    },
+    {
+      "address": "Área Residencial, Osasco, SP, Brasil",
+      "uf": "SP",
+      "city": "Osasco",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 756952
+    },
+    {
+      "address": "Centro, Ribeirão Preto, SP, Brasil",
+      "uf": "SP",
+      "city": "Ribeirão Preto",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 728400
+    },
+    {
+      "address": "Zona Norte, Ribeirão Preto, SP, Brasil",
+      "uf": "SP",
+      "city": "Ribeirão Preto",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 728400
+    },
+    {
+      "address": "Zona Sul, Ribeirão Preto, SP, Brasil",
+      "uf": "SP",
+      "city": "Ribeirão Preto",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 728400
+    },
+    {
+      "address": "Zona Leste, Ribeirão Preto, SP, Brasil",
+      "uf": "SP",
+      "city": "Ribeirão Preto",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 728400
+    },
+    {
+      "address": "Zona Oeste, Ribeirão Preto, SP, Brasil",
+      "uf": "SP",
+      "city": "Ribeirão Preto",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 728400
+    },
+    {
+      "address": "Área Central, Ribeirão Preto, SP, Brasil",
+      "uf": "SP",
+      "city": "Ribeirão Preto",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 728400
+    },
+    {
+      "address": "Área Comercial, Ribeirão Preto, SP, Brasil",
+      "uf": "SP",
+      "city": "Ribeirão Preto",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 728400
+    },
+    {
+      "address": "Área Residencial, Ribeirão Preto, SP, Brasil",
+      "uf": "SP",
+      "city": "Ribeirão Preto",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 728400
+    },
+    {
+      "address": "Centro, São José dos Campos, SP, Brasil",
+      "uf": "SP",
+      "city": "São José dos Campos",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 724756
+    },
+    {
+      "address": "Zona Norte, São José dos Campos, SP, Brasil",
+      "uf": "SP",
+      "city": "São José dos Campos",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 724756
+    },
+    {
+      "address": "Zona Sul, São José dos Campos, SP, Brasil",
+      "uf": "SP",
+      "city": "São José dos Campos",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 724756
+    },
+    {
+      "address": "Zona Leste, São José dos Campos, SP, Brasil",
+      "uf": "SP",
+      "city": "São José dos Campos",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 724756
+    },
+    {
+      "address": "Zona Oeste, São José dos Campos, SP, Brasil",
+      "uf": "SP",
+      "city": "São José dos Campos",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 724756
+    },
+    {
+      "address": "Área Central, São José dos Campos, SP, Brasil",
+      "uf": "SP",
+      "city": "São José dos Campos",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 724756
+    },
+    {
+      "address": "Área Comercial, São José dos Campos, SP, Brasil",
+      "uf": "SP",
+      "city": "São José dos Campos",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 724756
+    },
+    {
+      "address": "Área Residencial, São José dos Campos, SP, Brasil",
+      "uf": "SP",
+      "city": "São José dos Campos",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 724756
+    },
+    {
+      "address": "Centro, São José do Rio Preto, SP, Brasil",
+      "uf": "SP",
+      "city": "São José do Rio Preto",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 501597
+    },
+    {
+      "address": "Zona Norte, São José do Rio Preto, SP, Brasil",
+      "uf": "SP",
+      "city": "São José do Rio Preto",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 501597
+    },
+    {
+      "address": "Zona Sul, São José do Rio Preto, SP, Brasil",
+      "uf": "SP",
+      "city": "São José do Rio Preto",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 501597
+    },
+    {
+      "address": "Zona Leste, São José do Rio Preto, SP, Brasil",
+      "uf": "SP",
+      "city": "São José do Rio Preto",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 501597
+    },
+    {
+      "address": "Zona Oeste, São José do Rio Preto, SP, Brasil",
+      "uf": "SP",
+      "city": "São José do Rio Preto",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 501597
+    },
+    {
+      "address": "Área Central, São José do Rio Preto, SP, Brasil",
+      "uf": "SP",
+      "city": "São José do Rio Preto",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 501597
+    },
+    {
+      "address": "Área Comercial, São José do Rio Preto, SP, Brasil",
+      "uf": "SP",
+      "city": "São José do Rio Preto",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 501597
+    },
+    {
+      "address": "Área Residencial, São José do Rio Preto, SP, Brasil",
+      "uf": "SP",
+      "city": "São José do Rio Preto",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 501597
+    },
+    {
+      "address": "Centro, Mogi das Cruzes, SP, Brasil",
+      "uf": "SP",
+      "city": "Mogi das Cruzes",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 468120
+    },
+    {
+      "address": "Centro, Jundiaí, SP, Brasil",
+      "uf": "SP",
+      "city": "Jundiaí",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 460313
+    },
+    {
+      "address": "Centro, Piracicaba, SP, Brasil",
+      "uf": "SP",
+      "city": "Piracicaba",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 438827
+    },
+    {
+      "address": "Centro, Santos, SP, Brasil",
+      "uf": "SP",
+      "city": "Santos",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 429567
+    },
+    {
+      "address": "Centro, Mauá, SP, Brasil",
+      "uf": "SP",
+      "city": "Mauá",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 429380
+    },
+    {
+      "address": "Centro, Diadema, SP, Brasil",
+      "uf": "SP",
+      "city": "Diadema",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 404118
+    },
+    {
+      "address": "Centro, Carapicuíba, SP, Brasil",
+      "uf": "SP",
+      "city": "Carapicuíba",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 398462
+    },
+    {
+      "address": "Centro, Bauru, SP, Brasil",
+      "uf": "SP",
+      "city": "Bauru",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 391740
+    },
+    {
+      "address": "Centro, Itaquaquecetuba, SP, Brasil",
+      "uf": "SP",
+      "city": "Itaquaquecetuba",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 382521
+    },
+    {
+      "address": "Centro, Praia Grande, SP, Brasil",
+      "uf": "SP",
+      "city": "Praia Grande",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 365577
+    },
+    {
+      "address": "Centro, Franca, SP, Brasil",
+      "uf": "SP",
+      "city": "Franca",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 364331
+    },
+    {
+      "address": "Centro, São Vicente, SP, Brasil",
+      "uf": "SP",
+      "city": "São Vicente",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 338407
+    },
+    {
+      "address": "Centro, Barueri, SP, Brasil",
+      "uf": "SP",
+      "city": "Barueri",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 330339
+    },
+    {
+      "address": "Centro, Taubaté, SP, Brasil",
+      "uf": "SP",
+      "city": "Taubaté",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 321298
+    },
+    {
+      "address": "Centro, Suzano, SP, Brasil",
+      "uf": "SP",
+      "city": "Suzano",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 318765
+    },
+    {
+      "address": "Centro, Limeira, SP, Brasil",
+      "uf": "SP",
+      "city": "Limeira",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 300728
+    },
+    {
+      "address": "Centro, Guarujá, SP, Brasil",
+      "uf": "SP",
+      "city": "Guarujá",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 294973
+    },
+    {
+      "address": "Centro, Sumaré, SP, Brasil",
+      "uf": "SP",
+      "city": "Sumaré",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 289787
+    },
+    {
+      "address": "Centro, Cotia, SP, Brasil",
+      "uf": "SP",
+      "city": "Cotia",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 287004
+    },
+    {
+      "address": "Centro, Taboão da Serra, SP, Brasil",
+      "uf": "SP",
+      "city": "Taboão da Serra",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 284274
+    },
+    {
+      "address": "Centro, Indaiatuba, SP, Brasil",
+      "uf": "SP",
+      "city": "Indaiatuba",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 267796
+    },
+    {
+      "address": "Centro, São Carlos, SP, Brasil",
+      "uf": "SP",
+      "city": "São Carlos",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 265294
+    },
+    {
+      "address": "Centro, Embu das Artes, SP, Brasil",
+      "uf": "SP",
+      "city": "Embu das Artes",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 259323
+    },
+    {
+      "address": "Centro, Araraquara, SP, Brasil",
+      "uf": "SP",
+      "city": "Araraquara",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 252318
+    },
+    {
+      "address": "Centro, Jacareí, SP, Brasil",
+      "uf": "SP",
+      "city": "Jacareí",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 249968
+    },
+    {
+      "address": "Centro, Hortolândia, SP, Brasil",
+      "uf": "SP",
+      "city": "Hortolândia",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 247331
+    },
+    {
+      "address": "Centro, Americana, SP, Brasil",
+      "uf": "SP",
+      "city": "Americana",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 246655
+    },
+    {
+      "address": "Centro, Marília, SP, Brasil",
+      "uf": "SP",
+      "city": "Marília",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 246627
+    },
+    {
+      "address": "Centro, Itapevi, SP, Brasil",
+      "uf": "SP",
+      "city": "Itapevi",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 241924
+    },
+    {
+      "address": "Centro, Presidente Prudente, SP, Brasil",
+      "uf": "SP",
+      "city": "Presidente Prudente",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 234083
+    },
+    {
+      "address": "Centro, Rio Claro, SP, Brasil",
+      "uf": "SP",
+      "city": "Rio Claro",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 208857
+    },
+    {
+      "address": "Centro, Araçatuba, SP, Brasil",
+      "uf": "SP",
+      "city": "Araçatuba",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 207775
+    },
+    {
+      "address": "Centro, Santa Bárbara d'Oeste, SP, Brasil",
+      "uf": "SP",
+      "city": "Santa Bárbara d'Oeste",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 189338
+    },
+    {
+      "address": "Centro, Ferraz de Vasconcelos, SP, Brasil",
+      "uf": "SP",
+      "city": "Ferraz de Vasconcelos",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 185622
+    },
+    {
+      "address": "Centro, Bragança Paulista, SP, Brasil",
+      "uf": "SP",
+      "city": "Bragança Paulista",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 184634
+    },
+    {
+      "address": "Centro, Itu, SP, Brasil",
+      "uf": "SP",
+      "city": "Itu",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 174561
+    },
+    {
+      "address": "Centro, São Caetano do Sul, SP, Brasil",
+      "uf": "SP",
+      "city": "São Caetano do Sul",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 172109
+    },
+    {
+      "address": "Centro, Pindamonhangaba, SP, Brasil",
+      "uf": "SP",
+      "city": "Pindamonhangaba",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 172027
+    },
+    {
+      "address": "Centro, Francisco Morato, SP, Brasil",
+      "uf": "SP",
+      "city": "Francisco Morato",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 171107
+    },
+    {
+      "address": "Centro, Atibaia, SP, Brasil",
+      "uf": "SP",
+      "city": "Atibaia",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 166043
+    },
+    {
+      "address": "Centro, Itapecerica da Serra, SP, Brasil",
+      "uf": "SP",
+      "city": "Itapecerica da Serra",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 163928
+    },
+    {
+      "address": "Centro, Itapetininga, SP, Brasil",
+      "uf": "SP",
+      "city": "Itapetininga",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 163774
+    },
+    {
+      "address": "Centro, Santana de Parnaíba, SP, Brasil",
+      "uf": "SP",
+      "city": "Santana de Parnaíba",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 162341
+    },
+    {
+      "address": "Centro, Mogi Guaçu, SP, Brasil",
+      "uf": "SP",
+      "city": "Mogi Guaçu",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 159735
+    },
+    {
+      "address": "Centro, Botucatu, SP, Brasil",
+      "uf": "SP",
+      "city": "Botucatu",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 150442
+    },
+    {
+      "address": "Centro, Franco da Rocha, SP, Brasil",
+      "uf": "SP",
+      "city": "Franco da Rocha",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 149786
+    },
+    {
+      "address": "Centro, Caraguatatuba, SP, Brasil",
+      "uf": "SP",
+      "city": "Caraguatatuba",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 141084
+    },
+    {
+      "address": "Centro, Salto, SP, Brasil",
+      "uf": "SP",
+      "city": "Salto",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 140125
+    },
+    {
+      "address": "Centro, Jaú, SP, Brasil",
+      "uf": "SP",
+      "city": "Jaú",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 137323
+    },
+    {
+      "address": "Centro, Araras, SP, Brasil",
+      "uf": "SP",
+      "city": "Araras",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 135331
+    },
+    {
+      "address": "Centro, Votorantim, SP, Brasil",
+      "uf": "SP",
+      "city": "Votorantim",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 132849
+    },
+    {
+      "address": "Centro, Sertãozinho, SP, Brasil",
+      "uf": "SP",
+      "city": "Sertãozinho",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 131600
+    },
+    {
+      "address": "Centro, Valinhos, SP, Brasil",
+      "uf": "SP",
+      "city": "Valinhos",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 131277
+    },
+    {
+      "address": "Centro, Tatuí, SP, Brasil",
+      "uf": "SP",
+      "city": "Tatuí",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 128560
+    },
+    {
+      "address": "Centro, Barretos, SP, Brasil",
+      "uf": "SP",
+      "city": "Barretos",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 126600
+    },
+    {
+      "address": "Centro, Itatiba, SP, Brasil",
+      "uf": "SP",
+      "city": "Itatiba",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 126403
+    },
+    {
+      "address": "Centro, Birigui, SP, Brasil",
+      "uf": "SP",
+      "city": "Birigui",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 122988
+    },
+    {
+      "address": "Centro, Jandira, SP, Brasil",
+      "uf": "SP",
+      "city": "Jandira",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 121988
+    },
+    {
+      "address": "Centro, Guaratinguetá, SP, Brasil",
+      "uf": "SP",
+      "city": "Guaratinguetá",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 121710
+    },
+    {
+      "address": "Centro, Várzea Paulista, SP, Brasil",
+      "uf": "SP",
+      "city": "Várzea Paulista",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 119576
+    },
+    {
+      "address": "Centro, Catanduva, SP, Brasil",
+      "uf": "SP",
+      "city": "Catanduva",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 119172
+    },
+    {
+      "address": "Centro, Ribeirão Pires, SP, Brasil",
+      "uf": "SP",
+      "city": "Ribeirão Pires",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 118877
+    },
+    {
+      "address": "Centro, Itanhaém, SP, Brasil",
+      "uf": "SP",
+      "city": "Itanhaém",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 117435
+    },
+    {
+      "address": "Centro, Paulínia, SP, Brasil",
+      "uf": "SP",
+      "city": "Paulínia",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 115690
+    },
+    {
+      "address": "Centro, Cubatão, SP, Brasil",
+      "uf": "SP",
+      "city": "Cubatão",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 115082
+    },
+    {
+      "address": "Centro, Ourinhos, SP, Brasil",
+      "uf": "SP",
+      "city": "Ourinhos",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 106877
+    },
+    {
+      "address": "Centro, Poá, SP, Brasil",
+      "uf": "SP",
+      "city": "Poá",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 106431
+    },
+    {
+      "address": "Centro, Assis, SP, Brasil",
+      "uf": "SP",
+      "city": "Assis",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 104642
+    },
+    {
+      "address": "Centro, Leme, SP, Brasil",
+      "uf": "SP",
+      "city": "Leme",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 101316
+    },
+    {
+      "address": "Centro, Votuporanga, SP, Brasil",
+      "uf": "SP",
+      "city": "Votuporanga",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 100159
+    },
+    {
+      "address": "Centro, Aracaju, SE, Brasil",
+      "uf": "SE",
+      "city": "Aracaju",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 628849
+    },
+    {
+      "address": "Zona Norte, Aracaju, SE, Brasil",
+      "uf": "SE",
+      "city": "Aracaju",
+      "label": "segmento_01",
+      "execution_order": 2,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 628849
+    },
+    {
+      "address": "Zona Sul, Aracaju, SE, Brasil",
+      "uf": "SE",
+      "city": "Aracaju",
+      "label": "segmento_02",
+      "execution_order": 3,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 628849
+    },
+    {
+      "address": "Zona Leste, Aracaju, SE, Brasil",
+      "uf": "SE",
+      "city": "Aracaju",
+      "label": "segmento_03",
+      "execution_order": 4,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 628849
+    },
+    {
+      "address": "Zona Oeste, Aracaju, SE, Brasil",
+      "uf": "SE",
+      "city": "Aracaju",
+      "label": "segmento_04",
+      "execution_order": 5,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 628849
+    },
+    {
+      "address": "Área Central, Aracaju, SE, Brasil",
+      "uf": "SE",
+      "city": "Aracaju",
+      "label": "segmento_05",
+      "execution_order": 6,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 628849
+    },
+    {
+      "address": "Área Comercial, Aracaju, SE, Brasil",
+      "uf": "SE",
+      "city": "Aracaju",
+      "label": "segmento_06",
+      "execution_order": 7,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 628849
+    },
+    {
+      "address": "Área Residencial, Aracaju, SE, Brasil",
+      "uf": "SE",
+      "city": "Aracaju",
+      "label": "segmento_07",
+      "execution_order": 8,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 628849
+    },
+    {
+      "address": "Centro, Nossa Senhora do Socorro, SE, Brasil",
+      "uf": "SE",
+      "city": "Nossa Senhora do Socorro",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 202450
+    },
+    {
+      "address": "Centro, Itabaiana, SE, Brasil",
+      "uf": "SE",
+      "city": "Itabaiana",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 108408
+    },
+    {
+      "address": "Centro, Lagarto, SE, Brasil",
+      "uf": "SE",
+      "city": "Lagarto",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 105558
+    },
+    {
+      "address": "Centro, São Cristóvão, SE, Brasil",
+      "uf": "SE",
+      "city": "São Cristóvão",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 100360
+    },
+    {
+      "address": "Centro, Palmas, TO, Brasil",
+      "uf": "TO",
+      "city": "Palmas",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 323625
+    },
+    {
+      "address": "Centro, Araguaína, TO, Brasil",
+      "uf": "TO",
+      "city": "Araguaína",
+      "label": "centro",
+      "execution_order": 1,
+      "is_active": true,
+      "source": "ibge_pop2024_nominatim",
+      "population": 181493
+    }
+  ]
+}

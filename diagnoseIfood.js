@@ -4,9 +4,55 @@
  */
 import puppeteer from "puppeteer";
 import { promises as fs } from "fs";
+import { IFOOD_USER_AGENT } from "./lib/ifoodAddressAutomation.js";
+import { findChallengeFrame } from "./lib/ifoodHoldVerification.js";
 
 const CHROME_PATH = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
 const ADDRESS = "Avenida Engenheiro Gastão Rangel 393";
+
+async function logAllFrames(page) {
+  console.log("\n[diagnose] Frames (name | url):");
+  for (const f of page.frames()) {
+    const u = f.url() || "(empty)";
+    const n = f.name() || "";
+    console.log(`   ${n || "(sem nome)"} | ${u.slice(0, 180)}`);
+  }
+}
+
+async function logChallengeFrameHints(page) {
+  const frame = findChallengeFrame(page);
+  if (!frame) {
+    console.log(
+      "\n[diagnose] Nenhum iframe de desafio detectado pelas URLs padrão (arkoselabs, captcha, challenge…). Use logAllFrames acima para ajustar frameUrlIncludes."
+    );
+    return;
+  }
+  console.log("\n[diagnose] Iframe candidato a verificação:", frame.url().slice(0, 180));
+  try {
+    const info = await frame.evaluate(() => {
+      const out = [];
+      const buttons = document.querySelectorAll("button, [role=button]");
+      for (let i = 0; i < Math.min(12, buttons.length); i++) {
+        const b = buttons[i];
+        const r = b.getBoundingClientRect();
+        const dataAttrs = [...b.attributes]
+          .filter((a) => a.name.startsWith("data-"))
+          .map((a) => `${a.name}=${(a.value || "").slice(0, 50)}`);
+        out.push({
+          tag: b.tagName,
+          className: (b.className || "").slice(0, 120),
+          ariaLabel: b.getAttribute("aria-label"),
+          size: `${Math.round(r.width)}x${Math.round(r.height)}`,
+          dataAttrs,
+        });
+      }
+      return out;
+    });
+    console.log("[diagnose] Botões no iframe (amostra):", JSON.stringify(info, null, 2));
+  } catch (e) {
+    console.log("[diagnose] Erro ao ler iframe:", e?.message || e);
+  }
+}
 
 async function main() {
   const browser = await puppeteer.launch({
@@ -17,9 +63,7 @@ async function main() {
   });
 
   const page = await browser.newPage();
-  await page.setUserAgent(
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-  );
+  await page.setUserAgent(IFOOD_USER_AGENT);
 
   console.log("1. Navegando para ifood.com.br/restaurantes ...");
   await page.goto("https://www.ifood.com.br/restaurantes", {
@@ -86,6 +130,9 @@ async function main() {
   });
   console.log("   Sugestão clicada:", suggestionClicked);
   await new Promise((r) => setTimeout(r, 6000));
+
+  await logAllFrames(page);
+  await logChallengeFrameHints(page);
 
   // Inspecionar links de restaurantes (vários padrões de URL do iFood)
   const linkInfo = await page.evaluate(() => {

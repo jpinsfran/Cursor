@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS ifood_estabelecimentos (
   cuisine TEXT,
   price_range TEXT,
   regiao TEXT,
+  classificacao INTEGER,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
   updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
@@ -23,6 +24,7 @@ CREATE TABLE IF NOT EXISTS ifood_estabelecimentos (
 CREATE INDEX IF NOT EXISTS idx_ifood_estabelecimentos_ifood_url ON ifood_estabelecimentos(ifood_url);
 CREATE INDEX IF NOT EXISTS idx_ifood_estabelecimentos_name ON ifood_estabelecimentos(name);
 CREATE INDEX IF NOT EXISTS idx_ifood_estabelecimentos_regiao ON ifood_estabelecimentos(regiao);
+CREATE INDEX IF NOT EXISTS idx_ifood_estabelecimentos_regiao_classificacao ON ifood_estabelecimentos(regiao, classificacao);
 
 -- 2) Qualificados: estabelecimentos em que encontramos contato (telefone/email)
 CREATE TABLE IF NOT EXISTS leads_qualificados (

@@ -22,6 +22,7 @@ import { json2csv } from "json-2-csv";
 import path from "path";
 import { fileURLToPath } from "url";
 import { runFullInstagramAnalysis } from "./scrapeInstagram.js";
+import { normalizeLeadRows } from "./lib/leadDataUtils.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -95,7 +96,7 @@ const WRITE_RETRY_MS = 800;
 
 /** Grava a planilha em UTF-8 (BOM). Escreve em .tmp e troca pelo destino; se o destino estiver bloqueado (ex.: aberto no editor), mantém em .tmp. */
 async function writeCsvNow(rows, outPath) {
-  const copy = rows.map((r) => ({ ...r }));
+  const copy = normalizeLeadRows(rows).map((r) => ({ ...r }));
   copy.forEach(sanitizeRow);
   const csvContent = await json2csv(copy);
   const data = "\uFEFF" + csvContent;
@@ -122,13 +123,14 @@ function getArgs() {
   const limitIndex = process.argv.indexOf("--limit");
   const limit = limitIndex !== -1 && process.argv[limitIndex + 1] ? parseInt(process.argv[limitIndex + 1], 10) : 0;
   const resume = process.argv.includes("--resume");
+  const noSync = process.argv.includes("--no-sync");
   const cityIndex = process.argv.indexOf("--city");
   const citySuffix = cityIndex !== -1 && process.argv[cityIndex + 1] ? process.argv[cityIndex + 1] : "";
-  return { csvPath, limit, resume, citySuffix };
+  return { csvPath, limit, resume, citySuffix, noSync };
 }
 
 async function main() {
-  const { csvPath, limit, resume, citySuffix } = getArgs();
+  const { csvPath, limit, resume, citySuffix, noSync } = getArgs();
   const fullPath = path.isAbsolute(csvPath) ? csvPath : path.join(process.cwd(), csvPath);
 
   let rows = [];
@@ -143,6 +145,8 @@ async function main() {
     console.log("CSV vazio.");
     return;
   }
+
+  rows = normalizeLeadRows(rows);
 
   const toProcess = limit > 0 ? rows.slice(0, limit) : rows;
   const needColumns = [
@@ -161,15 +165,20 @@ async function main() {
 
   if (toRun.length === 0) {
     console.log("Nenhuma linha para processar (--resume e todas já têm instagram_user_id, ou limite 0).");
-    rows.forEach(sanitizeRow);
-    const outPath = fullPath.replace(/(\.csv)?$/i, "_unificado.csv");
-    const csvContent = await json2csv(rows);
+    const outPath = fullPath.endsWith("_unificado.csv")
+    ? fullPath
+    : fullPath.replace(/(\.csv)?$/i, "_unificado.csv");
+    const normalizedRows = normalizeLeadRows(rows);
+    normalizedRows.forEach(sanitizeRow);
+    const csvContent = await json2csv(normalizedRows);
     await fs.writeFile(outPath, "\uFEFF" + csvContent, "utf8");
     console.log("CSV unificado salvo:", outPath);
     return;
   }
 
-  const outPath = fullPath.replace(/(\.csv)?$/i, "_unificado.csv");
+  const outPath = fullPath.endsWith("_unificado.csv")
+    ? fullPath
+    : fullPath.replace(/(\.csv)?$/i, "_unificado.csv");
   console.log("Linhas a processar:", toRun.length, "de", toProcess.length);
   console.log("CSV será atualizado em tempo real a cada lead:", outPath);
   console.log("Abrindo navegador (use o mesmo perfil do Instagram: node scrapeInstagram.js --login)...");
@@ -242,14 +251,16 @@ async function main() {
 
       await writeCsvNow(rows, outPath);
 
-      try {
-        const { isEnabled, upsertEstabelecimento, upsertQualificado, upsertPerfil } = await import("./lib/supabaseLeads.js");
-        if (isEnabled() && (row.url || row.ifood_url)) {
-          await upsertEstabelecimento(row);
-          if ((row.phone || "").trim() || (row.email || "").trim()) await upsertQualificado(row);
-          if ((row.perfil_do_lead || "").trim() || (row.punch_line || "").trim()) await upsertPerfil(row);
-        }
-      } catch (_) {}
+      if (!noSync) {
+        try {
+          const { isEnabled, upsertEstabelecimento, upsertQualificado, upsertPerfil } = await import("./lib/supabaseLeads.js");
+          if (isEnabled() && (row.url || row.ifood_url)) {
+            await upsertEstabelecimento(row);
+            if ((row.phone || "").trim() || (row.email || "").trim()) await upsertQualificado(row);
+            if ((row.perfil_do_lead || "").trim() || (row.punch_line || "").trim()) await upsertPerfil(row);
+          }
+        } catch (_) {}
+      }
 
       await new Promise((r) => setTimeout(r, 2000));
     }

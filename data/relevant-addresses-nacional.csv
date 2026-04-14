@@ -1,0 +1,702 @@
+address,uf,city,label,execution_order,is_active,source,population
+"Centro, Rio Branco, AC, Brasil",AC,Rio Branco,centro,1,true,ibge_pop2024_nominatim,387852
+"Centro, Maceió, AL, Brasil",AL,Maceió,centro,1,true,ibge_pop2024_nominatim,994464
+"Zona Norte, Maceió, AL, Brasil",AL,Maceió,segmento_01,2,true,ibge_pop2024_nominatim,994464
+"Zona Sul, Maceió, AL, Brasil",AL,Maceió,segmento_02,3,true,ibge_pop2024_nominatim,994464
+"Zona Leste, Maceió, AL, Brasil",AL,Maceió,segmento_03,4,true,ibge_pop2024_nominatim,994464
+"Zona Oeste, Maceió, AL, Brasil",AL,Maceió,segmento_04,5,true,ibge_pop2024_nominatim,994464
+"Área Central, Maceió, AL, Brasil",AL,Maceió,segmento_05,6,true,ibge_pop2024_nominatim,994464
+"Área Comercial, Maceió, AL, Brasil",AL,Maceió,segmento_06,7,true,ibge_pop2024_nominatim,994464
+"Área Residencial, Maceió, AL, Brasil",AL,Maceió,segmento_07,8,true,ibge_pop2024_nominatim,994464
+"Centro, Arapiraca, AL, Brasil",AL,Arapiraca,centro,1,true,ibge_pop2024_nominatim,243661
+"Centro, Macapá, AP, Brasil",AP,Macapá,centro,1,true,ibge_pop2024_nominatim,487200
+"Centro, Santana, AP, Brasil",AP,Santana,centro,1,true,ibge_pop2024_nominatim,118353
+"Centro, Manaus, AM, Brasil",AM,Manaus,centro,1,true,ibge_pop2024_nominatim,2279686
+"Adrianópolis, Manaus, AM, Brasil",AM,Manaus,segmento_02,2,true,ibge_pop2024_nominatim,2279686
+"Vieiralves, Manaus, AM, Brasil",AM,Manaus,segmento_03,3,true,ibge_pop2024_nominatim,2279686
+"Cidade Nova, Manaus, AM, Brasil",AM,Manaus,segmento_04,4,true,ibge_pop2024_nominatim,2279686
+"Alvorada, Manaus, AM, Brasil",AM,Manaus,segmento_05,5,true,ibge_pop2024_nominatim,2279686
+"Compensa, Manaus, AM, Brasil",AM,Manaus,segmento_06,6,true,ibge_pop2024_nominatim,2279686
+"Japiim, Manaus, AM, Brasil",AM,Manaus,segmento_07,7,true,ibge_pop2024_nominatim,2279686
+"Ponta Negra, Manaus, AM, Brasil",AM,Manaus,segmento_08,8,true,ibge_pop2024_nominatim,2279686
+"Flores, Manaus, AM, Brasil",AM,Manaus,segmento_09,9,true,ibge_pop2024_nominatim,2279686
+"Mauazinho, Manaus, AM, Brasil",AM,Manaus,segmento_10,10,true,ibge_pop2024_nominatim,2279686
+"Centro, Itacoatiara, AM, Brasil",AM,Itacoatiara,centro,1,true,ibge_pop2024_nominatim,112520
+"Centro, Manacapuru, AM, Brasil",AM,Manacapuru,centro,1,true,ibge_pop2024_nominatim,110691
+"Centro, Parintins, AM, Brasil",AM,Parintins,centro,1,true,ibge_pop2024_nominatim,101956
+"Centro, Salvador, BA, Brasil",BA,Salvador,centro,1,true,ibge_pop2024_nominatim,2568928
+"Barra, Salvador, BA, Brasil",BA,Salvador,segmento_02,2,true,ibge_pop2024_nominatim,2568928
+"Pituba, Salvador, BA, Brasil",BA,Salvador,segmento_03,3,true,ibge_pop2024_nominatim,2568928
+"Brotas, Salvador, BA, Brasil",BA,Salvador,segmento_04,4,true,ibge_pop2024_nominatim,2568928
+"Itapuã, Salvador, BA, Brasil",BA,Salvador,segmento_05,5,true,ibge_pop2024_nominatim,2568928
+"Cajazeiras, Salvador, BA, Brasil",BA,Salvador,segmento_06,6,true,ibge_pop2024_nominatim,2568928
+"Paralela, Salvador, BA, Brasil",BA,Salvador,segmento_07,7,true,ibge_pop2024_nominatim,2568928
+"Comércio, Salvador, BA, Brasil",BA,Salvador,segmento_08,8,true,ibge_pop2024_nominatim,2568928
+"Rio Vermelho, Salvador, BA, Brasil",BA,Salvador,segmento_09,9,true,ibge_pop2024_nominatim,2568928
+"Lapa, Salvador, BA, Brasil",BA,Salvador,segmento_10,10,true,ibge_pop2024_nominatim,2568928
+"Centro, Feira de Santana, BA, Brasil",BA,Feira de Santana,centro,1,true,ibge_pop2024_nominatim,657948
+"Zona Norte, Feira de Santana, BA, Brasil",BA,Feira de Santana,segmento_01,2,true,ibge_pop2024_nominatim,657948
+"Zona Sul, Feira de Santana, BA, Brasil",BA,Feira de Santana,segmento_02,3,true,ibge_pop2024_nominatim,657948
+"Zona Leste, Feira de Santana, BA, Brasil",BA,Feira de Santana,segmento_03,4,true,ibge_pop2024_nominatim,657948
+"Zona Oeste, Feira de Santana, BA, Brasil",BA,Feira de Santana,segmento_04,5,true,ibge_pop2024_nominatim,657948
+"Área Central, Feira de Santana, BA, Brasil",BA,Feira de Santana,segmento_05,6,true,ibge_pop2024_nominatim,657948
+"Área Comercial, Feira de Santana, BA, Brasil",BA,Feira de Santana,segmento_06,7,true,ibge_pop2024_nominatim,657948
+"Área Residencial, Feira de Santana, BA, Brasil",BA,Feira de Santana,segmento_07,8,true,ibge_pop2024_nominatim,657948
+"Centro, Vitória da Conquista, BA, Brasil",BA,Vitória da Conquista,centro,1,true,ibge_pop2024_nominatim,394024
+"Centro, Camaçari, BA, Brasil",BA,Camaçari,centro,1,true,ibge_pop2024_nominatim,319394
+"Centro, Juazeiro, BA, Brasil",BA,Juazeiro,centro,1,true,ibge_pop2024_nominatim,254481
+"Centro, Lauro de Freitas, BA, Brasil",BA,Lauro de Freitas,centro,1,true,ibge_pop2024_nominatim,217960
+"Centro, Itabuna, BA, Brasil",BA,Itabuna,centro,1,true,ibge_pop2024_nominatim,196676
+"Centro, Ilhéus, BA, Brasil",BA,Ilhéus,centro,1,true,ibge_pop2024_nominatim,189028
+"Centro, Porto Seguro, BA, Brasil",BA,Porto Seguro,centro,1,true,ibge_pop2024_nominatim,181007
+"Centro, Barreiras, BA, Brasil",BA,Barreiras,centro,1,true,ibge_pop2024_nominatim,170667
+"Centro, Jequié, BA, Brasil",BA,Jequié,centro,1,true,ibge_pop2024_nominatim,168733
+"Centro, Alagoinhas, BA, Brasil",BA,Alagoinhas,centro,1,true,ibge_pop2024_nominatim,160662
+"Centro, Teixeira de Freitas, BA, Brasil",BA,Teixeira de Freitas,centro,1,true,ibge_pop2024_nominatim,153332
+"Centro, Eunápolis, BA, Brasil",BA,Eunápolis,centro,1,true,ibge_pop2024_nominatim,120515
+"Centro, Simões Filho, BA, Brasil",BA,Simões Filho,centro,1,true,ibge_pop2024_nominatim,120394
+"Centro, Paulo Afonso, BA, Brasil",BA,Paulo Afonso,centro,1,true,ibge_pop2024_nominatim,119128
+"Centro, Luís Eduardo Magalhães, BA, Brasil",BA,Luís Eduardo Magalhães,centro,1,true,ibge_pop2024_nominatim,116662
+"Centro, Santo Antônio de Jesus, BA, Brasil",BA,Santo Antônio de Jesus,centro,1,true,ibge_pop2024_nominatim,109267
+"Centro, Fortaleza, CE, Brasil",CE,Fortaleza,centro,1,true,ibge_pop2024_nominatim,2574412
+"Aldeota, Fortaleza, CE, Brasil",CE,Fortaleza,segmento_02,2,true,ibge_pop2024_nominatim,2574412
+"Meireles, Fortaleza, CE, Brasil",CE,Fortaleza,segmento_03,3,true,ibge_pop2024_nominatim,2574412
+"Montese, Fortaleza, CE, Brasil",CE,Fortaleza,segmento_04,4,true,ibge_pop2024_nominatim,2574412
+"Parangaba, Fortaleza, CE, Brasil",CE,Fortaleza,segmento_05,5,true,ibge_pop2024_nominatim,2574412
+"Messejana, Fortaleza, CE, Brasil",CE,Fortaleza,segmento_06,6,true,ibge_pop2024_nominatim,2574412
+"Benfica, Fortaleza, CE, Brasil",CE,Fortaleza,segmento_07,7,true,ibge_pop2024_nominatim,2574412
+"Papicu, Fortaleza, CE, Brasil",CE,Fortaleza,segmento_08,8,true,ibge_pop2024_nominatim,2574412
+"Varjota, Fortaleza, CE, Brasil",CE,Fortaleza,segmento_09,9,true,ibge_pop2024_nominatim,2574412
+"Cocó, Fortaleza, CE, Brasil",CE,Fortaleza,segmento_10,10,true,ibge_pop2024_nominatim,2574412
+"Centro, Caucaia, CE, Brasil",CE,Caucaia,centro,1,true,ibge_pop2024_nominatim,375730
+"Centro, Juazeiro do Norte, CE, Brasil",CE,Juazeiro do Norte,centro,1,true,ibge_pop2024_nominatim,303004
+"Centro, Maracanaú, CE, Brasil",CE,Maracanaú,centro,1,true,ibge_pop2024_nominatim,249684
+"Centro, Sobral, CE, Brasil",CE,Sobral,centro,1,true,ibge_pop2024_nominatim,215286
+"Centro, Crato, CE, Brasil",CE,Crato,centro,1,true,ibge_pop2024_nominatim,138232
+"Centro, Itapipoca, CE, Brasil",CE,Itapipoca,centro,1,true,ibge_pop2024_nominatim,137892
+"Centro, Maranguape, CE, Brasil",CE,Maranguape,centro,1,true,ibge_pop2024_nominatim,108937
+"Centro, Iguatu, CE, Brasil",CE,Iguatu,centro,1,true,ibge_pop2024_nominatim,102251
+"Centro, Brasília, DF, Brasil",DF,Brasília,centro,1,true,ibge_pop2024_nominatim,2982818
+"Asa Sul, Brasília, DF, Brasil",DF,Brasília,segmento_01,2,true,ibge_pop2024_nominatim,2982818
+"Asa Norte, Brasília, DF, Brasil",DF,Brasília,segmento_02,3,true,ibge_pop2024_nominatim,2982818
+"Taguatinga, Brasília, DF, Brasil",DF,Brasília,segmento_03,4,true,ibge_pop2024_nominatim,2982818
+"Ceilândia, Brasília, DF, Brasil",DF,Brasília,segmento_04,5,true,ibge_pop2024_nominatim,2982818
+"Águas Claras, Brasília, DF, Brasil",DF,Brasília,segmento_05,6,true,ibge_pop2024_nominatim,2982818
+"Samambaia, Brasília, DF, Brasil",DF,Brasília,segmento_06,7,true,ibge_pop2024_nominatim,2982818
+"Plano Piloto, Brasília, DF, Brasil",DF,Brasília,segmento_07,8,true,ibge_pop2024_nominatim,2982818
+"Guará, Brasília, DF, Brasil",DF,Brasília,segmento_08,9,true,ibge_pop2024_nominatim,2982818
+"Gama, Brasília, DF, Brasil",DF,Brasília,segmento_09,10,true,ibge_pop2024_nominatim,2982818
+"Sobradinho, Brasília, DF, Brasil",DF,Brasília,segmento_10,11,true,ibge_pop2024_nominatim,2982818
+"Centro, Serra, ES, Brasil",ES,Serra,centro,1,true,ibge_pop2024_nominatim,572274
+"Zona Norte, Serra, ES, Brasil",ES,Serra,segmento_01,2,true,ibge_pop2024_nominatim,572274
+"Zona Sul, Serra, ES, Brasil",ES,Serra,segmento_02,3,true,ibge_pop2024_nominatim,572274
+"Zona Leste, Serra, ES, Brasil",ES,Serra,segmento_03,4,true,ibge_pop2024_nominatim,572274
+"Zona Oeste, Serra, ES, Brasil",ES,Serra,segmento_04,5,true,ibge_pop2024_nominatim,572274
+"Área Central, Serra, ES, Brasil",ES,Serra,segmento_05,6,true,ibge_pop2024_nominatim,572274
+"Área Comercial, Serra, ES, Brasil",ES,Serra,segmento_06,7,true,ibge_pop2024_nominatim,572274
+"Área Residencial, Serra, ES, Brasil",ES,Serra,segmento_07,8,true,ibge_pop2024_nominatim,572274
+"Centro, Vila Velha, ES, Brasil",ES,Vila Velha,centro,1,true,ibge_pop2024_nominatim,502899
+"Zona Norte, Vila Velha, ES, Brasil",ES,Vila Velha,segmento_01,2,true,ibge_pop2024_nominatim,502899
+"Zona Sul, Vila Velha, ES, Brasil",ES,Vila Velha,segmento_02,3,true,ibge_pop2024_nominatim,502899
+"Zona Leste, Vila Velha, ES, Brasil",ES,Vila Velha,segmento_03,4,true,ibge_pop2024_nominatim,502899
+"Zona Oeste, Vila Velha, ES, Brasil",ES,Vila Velha,segmento_04,5,true,ibge_pop2024_nominatim,502899
+"Área Central, Vila Velha, ES, Brasil",ES,Vila Velha,segmento_05,6,true,ibge_pop2024_nominatim,502899
+"Área Comercial, Vila Velha, ES, Brasil",ES,Vila Velha,segmento_06,7,true,ibge_pop2024_nominatim,502899
+"Área Residencial, Vila Velha, ES, Brasil",ES,Vila Velha,segmento_07,8,true,ibge_pop2024_nominatim,502899
+"Centro, Cariacica, ES, Brasil",ES,Cariacica,centro,1,true,ibge_pop2024_nominatim,375485
+"Centro, Vitória, ES, Brasil",ES,Vitória,centro,1,true,ibge_pop2024_nominatim,342800
+"Centro, Cachoeiro de Itapemirim, ES, Brasil",ES,Cachoeiro de Itapemirim,centro,1,true,ibge_pop2024_nominatim,198323
+"Centro, Linhares, ES, Brasil",ES,Linhares,centro,1,true,ibge_pop2024_nominatim,181912
+"Centro, Guarapari, ES, Brasil",ES,Guarapari,centro,1,true,ibge_pop2024_nominatim,134944
+"Centro, São Mateus, ES, Brasil",ES,São Mateus,centro,1,true,ibge_pop2024_nominatim,133359
+"Centro, Colatina, ES, Brasil",ES,Colatina,centro,1,true,ibge_pop2024_nominatim,128622
+"Centro, Aracruz, ES, Brasil",ES,Aracruz,centro,1,true,ibge_pop2024_nominatim,102410
+"Centro, Goiânia, GO, Brasil",GO,Goiânia,centro,1,true,ibge_pop2024_nominatim,1494599
+"Zona Norte, Goiânia, GO, Brasil",GO,Goiânia,segmento_01,2,true,ibge_pop2024_nominatim,1494599
+"Zona Sul, Goiânia, GO, Brasil",GO,Goiânia,segmento_02,3,true,ibge_pop2024_nominatim,1494599
+"Zona Leste, Goiânia, GO, Brasil",GO,Goiânia,segmento_03,4,true,ibge_pop2024_nominatim,1494599
+"Zona Oeste, Goiânia, GO, Brasil",GO,Goiânia,segmento_04,5,true,ibge_pop2024_nominatim,1494599
+"Área Central, Goiânia, GO, Brasil",GO,Goiânia,segmento_05,6,true,ibge_pop2024_nominatim,1494599
+"Área Comercial, Goiânia, GO, Brasil",GO,Goiânia,segmento_06,7,true,ibge_pop2024_nominatim,1494599
+"Área Residencial, Goiânia, GO, Brasil",GO,Goiânia,segmento_07,8,true,ibge_pop2024_nominatim,1494599
+"Centro, Aparecida de Goiânia, GO, Brasil",GO,Aparecida de Goiânia,centro,1,true,ibge_pop2024_nominatim,550925
+"Zona Norte, Aparecida de Goiânia, GO, Brasil",GO,Aparecida de Goiânia,segmento_01,2,true,ibge_pop2024_nominatim,550925
+"Zona Sul, Aparecida de Goiânia, GO, Brasil",GO,Aparecida de Goiânia,segmento_02,3,true,ibge_pop2024_nominatim,550925
+"Zona Leste, Aparecida de Goiânia, GO, Brasil",GO,Aparecida de Goiânia,segmento_03,4,true,ibge_pop2024_nominatim,550925
+"Zona Oeste, Aparecida de Goiânia, GO, Brasil",GO,Aparecida de Goiânia,segmento_04,5,true,ibge_pop2024_nominatim,550925
+"Área Central, Aparecida de Goiânia, GO, Brasil",GO,Aparecida de Goiânia,segmento_05,6,true,ibge_pop2024_nominatim,550925
+"Área Comercial, Aparecida de Goiânia, GO, Brasil",GO,Aparecida de Goiânia,segmento_06,7,true,ibge_pop2024_nominatim,550925
+"Área Residencial, Aparecida de Goiânia, GO, Brasil",GO,Aparecida de Goiânia,segmento_07,8,true,ibge_pop2024_nominatim,550925
+"Centro, Anápolis, GO, Brasil",GO,Anápolis,centro,1,true,ibge_pop2024_nominatim,415847
+"Centro, Águas Lindas de Goiás, GO, Brasil",GO,Águas Lindas de Goiás,centro,1,true,ibge_pop2024_nominatim,240613
+"Centro, Rio Verde, GO, Brasil",GO,Rio Verde,centro,1,true,ibge_pop2024_nominatim,238025
+"Centro, Luziânia, GO, Brasil",GO,Luziânia,centro,1,true,ibge_pop2024_nominatim,218872
+"Centro, Valparaíso de Goiás, GO, Brasil",GO,Valparaíso de Goiás,centro,1,true,ibge_pop2024_nominatim,213506
+"Centro, Senador Canedo, GO, Brasil",GO,Senador Canedo,centro,1,true,ibge_pop2024_nominatim,169849
+"Centro, Trindade, GO, Brasil",GO,Trindade,centro,1,true,ibge_pop2024_nominatim,150858
+"Centro, Catalão, GO, Brasil",GO,Catalão,centro,1,true,ibge_pop2024_nominatim,120789
+"Centro, Formosa, GO, Brasil",GO,Formosa,centro,1,true,ibge_pop2024_nominatim,120478
+"Centro, Itumbiara, GO, Brasil",GO,Itumbiara,centro,1,true,ibge_pop2024_nominatim,112289
+"Centro, Planaltina, GO, Brasil",GO,Planaltina,centro,1,true,ibge_pop2024_nominatim,110619
+"Centro, Jataí, GO, Brasil",GO,Jataí,centro,1,true,ibge_pop2024_nominatim,110404
+"Centro, Novo Gama, GO, Brasil",GO,Novo Gama,centro,1,true,ibge_pop2024_nominatim,107092
+"Centro, Caldas Novas, GO, Brasil",GO,Caldas Novas,centro,1,true,ibge_pop2024_nominatim,104788
+"Centro, São Luís, MA, Brasil",MA,São Luís,centro,1,true,ibge_pop2024_nominatim,1088057
+"Zona Norte, São Luís, MA, Brasil",MA,São Luís,segmento_01,2,true,ibge_pop2024_nominatim,1088057
+"Zona Sul, São Luís, MA, Brasil",MA,São Luís,segmento_02,3,true,ibge_pop2024_nominatim,1088057
+"Zona Leste, São Luís, MA, Brasil",MA,São Luís,segmento_03,4,true,ibge_pop2024_nominatim,1088057
+"Zona Oeste, São Luís, MA, Brasil",MA,São Luís,segmento_04,5,true,ibge_pop2024_nominatim,1088057
+"Área Central, São Luís, MA, Brasil",MA,São Luís,segmento_05,6,true,ibge_pop2024_nominatim,1088057
+"Área Comercial, São Luís, MA, Brasil",MA,São Luís,segmento_06,7,true,ibge_pop2024_nominatim,1088057
+"Área Residencial, São Luís, MA, Brasil",MA,São Luís,segmento_07,8,true,ibge_pop2024_nominatim,1088057
+"Centro, Imperatriz, MA, Brasil",MA,Imperatriz,centro,1,true,ibge_pop2024_nominatim,285146
+"Centro, São José de Ribamar, MA, Brasil",MA,São José de Ribamar,centro,1,true,ibge_pop2024_nominatim,257414
+"Centro, Timon, MA, Brasil",MA,Timon,centro,1,true,ibge_pop2024_nominatim,182241
+"Centro, Caxias, MA, Brasil",MA,Caxias,centro,1,true,ibge_pop2024_nominatim,163428
+"Centro, Paço do Lumiar, MA, Brasil",MA,Paço do Lumiar,centro,1,true,ibge_pop2024_nominatim,152306
+"Centro, Codó, MA, Brasil",MA,Codó,centro,1,true,ibge_pop2024_nominatim,118295
+"Centro, Açailândia, MA, Brasil",MA,Açailândia,centro,1,true,ibge_pop2024_nominatim,110506
+"Centro, Bacabal, MA, Brasil",MA,Bacabal,centro,1,true,ibge_pop2024_nominatim,107620
+"Centro, Balsas, MA, Brasil",MA,Balsas,centro,1,true,ibge_pop2024_nominatim,106094
+"Centro, Cuiabá, MT, Brasil",MT,Cuiabá,centro,1,true,ibge_pop2024_nominatim,682932
+"Zona Norte, Cuiabá, MT, Brasil",MT,Cuiabá,segmento_01,2,true,ibge_pop2024_nominatim,682932
+"Zona Sul, Cuiabá, MT, Brasil",MT,Cuiabá,segmento_02,3,true,ibge_pop2024_nominatim,682932
+"Zona Leste, Cuiabá, MT, Brasil",MT,Cuiabá,segmento_03,4,true,ibge_pop2024_nominatim,682932
+"Zona Oeste, Cuiabá, MT, Brasil",MT,Cuiabá,segmento_04,5,true,ibge_pop2024_nominatim,682932
+"Área Central, Cuiabá, MT, Brasil",MT,Cuiabá,segmento_05,6,true,ibge_pop2024_nominatim,682932
+"Área Comercial, Cuiabá, MT, Brasil",MT,Cuiabá,segmento_06,7,true,ibge_pop2024_nominatim,682932
+"Área Residencial, Cuiabá, MT, Brasil",MT,Cuiabá,segmento_07,8,true,ibge_pop2024_nominatim,682932
+"Centro, Várzea Grande, MT, Brasil",MT,Várzea Grande,centro,1,true,ibge_pop2024_nominatim,314627
+"Centro, Rondonópolis, MT, Brasil",MT,Rondonópolis,centro,1,true,ibge_pop2024_nominatim,259167
+"Centro, Sinop, MT, Brasil",MT,Sinop,centro,1,true,ibge_pop2024_nominatim,216029
+"Centro, Sorriso, MT, Brasil",MT,Sorriso,centro,1,true,ibge_pop2024_nominatim,120561
+"Centro, Tangará da Serra, MT, Brasil",MT,Tangará da Serra,centro,1,true,ibge_pop2024_nominatim,112547
+"Centro, Campo Grande, MS, Brasil",MS,Campo Grande,centro,1,true,ibge_pop2024_nominatim,954537
+"Zona Norte, Campo Grande, MS, Brasil",MS,Campo Grande,segmento_01,2,true,ibge_pop2024_nominatim,954537
+"Zona Sul, Campo Grande, MS, Brasil",MS,Campo Grande,segmento_02,3,true,ibge_pop2024_nominatim,954537
+"Zona Leste, Campo Grande, MS, Brasil",MS,Campo Grande,segmento_03,4,true,ibge_pop2024_nominatim,954537
+"Zona Oeste, Campo Grande, MS, Brasil",MS,Campo Grande,segmento_04,5,true,ibge_pop2024_nominatim,954537
+"Área Central, Campo Grande, MS, Brasil",MS,Campo Grande,segmento_05,6,true,ibge_pop2024_nominatim,954537
+"Área Comercial, Campo Grande, MS, Brasil",MS,Campo Grande,segmento_06,7,true,ibge_pop2024_nominatim,954537
+"Área Residencial, Campo Grande, MS, Brasil",MS,Campo Grande,segmento_07,8,true,ibge_pop2024_nominatim,954537
+"Centro, Dourados, MS, Brasil",MS,Dourados,centro,1,true,ibge_pop2024_nominatim,260640
+"Centro, Três Lagoas, MS, Brasil",MS,Três Lagoas,centro,1,true,ibge_pop2024_nominatim,141435
+"Centro, Belo Horizonte, MG, Brasil",MG,Belo Horizonte,centro,1,true,ibge_pop2024_nominatim,2416339
+"Savassi, Belo Horizonte, MG, Brasil",MG,Belo Horizonte,segmento_02,2,true,ibge_pop2024_nominatim,2416339
+"Pampulha, Belo Horizonte, MG, Brasil",MG,Belo Horizonte,segmento_03,3,true,ibge_pop2024_nominatim,2416339
+"Buritis, Belo Horizonte, MG, Brasil",MG,Belo Horizonte,segmento_04,4,true,ibge_pop2024_nominatim,2416339
+"Venda Nova, Belo Horizonte, MG, Brasil",MG,Belo Horizonte,segmento_05,5,true,ibge_pop2024_nominatim,2416339
+"Lourdes, Belo Horizonte, MG, Brasil",MG,Belo Horizonte,segmento_06,6,true,ibge_pop2024_nominatim,2416339
+"Barreiro, Belo Horizonte, MG, Brasil",MG,Belo Horizonte,segmento_07,7,true,ibge_pop2024_nominatim,2416339
+"Santa Efigênia, Belo Horizonte, MG, Brasil",MG,Belo Horizonte,segmento_08,8,true,ibge_pop2024_nominatim,2416339
+"Cidade Nova, Belo Horizonte, MG, Brasil",MG,Belo Horizonte,segmento_09,9,true,ibge_pop2024_nominatim,2416339
+"Carlos Prates, Belo Horizonte, MG, Brasil",MG,Belo Horizonte,segmento_10,10,true,ibge_pop2024_nominatim,2416339
+"Centro, Uberlândia, MG, Brasil",MG,Uberlândia,centro,1,true,ibge_pop2024_nominatim,754954
+"Zona Norte, Uberlândia, MG, Brasil",MG,Uberlândia,segmento_01,2,true,ibge_pop2024_nominatim,754954
+"Zona Sul, Uberlândia, MG, Brasil",MG,Uberlândia,segmento_02,3,true,ibge_pop2024_nominatim,754954
+"Zona Leste, Uberlândia, MG, Brasil",MG,Uberlândia,segmento_03,4,true,ibge_pop2024_nominatim,754954
+"Zona Oeste, Uberlândia, MG, Brasil",MG,Uberlândia,segmento_04,5,true,ibge_pop2024_nominatim,754954
+"Área Central, Uberlândia, MG, Brasil",MG,Uberlândia,segmento_05,6,true,ibge_pop2024_nominatim,754954
+"Área Comercial, Uberlândia, MG, Brasil",MG,Uberlândia,segmento_06,7,true,ibge_pop2024_nominatim,754954
+"Área Residencial, Uberlândia, MG, Brasil",MG,Uberlândia,segmento_07,8,true,ibge_pop2024_nominatim,754954
+"Centro, Contagem, MG, Brasil",MG,Contagem,centro,1,true,ibge_pop2024_nominatim,649975
+"Zona Norte, Contagem, MG, Brasil",MG,Contagem,segmento_01,2,true,ibge_pop2024_nominatim,649975
+"Zona Sul, Contagem, MG, Brasil",MG,Contagem,segmento_02,3,true,ibge_pop2024_nominatim,649975
+"Zona Leste, Contagem, MG, Brasil",MG,Contagem,segmento_03,4,true,ibge_pop2024_nominatim,649975
+"Zona Oeste, Contagem, MG, Brasil",MG,Contagem,segmento_04,5,true,ibge_pop2024_nominatim,649975
+"Área Central, Contagem, MG, Brasil",MG,Contagem,segmento_05,6,true,ibge_pop2024_nominatim,649975
+"Área Comercial, Contagem, MG, Brasil",MG,Contagem,segmento_06,7,true,ibge_pop2024_nominatim,649975
+"Área Residencial, Contagem, MG, Brasil",MG,Contagem,segmento_07,8,true,ibge_pop2024_nominatim,649975
+"Centro, Juiz de Fora, MG, Brasil",MG,Juiz de Fora,centro,1,true,ibge_pop2024_nominatim,565764
+"Zona Norte, Juiz de Fora, MG, Brasil",MG,Juiz de Fora,segmento_01,2,true,ibge_pop2024_nominatim,565764
+"Zona Sul, Juiz de Fora, MG, Brasil",MG,Juiz de Fora,segmento_02,3,true,ibge_pop2024_nominatim,565764
+"Zona Leste, Juiz de Fora, MG, Brasil",MG,Juiz de Fora,segmento_03,4,true,ibge_pop2024_nominatim,565764
+"Zona Oeste, Juiz de Fora, MG, Brasil",MG,Juiz de Fora,segmento_04,5,true,ibge_pop2024_nominatim,565764
+"Área Central, Juiz de Fora, MG, Brasil",MG,Juiz de Fora,segmento_05,6,true,ibge_pop2024_nominatim,565764
+"Área Comercial, Juiz de Fora, MG, Brasil",MG,Juiz de Fora,segmento_06,7,true,ibge_pop2024_nominatim,565764
+"Área Residencial, Juiz de Fora, MG, Brasil",MG,Juiz de Fora,segmento_07,8,true,ibge_pop2024_nominatim,565764
+"Centro, Montes Claros, MG, Brasil",MG,Montes Claros,centro,1,true,ibge_pop2024_nominatim,434321
+"Centro, Betim, MG, Brasil",MG,Betim,centro,1,true,ibge_pop2024_nominatim,429236
+"Centro, Uberaba, MG, Brasil",MG,Uberaba,centro,1,true,ibge_pop2024_nominatim,354142
+"Centro, Ribeirão das Neves, MG, Brasil",MG,Ribeirão das Neves,centro,1,true,ibge_pop2024_nominatim,344828
+"Centro, Governador Valadares, MG, Brasil",MG,Governador Valadares,centro,1,true,ibge_pop2024_nominatim,266649
+"Centro, Divinópolis, MG, Brasil",MG,Divinópolis,centro,1,true,ibge_pop2024_nominatim,242328
+"Centro, Sete Lagoas, MG, Brasil",MG,Sete Lagoas,centro,1,true,ibge_pop2024_nominatim,237931
+"Centro, Ipatinga, MG, Brasil",MG,Ipatinga,centro,1,true,ibge_pop2024_nominatim,235445
+"Centro, Santa Luzia, MG, Brasil",MG,Santa Luzia,centro,1,true,ibge_pop2024_nominatim,229483
+"Centro, Ibirité, MG, Brasil",MG,Ibirité,centro,1,true,ibge_pop2024_nominatim,178713
+"Centro, Poços de Caldas, MG, Brasil",MG,Poços de Caldas,centro,1,true,ibge_pop2024_nominatim,171533
+"Centro, Patos de Minas, MG, Brasil",MG,Patos de Minas,centro,1,true,ibge_pop2024_nominatim,167870
+"Centro, Pouso Alegre, MG, Brasil",MG,Pouso Alegre,centro,1,true,ibge_pop2024_nominatim,160751
+"Centro, Varginha, MG, Brasil",MG,Varginha,centro,1,true,ibge_pop2024_nominatim,142802
+"Centro, Teófilo Otoni, MG, Brasil",MG,Teófilo Otoni,centro,1,true,ibge_pop2024_nominatim,142571
+"Centro, Conselheiro Lafaiete, MG, Brasil",MG,Conselheiro Lafaiete,centro,1,true,ibge_pop2024_nominatim,137980
+"Centro, Vespasiano, MG, Brasil",MG,Vespasiano,centro,1,true,ibge_pop2024_nominatim,136826
+"Centro, Sabará, MG, Brasil",MG,Sabará,centro,1,true,ibge_pop2024_nominatim,134286
+"Centro, Barbacena, MG, Brasil",MG,Barbacena,centro,1,true,ibge_pop2024_nominatim,129630
+"Centro, Araguari, MG, Brasil",MG,Araguari,centro,1,true,ibge_pop2024_nominatim,122874
+"Centro, Nova Lima, MG, Brasil",MG,Nova Lima,centro,1,true,ibge_pop2024_nominatim,119142
+"Centro, Itabira, MG, Brasil",MG,Itabira,centro,1,true,ibge_pop2024_nominatim,117747
+"Centro, Araxá, MG, Brasil",MG,Araxá,centro,1,true,ibge_pop2024_nominatim,117677
+"Centro, Passos, MG, Brasil",MG,Passos,centro,1,true,ibge_pop2024_nominatim,116530
+"Centro, Nova Serrana, MG, Brasil",MG,Nova Serrana,centro,1,true,ibge_pop2024_nominatim,112910
+"Centro, Lavras, MG, Brasil",MG,Lavras,centro,1,true,ibge_pop2024_nominatim,109884
+"Centro, Coronel Fabriciano, MG, Brasil",MG,Coronel Fabriciano,centro,1,true,ibge_pop2024_nominatim,108551
+"Centro, Muriaé, MG, Brasil",MG,Muriaé,centro,1,true,ibge_pop2024_nominatim,108161
+"Centro, Ubá, MG, Brasil",MG,Ubá,centro,1,true,ibge_pop2024_nominatim,107222
+"Centro, Ituiutaba, MG, Brasil",MG,Ituiutaba,centro,1,true,ibge_pop2024_nominatim,106397
+"Centro, Itaúna, MG, Brasil",MG,Itaúna,centro,1,true,ibge_pop2024_nominatim,102500
+"Centro, Pará de Minas, MG, Brasil",MG,Pará de Minas,centro,1,true,ibge_pop2024_nominatim,102033
+"Centro, Belém, PA, Brasil",PA,Belém,centro,1,true,ibge_pop2024_nominatim,1398531
+"Zona Norte, Belém, PA, Brasil",PA,Belém,segmento_01,2,true,ibge_pop2024_nominatim,1398531
+"Zona Sul, Belém, PA, Brasil",PA,Belém,segmento_02,3,true,ibge_pop2024_nominatim,1398531
+"Zona Leste, Belém, PA, Brasil",PA,Belém,segmento_03,4,true,ibge_pop2024_nominatim,1398531
+"Zona Oeste, Belém, PA, Brasil",PA,Belém,segmento_04,5,true,ibge_pop2024_nominatim,1398531
+"Área Central, Belém, PA, Brasil",PA,Belém,segmento_05,6,true,ibge_pop2024_nominatim,1398531
+"Área Comercial, Belém, PA, Brasil",PA,Belém,segmento_06,7,true,ibge_pop2024_nominatim,1398531
+"Área Residencial, Belém, PA, Brasil",PA,Belém,segmento_07,8,true,ibge_pop2024_nominatim,1398531
+"Centro, Ananindeua, PA, Brasil",PA,Ananindeua,centro,1,true,ibge_pop2024_nominatim,507838
+"Zona Norte, Ananindeua, PA, Brasil",PA,Ananindeua,segmento_01,2,true,ibge_pop2024_nominatim,507838
+"Zona Sul, Ananindeua, PA, Brasil",PA,Ananindeua,segmento_02,3,true,ibge_pop2024_nominatim,507838
+"Zona Leste, Ananindeua, PA, Brasil",PA,Ananindeua,segmento_03,4,true,ibge_pop2024_nominatim,507838
+"Zona Oeste, Ananindeua, PA, Brasil",PA,Ananindeua,segmento_04,5,true,ibge_pop2024_nominatim,507838
+"Área Central, Ananindeua, PA, Brasil",PA,Ananindeua,segmento_05,6,true,ibge_pop2024_nominatim,507838
+"Área Comercial, Ananindeua, PA, Brasil",PA,Ananindeua,segmento_06,7,true,ibge_pop2024_nominatim,507838
+"Área Residencial, Ananindeua, PA, Brasil",PA,Ananindeua,segmento_07,8,true,ibge_pop2024_nominatim,507838
+"Centro, Santarém, PA, Brasil",PA,Santarém,centro,1,true,ibge_pop2024_nominatim,357311
+"Centro, Parauapebas, PA, Brasil",PA,Parauapebas,centro,1,true,ibge_pop2024_nominatim,298854
+"Centro, Marabá, PA, Brasil",PA,Marabá,centro,1,true,ibge_pop2024_nominatim,288513
+"Centro, Castanhal, PA, Brasil",PA,Castanhal,centro,1,true,ibge_pop2024_nominatim,207603
+"Centro, Abaetetuba, PA, Brasil",PA,Abaetetuba,centro,1,true,ibge_pop2024_nominatim,170999
+"Centro, Cametá, PA, Brasil",PA,Cametá,centro,1,true,ibge_pop2024_nominatim,143837
+"Centro, Barcarena, PA, Brasil",PA,Barcarena,centro,1,true,ibge_pop2024_nominatim,137331
+"Centro, Altamira, PA, Brasil",PA,Altamira,centro,1,true,ibge_pop2024_nominatim,136982
+"Centro, Itaituba, PA, Brasil",PA,Itaituba,centro,1,true,ibge_pop2024_nominatim,133684
+"Centro, Bragança, PA, Brasil",PA,Bragança,centro,1,true,ibge_pop2024_nominatim,131679
+"Centro, Marituba, PA, Brasil",PA,Marituba,centro,1,true,ibge_pop2024_nominatim,118998
+"Centro, Breves, PA, Brasil",PA,Breves,centro,1,true,ibge_pop2024_nominatim,115051
+"Centro, Paragominas, PA, Brasil",PA,Paragominas,centro,1,true,ibge_pop2024_nominatim,112843
+"Centro, João Pessoa, PB, Brasil",PB,João Pessoa,centro,1,true,ibge_pop2024_nominatim,888679
+"Zona Norte, João Pessoa, PB, Brasil",PB,João Pessoa,segmento_01,2,true,ibge_pop2024_nominatim,888679
+"Zona Sul, João Pessoa, PB, Brasil",PB,João Pessoa,segmento_02,3,true,ibge_pop2024_nominatim,888679
+"Zona Leste, João Pessoa, PB, Brasil",PB,João Pessoa,segmento_03,4,true,ibge_pop2024_nominatim,888679
+"Zona Oeste, João Pessoa, PB, Brasil",PB,João Pessoa,segmento_04,5,true,ibge_pop2024_nominatim,888679
+"Área Central, João Pessoa, PB, Brasil",PB,João Pessoa,segmento_05,6,true,ibge_pop2024_nominatim,888679
+"Área Comercial, João Pessoa, PB, Brasil",PB,João Pessoa,segmento_06,7,true,ibge_pop2024_nominatim,888679
+"Área Residencial, João Pessoa, PB, Brasil",PB,João Pessoa,segmento_07,8,true,ibge_pop2024_nominatim,888679
+"Centro, Campina Grande, PB, Brasil",PB,Campina Grande,centro,1,true,ibge_pop2024_nominatim,440939
+"Centro, Santa Rita, PB, Brasil",PB,Santa Rita,centro,1,true,ibge_pop2024_nominatim,159121
+"Centro, Patos, PB, Brasil",PB,Patos,centro,1,true,ibge_pop2024_nominatim,107774
+"Centro, Curitiba, PR, Brasil",PR,Curitiba,centro,1,true,ibge_pop2024_nominatim,1829225
+"Batel, Curitiba, PR, Brasil",PR,Curitiba,segmento_02,2,true,ibge_pop2024_nominatim,1829225
+"Água Verde, Curitiba, PR, Brasil",PR,Curitiba,segmento_03,3,true,ibge_pop2024_nominatim,1829225
+"Santa Felicidade, Curitiba, PR, Brasil",PR,Curitiba,segmento_04,4,true,ibge_pop2024_nominatim,1829225
+"Boqueirão, Curitiba, PR, Brasil",PR,Curitiba,segmento_05,5,true,ibge_pop2024_nominatim,1829225
+"Portão, Curitiba, PR, Brasil",PR,Curitiba,segmento_06,6,true,ibge_pop2024_nominatim,1829225
+"Cabral, Curitiba, PR, Brasil",PR,Curitiba,segmento_07,7,true,ibge_pop2024_nominatim,1829225
+"CIC, Curitiba, PR, Brasil",PR,Curitiba,segmento_08,8,true,ibge_pop2024_nominatim,1829225
+"Pinheirinho, Curitiba, PR, Brasil",PR,Curitiba,segmento_09,9,true,ibge_pop2024_nominatim,1829225
+"Bigorrilho, Curitiba, PR, Brasil",PR,Curitiba,segmento_10,10,true,ibge_pop2024_nominatim,1829225
+"Centro, Londrina, PR, Brasil",PR,Londrina,centro,1,true,ibge_pop2024_nominatim,577318
+"Zona Norte, Londrina, PR, Brasil",PR,Londrina,segmento_01,2,true,ibge_pop2024_nominatim,577318
+"Zona Sul, Londrina, PR, Brasil",PR,Londrina,segmento_02,3,true,ibge_pop2024_nominatim,577318
+"Zona Leste, Londrina, PR, Brasil",PR,Londrina,segmento_03,4,true,ibge_pop2024_nominatim,577318
+"Zona Oeste, Londrina, PR, Brasil",PR,Londrina,segmento_04,5,true,ibge_pop2024_nominatim,577318
+"Área Central, Londrina, PR, Brasil",PR,Londrina,segmento_05,6,true,ibge_pop2024_nominatim,577318
+"Área Comercial, Londrina, PR, Brasil",PR,Londrina,segmento_06,7,true,ibge_pop2024_nominatim,577318
+"Área Residencial, Londrina, PR, Brasil",PR,Londrina,segmento_07,8,true,ibge_pop2024_nominatim,577318
+"Centro, Maringá, PR, Brasil",PR,Maringá,centro,1,true,ibge_pop2024_nominatim,425983
+"Centro, Ponta Grossa, PR, Brasil",PR,Ponta Grossa,centro,1,true,ibge_pop2024_nominatim,372562
+"Centro, Cascavel, PR, Brasil",PR,Cascavel,centro,1,true,ibge_pop2024_nominatim,364104
+"Centro, São José dos Pinhais, PR, Brasil",PR,São José dos Pinhais,centro,1,true,ibge_pop2024_nominatim,345644
+"Centro, Foz do Iguaçu, PR, Brasil",PR,Foz do Iguaçu,centro,1,true,ibge_pop2024_nominatim,295500
+"Centro, Colombo, PR, Brasil",PR,Colombo,centro,1,true,ibge_pop2024_nominatim,240720
+"Centro, Guarapuava, PR, Brasil",PR,Guarapuava,centro,1,true,ibge_pop2024_nominatim,188710
+"Centro, Fazenda Rio Grande, PR, Brasil",PR,Fazenda Rio Grande,centro,1,true,ibge_pop2024_nominatim,161506
+"Centro, Araucária, PR, Brasil",PR,Araucária,centro,1,true,ibge_pop2024_nominatim,160038
+"Centro, Toledo, PR, Brasil",PR,Toledo,centro,1,true,ibge_pop2024_nominatim,158620
+"Centro, Paranaguá, PR, Brasil",PR,Paranaguá,centro,1,true,ibge_pop2024_nominatim,149819
+"Centro, Campo Largo, PR, Brasil",PR,Campo Largo,centro,1,true,ibge_pop2024_nominatim,142695
+"Centro, Apucarana, PR, Brasil",PR,Apucarana,centro,1,true,ibge_pop2024_nominatim,134306
+"Centro, Pinhais, PR, Brasil",PR,Pinhais,centro,1,true,ibge_pop2024_nominatim,131199
+"Centro, Sarandi, PR, Brasil",PR,Sarandi,centro,1,true,ibge_pop2024_nominatim,125785
+"Centro, Piraquara, PR, Brasil",PR,Piraquara,centro,1,true,ibge_pop2024_nominatim,124934
+"Centro, Almirante Tamandaré, PR, Brasil",PR,Almirante Tamandaré,centro,1,true,ibge_pop2024_nominatim,124788
+"Centro, Arapongas, PR, Brasil",PR,Arapongas,centro,1,true,ibge_pop2024_nominatim,123863
+"Centro, Umuarama, PR, Brasil",PR,Umuarama,centro,1,true,ibge_pop2024_nominatim,121972
+"Centro, Cambé, PR, Brasil",PR,Cambé,centro,1,true,ibge_pop2024_nominatim,111009
+"Centro, Campo Mourão, PR, Brasil",PR,Campo Mourão,centro,1,true,ibge_pop2024_nominatim,103340
+"Centro, Francisco Beltrão, PR, Brasil",PR,Francisco Beltrão,centro,1,true,ibge_pop2024_nominatim,101302
+"Centro, Recife, PE, Brasil",PE,Recife,centro,1,true,ibge_pop2024_nominatim,1587707
+"Boa Viagem, Recife, PE, Brasil",PE,Recife,segmento_02,2,true,ibge_pop2024_nominatim,1587707
+"Casa Forte, Recife, PE, Brasil",PE,Recife,segmento_03,3,true,ibge_pop2024_nominatim,1587707
+"Espinheiro, Recife, PE, Brasil",PE,Recife,segmento_04,4,true,ibge_pop2024_nominatim,1587707
+"Madalena, Recife, PE, Brasil",PE,Recife,segmento_05,5,true,ibge_pop2024_nominatim,1587707
+"Afogados, Recife, PE, Brasil",PE,Recife,segmento_06,6,true,ibge_pop2024_nominatim,1587707
+"Imbiribeira, Recife, PE, Brasil",PE,Recife,segmento_07,7,true,ibge_pop2024_nominatim,1587707
+"Pina, Recife, PE, Brasil",PE,Recife,segmento_08,8,true,ibge_pop2024_nominatim,1587707
+"Santo Amaro, Recife, PE, Brasil",PE,Recife,segmento_09,9,true,ibge_pop2024_nominatim,1587707
+"Boa Vista, Recife, PE, Brasil",PE,Recife,segmento_10,10,true,ibge_pop2024_nominatim,1587707
+"Centro, Jaboatão dos Guararapes, PE, Brasil",PE,Jaboatão dos Guararapes,centro,1,true,ibge_pop2024_nominatim,683285
+"Zona Norte, Jaboatão dos Guararapes, PE, Brasil",PE,Jaboatão dos Guararapes,segmento_01,2,true,ibge_pop2024_nominatim,683285
+"Zona Sul, Jaboatão dos Guararapes, PE, Brasil",PE,Jaboatão dos Guararapes,segmento_02,3,true,ibge_pop2024_nominatim,683285
+"Zona Leste, Jaboatão dos Guararapes, PE, Brasil",PE,Jaboatão dos Guararapes,segmento_03,4,true,ibge_pop2024_nominatim,683285
+"Zona Oeste, Jaboatão dos Guararapes, PE, Brasil",PE,Jaboatão dos Guararapes,segmento_04,5,true,ibge_pop2024_nominatim,683285
+"Área Central, Jaboatão dos Guararapes, PE, Brasil",PE,Jaboatão dos Guararapes,segmento_05,6,true,ibge_pop2024_nominatim,683285
+"Área Comercial, Jaboatão dos Guararapes, PE, Brasil",PE,Jaboatão dos Guararapes,segmento_06,7,true,ibge_pop2024_nominatim,683285
+"Área Residencial, Jaboatão dos Guararapes, PE, Brasil",PE,Jaboatão dos Guararapes,segmento_07,8,true,ibge_pop2024_nominatim,683285
+"Centro, Petrolina, PE, Brasil",PE,Petrolina,centro,1,true,ibge_pop2024_nominatim,414083
+"Centro, Caruaru, PE, Brasil",PE,Caruaru,centro,1,true,ibge_pop2024_nominatim,402290
+"Centro, Olinda, PE, Brasil",PE,Olinda,centro,1,true,ibge_pop2024_nominatim,365402
+"Centro, Paulista, PE, Brasil",PE,Paulista,centro,1,true,ibge_pop2024_nominatim,362960
+"Centro, Cabo de Santo Agostinho, PE, Brasil",PE,Cabo de Santo Agostinho,centro,1,true,ibge_pop2024_nominatim,216969
+"Centro, Camaragibe, PE, Brasil",PE,Camaragibe,centro,1,true,ibge_pop2024_nominatim,155771
+"Centro, Garanhuns, PE, Brasil",PE,Garanhuns,centro,1,true,ibge_pop2024_nominatim,151064
+"Centro, Vitória de Santo Antão, PE, Brasil",PE,Vitória de Santo Antão,centro,1,true,ibge_pop2024_nominatim,143799
+"Centro, Igarassu, PE, Brasil",PE,Igarassu,centro,1,true,ibge_pop2024_nominatim,122312
+"Centro, São Lourenço da Mata, PE, Brasil",PE,São Lourenço da Mata,centro,1,true,ibge_pop2024_nominatim,117759
+"Centro, Ipojuca, PE, Brasil",PE,Ipojuca,centro,1,true,ibge_pop2024_nominatim,105638
+"Centro, Santa Cruz do Capibaribe, PE, Brasil",PE,Santa Cruz do Capibaribe,centro,1,true,ibge_pop2024_nominatim,104277
+"Centro, Abreu e Lima, PE, Brasil",PE,Abreu e Lima,centro,1,true,ibge_pop2024_nominatim,103945
+"Centro, Teresina, PI, Brasil",PI,Teresina,centro,1,true,ibge_pop2024_nominatim,902644
+"Zona Norte, Teresina, PI, Brasil",PI,Teresina,segmento_01,2,true,ibge_pop2024_nominatim,902644
+"Zona Sul, Teresina, PI, Brasil",PI,Teresina,segmento_02,3,true,ibge_pop2024_nominatim,902644
+"Zona Leste, Teresina, PI, Brasil",PI,Teresina,segmento_03,4,true,ibge_pop2024_nominatim,902644
+"Zona Oeste, Teresina, PI, Brasil",PI,Teresina,segmento_04,5,true,ibge_pop2024_nominatim,902644
+"Área Central, Teresina, PI, Brasil",PI,Teresina,segmento_05,6,true,ibge_pop2024_nominatim,902644
+"Área Comercial, Teresina, PI, Brasil",PI,Teresina,segmento_06,7,true,ibge_pop2024_nominatim,902644
+"Área Residencial, Teresina, PI, Brasil",PI,Teresina,segmento_07,8,true,ibge_pop2024_nominatim,902644
+"Centro, Parnaíba, PI, Brasil",PI,Parnaíba,centro,1,true,ibge_pop2024_nominatim,169552
+"Centro, Rio de Janeiro, RJ, Brasil",RJ,Rio de Janeiro,centro,1,true,ibge_pop2024_nominatim,6729894
+"Copacabana, Rio de Janeiro, RJ, Brasil",RJ,Rio de Janeiro,segmento_02,2,true,ibge_pop2024_nominatim,6729894
+"Barra da Tijuca, Rio de Janeiro, RJ, Brasil",RJ,Rio de Janeiro,segmento_03,3,true,ibge_pop2024_nominatim,6729894
+"Tijuca, Rio de Janeiro, RJ, Brasil",RJ,Rio de Janeiro,segmento_04,4,true,ibge_pop2024_nominatim,6729894
+"Botafogo, Rio de Janeiro, RJ, Brasil",RJ,Rio de Janeiro,segmento_05,5,true,ibge_pop2024_nominatim,6729894
+"Méier, Rio de Janeiro, RJ, Brasil",RJ,Rio de Janeiro,segmento_06,6,true,ibge_pop2024_nominatim,6729894
+"Campo Grande, Rio de Janeiro, RJ, Brasil",RJ,Rio de Janeiro,segmento_07,7,true,ibge_pop2024_nominatim,6729894
+"Jacarepaguá, Rio de Janeiro, RJ, Brasil",RJ,Rio de Janeiro,segmento_08,8,true,ibge_pop2024_nominatim,6729894
+"Madureira, Rio de Janeiro, RJ, Brasil",RJ,Rio de Janeiro,segmento_09,9,true,ibge_pop2024_nominatim,6729894
+"Recreio dos Bandeirantes, Rio de Janeiro, RJ, Brasil",RJ,Rio de Janeiro,segmento_10,10,true,ibge_pop2024_nominatim,6729894
+"Ipanema, Rio de Janeiro, RJ, Brasil",RJ,Rio de Janeiro,segmento_11,11,true,ibge_pop2024_nominatim,6729894
+"Bangu, Rio de Janeiro, RJ, Brasil",RJ,Rio de Janeiro,segmento_12,12,true,ibge_pop2024_nominatim,6729894
+"Centro, São Gonçalo, RJ, Brasil",RJ,São Gonçalo,centro,1,true,ibge_pop2024_nominatim,960652
+"Zona Norte, São Gonçalo, RJ, Brasil",RJ,São Gonçalo,segmento_01,2,true,ibge_pop2024_nominatim,960652
+"Zona Sul, São Gonçalo, RJ, Brasil",RJ,São Gonçalo,segmento_02,3,true,ibge_pop2024_nominatim,960652
+"Zona Leste, São Gonçalo, RJ, Brasil",RJ,São Gonçalo,segmento_03,4,true,ibge_pop2024_nominatim,960652
+"Zona Oeste, São Gonçalo, RJ, Brasil",RJ,São Gonçalo,segmento_04,5,true,ibge_pop2024_nominatim,960652
+"Área Central, São Gonçalo, RJ, Brasil",RJ,São Gonçalo,segmento_05,6,true,ibge_pop2024_nominatim,960652
+"Área Comercial, São Gonçalo, RJ, Brasil",RJ,São Gonçalo,segmento_06,7,true,ibge_pop2024_nominatim,960652
+"Área Residencial, São Gonçalo, RJ, Brasil",RJ,São Gonçalo,segmento_07,8,true,ibge_pop2024_nominatim,960652
+"Centro, Duque de Caxias, RJ, Brasil",RJ,Duque de Caxias,centro,1,true,ibge_pop2024_nominatim,866347
+"Zona Norte, Duque de Caxias, RJ, Brasil",RJ,Duque de Caxias,segmento_01,2,true,ibge_pop2024_nominatim,866347
+"Zona Sul, Duque de Caxias, RJ, Brasil",RJ,Duque de Caxias,segmento_02,3,true,ibge_pop2024_nominatim,866347
+"Zona Leste, Duque de Caxias, RJ, Brasil",RJ,Duque de Caxias,segmento_03,4,true,ibge_pop2024_nominatim,866347
+"Zona Oeste, Duque de Caxias, RJ, Brasil",RJ,Duque de Caxias,segmento_04,5,true,ibge_pop2024_nominatim,866347
+"Área Central, Duque de Caxias, RJ, Brasil",RJ,Duque de Caxias,segmento_05,6,true,ibge_pop2024_nominatim,866347
+"Área Comercial, Duque de Caxias, RJ, Brasil",RJ,Duque de Caxias,segmento_06,7,true,ibge_pop2024_nominatim,866347
+"Área Residencial, Duque de Caxias, RJ, Brasil",RJ,Duque de Caxias,segmento_07,8,true,ibge_pop2024_nominatim,866347
+"Centro, Nova Iguaçu, RJ, Brasil",RJ,Nova Iguaçu,centro,1,true,ibge_pop2024_nominatim,843046
+"Zona Norte, Nova Iguaçu, RJ, Brasil",RJ,Nova Iguaçu,segmento_01,2,true,ibge_pop2024_nominatim,843046
+"Zona Sul, Nova Iguaçu, RJ, Brasil",RJ,Nova Iguaçu,segmento_02,3,true,ibge_pop2024_nominatim,843046
+"Zona Leste, Nova Iguaçu, RJ, Brasil",RJ,Nova Iguaçu,segmento_03,4,true,ibge_pop2024_nominatim,843046
+"Zona Oeste, Nova Iguaçu, RJ, Brasil",RJ,Nova Iguaçu,segmento_04,5,true,ibge_pop2024_nominatim,843046
+"Área Central, Nova Iguaçu, RJ, Brasil",RJ,Nova Iguaçu,segmento_05,6,true,ibge_pop2024_nominatim,843046
+"Área Comercial, Nova Iguaçu, RJ, Brasil",RJ,Nova Iguaçu,segmento_06,7,true,ibge_pop2024_nominatim,843046
+"Área Residencial, Nova Iguaçu, RJ, Brasil",RJ,Nova Iguaçu,segmento_07,8,true,ibge_pop2024_nominatim,843046
+"Centro, Campos dos Goytacazes, RJ, Brasil",RJ,Campos dos Goytacazes,centro,1,true,ibge_pop2024_nominatim,519011
+"Zona Norte, Campos dos Goytacazes, RJ, Brasil",RJ,Campos dos Goytacazes,segmento_01,2,true,ibge_pop2024_nominatim,519011
+"Zona Sul, Campos dos Goytacazes, RJ, Brasil",RJ,Campos dos Goytacazes,segmento_02,3,true,ibge_pop2024_nominatim,519011
+"Zona Leste, Campos dos Goytacazes, RJ, Brasil",RJ,Campos dos Goytacazes,segmento_03,4,true,ibge_pop2024_nominatim,519011
+"Zona Oeste, Campos dos Goytacazes, RJ, Brasil",RJ,Campos dos Goytacazes,segmento_04,5,true,ibge_pop2024_nominatim,519011
+"Área Central, Campos dos Goytacazes, RJ, Brasil",RJ,Campos dos Goytacazes,segmento_05,6,true,ibge_pop2024_nominatim,519011
+"Área Comercial, Campos dos Goytacazes, RJ, Brasil",RJ,Campos dos Goytacazes,segmento_06,7,true,ibge_pop2024_nominatim,519011
+"Área Residencial, Campos dos Goytacazes, RJ, Brasil",RJ,Campos dos Goytacazes,segmento_07,8,true,ibge_pop2024_nominatim,519011
+"Centro, Belford Roxo, RJ, Brasil",RJ,Belford Roxo,centro,1,true,ibge_pop2024_nominatim,518263
+"Zona Norte, Belford Roxo, RJ, Brasil",RJ,Belford Roxo,segmento_01,2,true,ibge_pop2024_nominatim,518263
+"Zona Sul, Belford Roxo, RJ, Brasil",RJ,Belford Roxo,segmento_02,3,true,ibge_pop2024_nominatim,518263
+"Zona Leste, Belford Roxo, RJ, Brasil",RJ,Belford Roxo,segmento_03,4,true,ibge_pop2024_nominatim,518263
+"Zona Oeste, Belford Roxo, RJ, Brasil",RJ,Belford Roxo,segmento_04,5,true,ibge_pop2024_nominatim,518263
+"Área Central, Belford Roxo, RJ, Brasil",RJ,Belford Roxo,segmento_05,6,true,ibge_pop2024_nominatim,518263
+"Área Comercial, Belford Roxo, RJ, Brasil",RJ,Belford Roxo,segmento_06,7,true,ibge_pop2024_nominatim,518263
+"Área Residencial, Belford Roxo, RJ, Brasil",RJ,Belford Roxo,segmento_07,8,true,ibge_pop2024_nominatim,518263
+"Centro, Niterói, RJ, Brasil",RJ,Niterói,centro,1,true,ibge_pop2024_nominatim,516720
+"Zona Norte, Niterói, RJ, Brasil",RJ,Niterói,segmento_01,2,true,ibge_pop2024_nominatim,516720
+"Zona Sul, Niterói, RJ, Brasil",RJ,Niterói,segmento_02,3,true,ibge_pop2024_nominatim,516720
+"Zona Leste, Niterói, RJ, Brasil",RJ,Niterói,segmento_03,4,true,ibge_pop2024_nominatim,516720
+"Zona Oeste, Niterói, RJ, Brasil",RJ,Niterói,segmento_04,5,true,ibge_pop2024_nominatim,516720
+"Área Central, Niterói, RJ, Brasil",RJ,Niterói,segmento_05,6,true,ibge_pop2024_nominatim,516720
+"Área Comercial, Niterói, RJ, Brasil",RJ,Niterói,segmento_06,7,true,ibge_pop2024_nominatim,516720
+"Área Residencial, Niterói, RJ, Brasil",RJ,Niterói,segmento_07,8,true,ibge_pop2024_nominatim,516720
+"Centro, São João de Meriti, RJ, Brasil",RJ,São João de Meriti,centro,1,true,ibge_pop2024_nominatim,466536
+"Centro, Petrópolis, RJ, Brasil",RJ,Petrópolis,centro,1,true,ibge_pop2024_nominatim,294983
+"Centro, Volta Redonda, RJ, Brasil",RJ,Volta Redonda,centro,1,true,ibge_pop2024_nominatim,279898
+"Centro, Macaé, RJ, Brasil",RJ,Macaé,centro,1,true,ibge_pop2024_nominatim,264138
+"Centro, Magé, RJ, Brasil",RJ,Magé,centro,1,true,ibge_pop2024_nominatim,244092
+"Centro, Itaboraí, RJ, Brasil",RJ,Itaboraí,centro,1,true,ibge_pop2024_nominatim,240040
+"Centro, Cabo Frio, RJ, Brasil",RJ,Cabo Frio,centro,1,true,ibge_pop2024_nominatim,238166
+"Centro, Maricá, RJ, Brasil",RJ,Maricá,centro,1,true,ibge_pop2024_nominatim,211986
+"Centro, Nova Friburgo, RJ, Brasil",RJ,Nova Friburgo,centro,1,true,ibge_pop2024_nominatim,203328
+"Centro, Barra Mansa, RJ, Brasil",RJ,Barra Mansa,centro,1,true,ibge_pop2024_nominatim,181688
+"Centro, Angra dos Reis, RJ, Brasil",RJ,Angra dos Reis,centro,1,true,ibge_pop2024_nominatim,179120
+"Centro, Mesquita, RJ, Brasil",RJ,Mesquita,centro,1,true,ibge_pop2024_nominatim,178803
+"Centro, Teresópolis, RJ, Brasil",RJ,Teresópolis,centro,1,true,ibge_pop2024_nominatim,176692
+"Centro, Rio das Ostras, RJ, Brasil",RJ,Rio das Ostras,centro,1,true,ibge_pop2024_nominatim,168099
+"Centro, Nilópolis, RJ, Brasil",RJ,Nilópolis,centro,1,true,ibge_pop2024_nominatim,155544
+"Centro, Queimados, RJ, Brasil",RJ,Queimados,centro,1,true,ibge_pop2024_nominatim,149093
+"Centro, Araruama, RJ, Brasil",RJ,Araruama,centro,1,true,ibge_pop2024_nominatim,137773
+"Centro, Resende, RJ, Brasil",RJ,Resende,centro,1,true,ibge_pop2024_nominatim,137612
+"Centro, Itaguaí, RJ, Brasil",RJ,Itaguaí,centro,1,true,ibge_pop2024_nominatim,123980
+"Centro, São Pedro da Aldeia, RJ, Brasil",RJ,São Pedro da Aldeia,centro,1,true,ibge_pop2024_nominatim,110556
+"Centro, Itaperuna, RJ, Brasil",RJ,Itaperuna,centro,1,true,ibge_pop2024_nominatim,107246
+"Centro, Japeri, RJ, Brasil",RJ,Japeri,centro,1,true,ibge_pop2024_nominatim,102149
+"Centro, Natal, RN, Brasil",RN,Natal,centro,1,true,ibge_pop2024_nominatim,785368
+"Zona Norte, Natal, RN, Brasil",RN,Natal,segmento_01,2,true,ibge_pop2024_nominatim,785368
+"Zona Sul, Natal, RN, Brasil",RN,Natal,segmento_02,3,true,ibge_pop2024_nominatim,785368
+"Zona Leste, Natal, RN, Brasil",RN,Natal,segmento_03,4,true,ibge_pop2024_nominatim,785368
+"Zona Oeste, Natal, RN, Brasil",RN,Natal,segmento_04,5,true,ibge_pop2024_nominatim,785368
+"Área Central, Natal, RN, Brasil",RN,Natal,segmento_05,6,true,ibge_pop2024_nominatim,785368
+"Área Comercial, Natal, RN, Brasil",RN,Natal,segmento_06,7,true,ibge_pop2024_nominatim,785368
+"Área Residencial, Natal, RN, Brasil",RN,Natal,segmento_07,8,true,ibge_pop2024_nominatim,785368
+"Centro, Mossoró, RN, Brasil",RN,Mossoró,centro,1,true,ibge_pop2024_nominatim,278034
+"Centro, Parnamirim, RN, Brasil",RN,Parnamirim,centro,1,true,ibge_pop2024_nominatim,269298
+"Centro, São Gonçalo do Amarante, RN, Brasil",RN,São Gonçalo do Amarante,centro,1,true,ibge_pop2024_nominatim,123207
+"Centro, Porto Alegre, RS, Brasil",RS,Porto Alegre,centro,1,true,ibge_pop2024_nominatim,1389322
+"Moinhos de Vento, Porto Alegre, RS, Brasil",RS,Porto Alegre,segmento_02,2,true,ibge_pop2024_nominatim,1389322
+"Menino Deus, Porto Alegre, RS, Brasil",RS,Porto Alegre,segmento_03,3,true,ibge_pop2024_nominatim,1389322
+"Petrópolis, Porto Alegre, RS, Brasil",RS,Porto Alegre,segmento_04,4,true,ibge_pop2024_nominatim,1389322
+"Partenon, Porto Alegre, RS, Brasil",RS,Porto Alegre,segmento_05,5,true,ibge_pop2024_nominatim,1389322
+"Sarandi, Porto Alegre, RS, Brasil",RS,Porto Alegre,segmento_06,6,true,ibge_pop2024_nominatim,1389322
+"Zona Sul, Porto Alegre, RS, Brasil",RS,Porto Alegre,segmento_07,7,true,ibge_pop2024_nominatim,1389322
+"Azenha, Porto Alegre, RS, Brasil",RS,Porto Alegre,segmento_08,8,true,ibge_pop2024_nominatim,1389322
+"Passo D'Areia, Porto Alegre, RS, Brasil",RS,Porto Alegre,segmento_09,9,true,ibge_pop2024_nominatim,1389322
+"Tristeza, Porto Alegre, RS, Brasil",RS,Porto Alegre,segmento_10,10,true,ibge_pop2024_nominatim,1389322
+"Centro, Caxias do Sul, RS, Brasil",RS,Caxias do Sul,centro,1,true,ibge_pop2024_nominatim,479256
+"Centro, Canoas, RS, Brasil",RS,Canoas,centro,1,true,ibge_pop2024_nominatim,359554
+"Centro, Pelotas, RS, Brasil",RS,Pelotas,centro,1,true,ibge_pop2024_nominatim,336131
+"Centro, Santa Maria, RS, Brasil",RS,Santa Maria,centro,1,true,ibge_pop2024_nominatim,282244
+"Centro, Gravataí, RS, Brasil",RS,Gravataí,centro,1,true,ibge_pop2024_nominatim,275294
+"Centro, Novo Hamburgo, RS, Brasil",RS,Novo Hamburgo,centro,1,true,ibge_pop2024_nominatim,235879
+"Centro, Viamão, RS, Brasil",RS,Viamão,centro,1,true,ibge_pop2024_nominatim,232113
+"Centro, São Leopoldo, RS, Brasil",RS,São Leopoldo,centro,1,true,ibge_pop2024_nominatim,225669
+"Centro, Passo Fundo, RS, Brasil",RS,Passo Fundo,centro,1,true,ibge_pop2024_nominatim,214564
+"Centro, Rio Grande, RS, Brasil",RS,Rio Grande,centro,1,true,ibge_pop2024_nominatim,198958
+"Centro, Alvorada, RS, Brasil",RS,Alvorada,centro,1,true,ibge_pop2024_nominatim,194116
+"Centro, Cachoeirinha, RS, Brasil",RS,Cachoeirinha,centro,1,true,ibge_pop2024_nominatim,141303
+"Centro, Santa Cruz do Sul, RS, Brasil",RS,Santa Cruz do Sul,centro,1,true,ibge_pop2024_nominatim,138104
+"Centro, Sapucaia do Sul, RS, Brasil",RS,Sapucaia do Sul,centro,1,true,ibge_pop2024_nominatim,136542
+"Centro, Bento Gonçalves, RS, Brasil",RS,Bento Gonçalves,centro,1,true,ibge_pop2024_nominatim,127775
+"Centro, Bagé, RS, Brasil",RS,Bagé,centro,1,true,ibge_pop2024_nominatim,121900
+"Centro, Uruguaiana, RS, Brasil",RS,Uruguaiana,centro,1,true,ibge_pop2024_nominatim,120885
+"Centro, Erechim, RS, Brasil",RS,Erechim,centro,1,true,ibge_pop2024_nominatim,109497
+"Centro, Porto Velho, RO, Brasil",RO,Porto Velho,centro,1,true,ibge_pop2024_nominatim,514873
+"Zona Norte, Porto Velho, RO, Brasil",RO,Porto Velho,segmento_01,2,true,ibge_pop2024_nominatim,514873
+"Zona Sul, Porto Velho, RO, Brasil",RO,Porto Velho,segmento_02,3,true,ibge_pop2024_nominatim,514873
+"Zona Leste, Porto Velho, RO, Brasil",RO,Porto Velho,segmento_03,4,true,ibge_pop2024_nominatim,514873
+"Zona Oeste, Porto Velho, RO, Brasil",RO,Porto Velho,segmento_04,5,true,ibge_pop2024_nominatim,514873
+"Área Central, Porto Velho, RO, Brasil",RO,Porto Velho,segmento_05,6,true,ibge_pop2024_nominatim,514873
+"Área Comercial, Porto Velho, RO, Brasil",RO,Porto Velho,segmento_06,7,true,ibge_pop2024_nominatim,514873
+"Área Residencial, Porto Velho, RO, Brasil",RO,Porto Velho,segmento_07,8,true,ibge_pop2024_nominatim,514873
+"Centro, Ji-Paraná, RO, Brasil",RO,Ji-Paraná,centro,1,true,ibge_pop2024_nominatim,139359
+"Centro, Ariquemes, RO, Brasil",RO,Ariquemes,centro,1,true,ibge_pop2024_nominatim,108573
+"Centro, Vilhena, RO, Brasil",RO,Vilhena,centro,1,true,ibge_pop2024_nominatim,108528
+"Centro, Boa Vista, RR, Brasil",RR,Boa Vista,centro,1,true,ibge_pop2024_nominatim,470169
+"Centro, Joinville, SC, Brasil",SC,Joinville,centro,1,true,ibge_pop2024_nominatim,654888
+"Zona Norte, Joinville, SC, Brasil",SC,Joinville,segmento_01,2,true,ibge_pop2024_nominatim,654888
+"Zona Sul, Joinville, SC, Brasil",SC,Joinville,segmento_02,3,true,ibge_pop2024_nominatim,654888
+"Zona Leste, Joinville, SC, Brasil",SC,Joinville,segmento_03,4,true,ibge_pop2024_nominatim,654888
+"Zona Oeste, Joinville, SC, Brasil",SC,Joinville,segmento_04,5,true,ibge_pop2024_nominatim,654888
+"Área Central, Joinville, SC, Brasil",SC,Joinville,segmento_05,6,true,ibge_pop2024_nominatim,654888
+"Área Comercial, Joinville, SC, Brasil",SC,Joinville,segmento_06,7,true,ibge_pop2024_nominatim,654888
+"Área Residencial, Joinville, SC, Brasil",SC,Joinville,segmento_07,8,true,ibge_pop2024_nominatim,654888
+"Centro, Florianópolis, SC, Brasil",SC,Florianópolis,centro,1,true,ibge_pop2024_nominatim,576361
+"Zona Norte, Florianópolis, SC, Brasil",SC,Florianópolis,segmento_01,2,true,ibge_pop2024_nominatim,576361
+"Zona Sul, Florianópolis, SC, Brasil",SC,Florianópolis,segmento_02,3,true,ibge_pop2024_nominatim,576361
+"Zona Leste, Florianópolis, SC, Brasil",SC,Florianópolis,segmento_03,4,true,ibge_pop2024_nominatim,576361
+"Zona Oeste, Florianópolis, SC, Brasil",SC,Florianópolis,segmento_04,5,true,ibge_pop2024_nominatim,576361
+"Área Central, Florianópolis, SC, Brasil",SC,Florianópolis,segmento_05,6,true,ibge_pop2024_nominatim,576361
+"Área Comercial, Florianópolis, SC, Brasil",SC,Florianópolis,segmento_06,7,true,ibge_pop2024_nominatim,576361
+"Área Residencial, Florianópolis, SC, Brasil",SC,Florianópolis,segmento_07,8,true,ibge_pop2024_nominatim,576361
+"Centro, Blumenau, SC, Brasil",SC,Blumenau,centro,1,true,ibge_pop2024_nominatim,380597
+"Centro, São José, SC, Brasil",SC,São José,centro,1,true,ibge_pop2024_nominatim,289949
+"Centro, Itajaí, SC, Brasil",SC,Itajaí,centro,1,true,ibge_pop2024_nominatim,287289
+"Centro, Chapecó, SC, Brasil",SC,Chapecó,centro,1,true,ibge_pop2024_nominatim,275959
+"Centro, Palhoça, SC, Brasil",SC,Palhoça,centro,1,true,ibge_pop2024_nominatim,245477
+"Centro, Criciúma, SC, Brasil",SC,Criciúma,centro,1,true,ibge_pop2024_nominatim,225281
+"Centro, Jaraguá do Sul, SC, Brasil",SC,Jaraguá do Sul,centro,1,true,ibge_pop2024_nominatim,195753
+"Centro, Lages, SC, Brasil",SC,Lages,centro,1,true,ibge_pop2024_nominatim,171609
+"Centro, Brusque, SC, Brasil",SC,Brusque,centro,1,true,ibge_pop2024_nominatim,151949
+"Centro, Balneário Camboriú, SC, Brasil",SC,Balneário Camboriú,centro,1,true,ibge_pop2024_nominatim,148758
+"Centro, Tubarão, SC, Brasil",SC,Tubarão,centro,1,true,ibge_pop2024_nominatim,115495
+"Centro, Camboriú, SC, Brasil",SC,Camboriú,centro,1,true,ibge_pop2024_nominatim,113525
+"Centro, São Paulo, SP, Brasil",SP,São Paulo,centro,1,true,ibge_pop2024_nominatim,11895578
+"Sé, São Paulo, SP, Brasil",SP,São Paulo,segmento_01,2,true,ibge_pop2024_nominatim,11895578
+"Paulista, São Paulo, SP, Brasil",SP,São Paulo,segmento_02,3,true,ibge_pop2024_nominatim,11895578
+"Pinheiros, São Paulo, SP, Brasil",SP,São Paulo,segmento_03,4,true,ibge_pop2024_nominatim,11895578
+"Vila Mariana, São Paulo, SP, Brasil",SP,São Paulo,segmento_04,5,true,ibge_pop2024_nominatim,11895578
+"Moema, São Paulo, SP, Brasil",SP,São Paulo,segmento_05,6,true,ibge_pop2024_nominatim,11895578
+"Santana, São Paulo, SP, Brasil",SP,São Paulo,segmento_06,7,true,ibge_pop2024_nominatim,11895578
+"Tatuapé, São Paulo, SP, Brasil",SP,São Paulo,segmento_07,8,true,ibge_pop2024_nominatim,11895578
+"Itaquera, São Paulo, SP, Brasil",SP,São Paulo,segmento_08,9,true,ibge_pop2024_nominatim,11895578
+"Lapa, São Paulo, SP, Brasil",SP,São Paulo,segmento_09,10,true,ibge_pop2024_nominatim,11895578
+"Santo Amaro, São Paulo, SP, Brasil",SP,São Paulo,segmento_10,11,true,ibge_pop2024_nominatim,11895578
+"Campo Limpo, São Paulo, SP, Brasil",SP,São Paulo,segmento_11,12,true,ibge_pop2024_nominatim,11895578
+"Butantã, São Paulo, SP, Brasil",SP,São Paulo,segmento_12,13,true,ibge_pop2024_nominatim,11895578
+"Ipiranga, São Paulo, SP, Brasil",SP,São Paulo,segmento_13,14,true,ibge_pop2024_nominatim,11895578
+"Vila Madalena, São Paulo, SP, Brasil",SP,São Paulo,segmento_14,15,true,ibge_pop2024_nominatim,11895578
+"Liberdade, São Paulo, SP, Brasil",SP,São Paulo,segmento_15,16,true,ibge_pop2024_nominatim,11895578
+"Centro, Guarulhos, SP, Brasil",SP,Guarulhos,centro,1,true,ibge_pop2024_nominatim,1345364
+"Zona Norte, Guarulhos, SP, Brasil",SP,Guarulhos,segmento_01,2,true,ibge_pop2024_nominatim,1345364
+"Zona Sul, Guarulhos, SP, Brasil",SP,Guarulhos,segmento_02,3,true,ibge_pop2024_nominatim,1345364
+"Zona Leste, Guarulhos, SP, Brasil",SP,Guarulhos,segmento_03,4,true,ibge_pop2024_nominatim,1345364
+"Zona Oeste, Guarulhos, SP, Brasil",SP,Guarulhos,segmento_04,5,true,ibge_pop2024_nominatim,1345364
+"Área Central, Guarulhos, SP, Brasil",SP,Guarulhos,segmento_05,6,true,ibge_pop2024_nominatim,1345364
+"Área Comercial, Guarulhos, SP, Brasil",SP,Guarulhos,segmento_06,7,true,ibge_pop2024_nominatim,1345364
+"Área Residencial, Guarulhos, SP, Brasil",SP,Guarulhos,segmento_07,8,true,ibge_pop2024_nominatim,1345364
+"Centro, Campinas, SP, Brasil",SP,Campinas,centro,1,true,ibge_pop2024_nominatim,1185977
+"Zona Norte, Campinas, SP, Brasil",SP,Campinas,segmento_01,2,true,ibge_pop2024_nominatim,1185977
+"Zona Sul, Campinas, SP, Brasil",SP,Campinas,segmento_02,3,true,ibge_pop2024_nominatim,1185977
+"Zona Leste, Campinas, SP, Brasil",SP,Campinas,segmento_03,4,true,ibge_pop2024_nominatim,1185977
+"Zona Oeste, Campinas, SP, Brasil",SP,Campinas,segmento_04,5,true,ibge_pop2024_nominatim,1185977
+"Área Central, Campinas, SP, Brasil",SP,Campinas,segmento_05,6,true,ibge_pop2024_nominatim,1185977
+"Área Comercial, Campinas, SP, Brasil",SP,Campinas,segmento_06,7,true,ibge_pop2024_nominatim,1185977
+"Área Residencial, Campinas, SP, Brasil",SP,Campinas,segmento_07,8,true,ibge_pop2024_nominatim,1185977
+"Centro, São Bernardo do Campo, SP, Brasil",SP,São Bernardo do Campo,centro,1,true,ibge_pop2024_nominatim,840499
+"Zona Norte, São Bernardo do Campo, SP, Brasil",SP,São Bernardo do Campo,segmento_01,2,true,ibge_pop2024_nominatim,840499
+"Zona Sul, São Bernardo do Campo, SP, Brasil",SP,São Bernardo do Campo,segmento_02,3,true,ibge_pop2024_nominatim,840499
+"Zona Leste, São Bernardo do Campo, SP, Brasil",SP,São Bernardo do Campo,segmento_03,4,true,ibge_pop2024_nominatim,840499
+"Zona Oeste, São Bernardo do Campo, SP, Brasil",SP,São Bernardo do Campo,segmento_04,5,true,ibge_pop2024_nominatim,840499
+"Área Central, São Bernardo do Campo, SP, Brasil",SP,São Bernardo do Campo,segmento_05,6,true,ibge_pop2024_nominatim,840499
+"Área Comercial, São Bernardo do Campo, SP, Brasil",SP,São Bernardo do Campo,segmento_06,7,true,ibge_pop2024_nominatim,840499
+"Área Residencial, São Bernardo do Campo, SP, Brasil",SP,São Bernardo do Campo,segmento_07,8,true,ibge_pop2024_nominatim,840499
+"Centro, Santo André, SP, Brasil",SP,Santo André,centro,1,true,ibge_pop2024_nominatim,778711
+"Zona Norte, Santo André, SP, Brasil",SP,Santo André,segmento_01,2,true,ibge_pop2024_nominatim,778711
+"Zona Sul, Santo André, SP, Brasil",SP,Santo André,segmento_02,3,true,ibge_pop2024_nominatim,778711
+"Zona Leste, Santo André, SP, Brasil",SP,Santo André,segmento_03,4,true,ibge_pop2024_nominatim,778711
+"Zona Oeste, Santo André, SP, Brasil",SP,Santo André,segmento_04,5,true,ibge_pop2024_nominatim,778711
+"Área Central, Santo André, SP, Brasil",SP,Santo André,segmento_05,6,true,ibge_pop2024_nominatim,778711
+"Área Comercial, Santo André, SP, Brasil",SP,Santo André,segmento_06,7,true,ibge_pop2024_nominatim,778711
+"Área Residencial, Santo André, SP, Brasil",SP,Santo André,segmento_07,8,true,ibge_pop2024_nominatim,778711
+"Centro, Sorocaba, SP, Brasil",SP,Sorocaba,centro,1,true,ibge_pop2024_nominatim,757459
+"Zona Norte, Sorocaba, SP, Brasil",SP,Sorocaba,segmento_01,2,true,ibge_pop2024_nominatim,757459
+"Zona Sul, Sorocaba, SP, Brasil",SP,Sorocaba,segmento_02,3,true,ibge_pop2024_nominatim,757459
+"Zona Leste, Sorocaba, SP, Brasil",SP,Sorocaba,segmento_03,4,true,ibge_pop2024_nominatim,757459
+"Zona Oeste, Sorocaba, SP, Brasil",SP,Sorocaba,segmento_04,5,true,ibge_pop2024_nominatim,757459
+"Área Central, Sorocaba, SP, Brasil",SP,Sorocaba,segmento_05,6,true,ibge_pop2024_nominatim,757459
+"Área Comercial, Sorocaba, SP, Brasil",SP,Sorocaba,segmento_06,7,true,ibge_pop2024_nominatim,757459
+"Área Residencial, Sorocaba, SP, Brasil",SP,Sorocaba,segmento_07,8,true,ibge_pop2024_nominatim,757459
+"Centro, Osasco, SP, Brasil",SP,Osasco,centro,1,true,ibge_pop2024_nominatim,756952
+"Zona Norte, Osasco, SP, Brasil",SP,Osasco,segmento_01,2,true,ibge_pop2024_nominatim,756952
+"Zona Sul, Osasco, SP, Brasil",SP,Osasco,segmento_02,3,true,ibge_pop2024_nominatim,756952
+"Zona Leste, Osasco, SP, Brasil",SP,Osasco,segmento_03,4,true,ibge_pop2024_nominatim,756952
+"Zona Oeste, Osasco, SP, Brasil",SP,Osasco,segmento_04,5,true,ibge_pop2024_nominatim,756952
+"Área Central, Osasco, SP, Brasil",SP,Osasco,segmento_05,6,true,ibge_pop2024_nominatim,756952
+"Área Comercial, Osasco, SP, Brasil",SP,Osasco,segmento_06,7,true,ibge_pop2024_nominatim,756952
+"Área Residencial, Osasco, SP, Brasil",SP,Osasco,segmento_07,8,true,ibge_pop2024_nominatim,756952
+"Centro, Ribeirão Preto, SP, Brasil",SP,Ribeirão Preto,centro,1,true,ibge_pop2024_nominatim,728400
+"Zona Norte, Ribeirão Preto, SP, Brasil",SP,Ribeirão Preto,segmento_01,2,true,ibge_pop2024_nominatim,728400
+"Zona Sul, Ribeirão Preto, SP, Brasil",SP,Ribeirão Preto,segmento_02,3,true,ibge_pop2024_nominatim,728400
+"Zona Leste, Ribeirão Preto, SP, Brasil",SP,Ribeirão Preto,segmento_03,4,true,ibge_pop2024_nominatim,728400
+"Zona Oeste, Ribeirão Preto, SP, Brasil",SP,Ribeirão Preto,segmento_04,5,true,ibge_pop2024_nominatim,728400
+"Área Central, Ribeirão Preto, SP, Brasil",SP,Ribeirão Preto,segmento_05,6,true,ibge_pop2024_nominatim,728400
+"Área Comercial, Ribeirão Preto, SP, Brasil",SP,Ribeirão Preto,segmento_06,7,true,ibge_pop2024_nominatim,728400
+"Área Residencial, Ribeirão Preto, SP, Brasil",SP,Ribeirão Preto,segmento_07,8,true,ibge_pop2024_nominatim,728400
+"Centro, São José dos Campos, SP, Brasil",SP,São José dos Campos,centro,1,true,ibge_pop2024_nominatim,724756
+"Zona Norte, São José dos Campos, SP, Brasil",SP,São José dos Campos,segmento_01,2,true,ibge_pop2024_nominatim,724756
+"Zona Sul, São José dos Campos, SP, Brasil",SP,São José dos Campos,segmento_02,3,true,ibge_pop2024_nominatim,724756
+"Zona Leste, São José dos Campos, SP, Brasil",SP,São José dos Campos,segmento_03,4,true,ibge_pop2024_nominatim,724756
+"Zona Oeste, São José dos Campos, SP, Brasil",SP,São José dos Campos,segmento_04,5,true,ibge_pop2024_nominatim,724756
+"Área Central, São José dos Campos, SP, Brasil",SP,São José dos Campos,segmento_05,6,true,ibge_pop2024_nominatim,724756
+"Área Comercial, São José dos Campos, SP, Brasil",SP,São José dos Campos,segmento_06,7,true,ibge_pop2024_nominatim,724756
+"Área Residencial, São José dos Campos, SP, Brasil",SP,São José dos Campos,segmento_07,8,true,ibge_pop2024_nominatim,724756
+"Centro, São José do Rio Preto, SP, Brasil",SP,São José do Rio Preto,centro,1,true,ibge_pop2024_nominatim,501597
+"Zona Norte, São José do Rio Preto, SP, Brasil",SP,São José do Rio Preto,segmento_01,2,true,ibge_pop2024_nominatim,501597
+"Zona Sul, São José do Rio Preto, SP, Brasil",SP,São José do Rio Preto,segmento_02,3,true,ibge_pop2024_nominatim,501597
+"Zona Leste, São José do Rio Preto, SP, Brasil",SP,São José do Rio Preto,segmento_03,4,true,ibge_pop2024_nominatim,501597
+"Zona Oeste, São José do Rio Preto, SP, Brasil",SP,São José do Rio Preto,segmento_04,5,true,ibge_pop2024_nominatim,501597
+"Área Central, São José do Rio Preto, SP, Brasil",SP,São José do Rio Preto,segmento_05,6,true,ibge_pop2024_nominatim,501597
+"Área Comercial, São José do Rio Preto, SP, Brasil",SP,São José do Rio Preto,segmento_06,7,true,ibge_pop2024_nominatim,501597
+"Área Residencial, São José do Rio Preto, SP, Brasil",SP,São José do Rio Preto,segmento_07,8,true,ibge_pop2024_nominatim,501597
+"Centro, Mogi das Cruzes, SP, Brasil",SP,Mogi das Cruzes,centro,1,true,ibge_pop2024_nominatim,468120
+"Centro, Jundiaí, SP, Brasil",SP,Jundiaí,centro,1,true,ibge_pop2024_nominatim,460313
+"Centro, Piracicaba, SP, Brasil",SP,Piracicaba,centro,1,true,ibge_pop2024_nominatim,438827
+"Centro, Santos, SP, Brasil",SP,Santos,centro,1,true,ibge_pop2024_nominatim,429567
+"Centro, Mauá, SP, Brasil",SP,Mauá,centro,1,true,ibge_pop2024_nominatim,429380
+"Centro, Diadema, SP, Brasil",SP,Diadema,centro,1,true,ibge_pop2024_nominatim,404118
+"Centro, Carapicuíba, SP, Brasil",SP,Carapicuíba,centro,1,true,ibge_pop2024_nominatim,398462
+"Centro, Bauru, SP, Brasil",SP,Bauru,centro,1,true,ibge_pop2024_nominatim,391740
+"Centro, Itaquaquecetuba, SP, Brasil",SP,Itaquaquecetuba,centro,1,true,ibge_pop2024_nominatim,382521
+"Centro, Praia Grande, SP, Brasil",SP,Praia Grande,centro,1,true,ibge_pop2024_nominatim,365577
+"Centro, Franca, SP, Brasil",SP,Franca,centro,1,true,ibge_pop2024_nominatim,364331
+"Centro, São Vicente, SP, Brasil",SP,São Vicente,centro,1,true,ibge_pop2024_nominatim,338407
+"Centro, Barueri, SP, Brasil",SP,Barueri,centro,1,true,ibge_pop2024_nominatim,330339
+"Centro, Taubaté, SP, Brasil",SP,Taubaté,centro,1,true,ibge_pop2024_nominatim,321298
+"Centro, Suzano, SP, Brasil",SP,Suzano,centro,1,true,ibge_pop2024_nominatim,318765
+"Centro, Limeira, SP, Brasil",SP,Limeira,centro,1,true,ibge_pop2024_nominatim,300728
+"Centro, Guarujá, SP, Brasil",SP,Guarujá,centro,1,true,ibge_pop2024_nominatim,294973
+"Centro, Sumaré, SP, Brasil",SP,Sumaré,centro,1,true,ibge_pop2024_nominatim,289787
+"Centro, Cotia, SP, Brasil",SP,Cotia,centro,1,true,ibge_pop2024_nominatim,287004
+"Centro, Taboão da Serra, SP, Brasil",SP,Taboão da Serra,centro,1,true,ibge_pop2024_nominatim,284274
+"Centro, Indaiatuba, SP, Brasil",SP,Indaiatuba,centro,1,true,ibge_pop2024_nominatim,267796
+"Centro, São Carlos, SP, Brasil",SP,São Carlos,centro,1,true,ibge_pop2024_nominatim,265294
+"Centro, Embu das Artes, SP, Brasil",SP,Embu das Artes,centro,1,true,ibge_pop2024_nominatim,259323
+"Centro, Araraquara, SP, Brasil",SP,Araraquara,centro,1,true,ibge_pop2024_nominatim,252318
+"Centro, Jacareí, SP, Brasil",SP,Jacareí,centro,1,true,ibge_pop2024_nominatim,249968
+"Centro, Hortolândia, SP, Brasil",SP,Hortolândia,centro,1,true,ibge_pop2024_nominatim,247331
+"Centro, Americana, SP, Brasil",SP,Americana,centro,1,true,ibge_pop2024_nominatim,246655
+"Centro, Marília, SP, Brasil",SP,Marília,centro,1,true,ibge_pop2024_nominatim,246627
+"Centro, Itapevi, SP, Brasil",SP,Itapevi,centro,1,true,ibge_pop2024_nominatim,241924
+"Centro, Presidente Prudente, SP, Brasil",SP,Presidente Prudente,centro,1,true,ibge_pop2024_nominatim,234083
+"Centro, Rio Claro, SP, Brasil",SP,Rio Claro,centro,1,true,ibge_pop2024_nominatim,208857
+"Centro, Araçatuba, SP, Brasil",SP,Araçatuba,centro,1,true,ibge_pop2024_nominatim,207775
+"Centro, Santa Bárbara d'Oeste, SP, Brasil",SP,Santa Bárbara d'Oeste,centro,1,true,ibge_pop2024_nominatim,189338
+"Centro, Ferraz de Vasconcelos, SP, Brasil",SP,Ferraz de Vasconcelos,centro,1,true,ibge_pop2024_nominatim,185622
+"Centro, Bragança Paulista, SP, Brasil",SP,Bragança Paulista,centro,1,true,ibge_pop2024_nominatim,184634
+"Centro, Itu, SP, Brasil",SP,Itu,centro,1,true,ibge_pop2024_nominatim,174561
+"Centro, São Caetano do Sul, SP, Brasil",SP,São Caetano do Sul,centro,1,true,ibge_pop2024_nominatim,172109
+"Centro, Pindamonhangaba, SP, Brasil",SP,Pindamonhangaba,centro,1,true,ibge_pop2024_nominatim,172027
+"Centro, Francisco Morato, SP, Brasil",SP,Francisco Morato,centro,1,true,ibge_pop2024_nominatim,171107
+"Centro, Atibaia, SP, Brasil",SP,Atibaia,centro,1,true,ibge_pop2024_nominatim,166043
+"Centro, Itapecerica da Serra, SP, Brasil",SP,Itapecerica da Serra,centro,1,true,ibge_pop2024_nominatim,163928
+"Centro, Itapetininga, SP, Brasil",SP,Itapetininga,centro,1,true,ibge_pop2024_nominatim,163774
+"Centro, Santana de Parnaíba, SP, Brasil",SP,Santana de Parnaíba,centro,1,true,ibge_pop2024_nominatim,162341
+"Centro, Mogi Guaçu, SP, Brasil",SP,Mogi Guaçu,centro,1,true,ibge_pop2024_nominatim,159735
+"Centro, Botucatu, SP, Brasil",SP,Botucatu,centro,1,true,ibge_pop2024_nominatim,150442
+"Centro, Franco da Rocha, SP, Brasil",SP,Franco da Rocha,centro,1,true,ibge_pop2024_nominatim,149786
+"Centro, Caraguatatuba, SP, Brasil",SP,Caraguatatuba,centro,1,true,ibge_pop2024_nominatim,141084
+"Centro, Salto, SP, Brasil",SP,Salto,centro,1,true,ibge_pop2024_nominatim,140125
+"Centro, Jaú, SP, Brasil",SP,Jaú,centro,1,true,ibge_pop2024_nominatim,137323
+"Centro, Araras, SP, Brasil",SP,Araras,centro,1,true,ibge_pop2024_nominatim,135331
+"Centro, Votorantim, SP, Brasil",SP,Votorantim,centro,1,true,ibge_pop2024_nominatim,132849
+"Centro, Sertãozinho, SP, Brasil",SP,Sertãozinho,centro,1,true,ibge_pop2024_nominatim,131600
+"Centro, Valinhos, SP, Brasil",SP,Valinhos,centro,1,true,ibge_pop2024_nominatim,131277
+"Centro, Tatuí, SP, Brasil",SP,Tatuí,centro,1,true,ibge_pop2024_nominatim,128560
+"Centro, Barretos, SP, Brasil",SP,Barretos,centro,1,true,ibge_pop2024_nominatim,126600
+"Centro, Itatiba, SP, Brasil",SP,Itatiba,centro,1,true,ibge_pop2024_nominatim,126403
+"Centro, Birigui, SP, Brasil",SP,Birigui,centro,1,true,ibge_pop2024_nominatim,122988
+"Centro, Jandira, SP, Brasil",SP,Jandira,centro,1,true,ibge_pop2024_nominatim,121988
+"Centro, Guaratinguetá, SP, Brasil",SP,Guaratinguetá,centro,1,true,ibge_pop2024_nominatim,121710
+"Centro, Várzea Paulista, SP, Brasil",SP,Várzea Paulista,centro,1,true,ibge_pop2024_nominatim,119576
+"Centro, Catanduva, SP, Brasil",SP,Catanduva,centro,1,true,ibge_pop2024_nominatim,119172
+"Centro, Ribeirão Pires, SP, Brasil",SP,Ribeirão Pires,centro,1,true,ibge_pop2024_nominatim,118877
+"Centro, Itanhaém, SP, Brasil",SP,Itanhaém,centro,1,true,ibge_pop2024_nominatim,117435
+"Centro, Paulínia, SP, Brasil",SP,Paulínia,centro,1,true,ibge_pop2024_nominatim,115690
+"Centro, Cubatão, SP, Brasil",SP,Cubatão,centro,1,true,ibge_pop2024_nominatim,115082
+"Centro, Ourinhos, SP, Brasil",SP,Ourinhos,centro,1,true,ibge_pop2024_nominatim,106877
+"Centro, Poá, SP, Brasil",SP,Poá,centro,1,true,ibge_pop2024_nominatim,106431
+"Centro, Assis, SP, Brasil",SP,Assis,centro,1,true,ibge_pop2024_nominatim,104642
+"Centro, Leme, SP, Brasil",SP,Leme,centro,1,true,ibge_pop2024_nominatim,101316
+"Centro, Votuporanga, SP, Brasil",SP,Votuporanga,centro,1,true,ibge_pop2024_nominatim,100159
+"Centro, Aracaju, SE, Brasil",SE,Aracaju,centro,1,true,ibge_pop2024_nominatim,628849
+"Zona Norte, Aracaju, SE, Brasil",SE,Aracaju,segmento_01,2,true,ibge_pop2024_nominatim,628849
+"Zona Sul, Aracaju, SE, Brasil",SE,Aracaju,segmento_02,3,true,ibge_pop2024_nominatim,628849
+"Zona Leste, Aracaju, SE, Brasil",SE,Aracaju,segmento_03,4,true,ibge_pop2024_nominatim,628849
+"Zona Oeste, Aracaju, SE, Brasil",SE,Aracaju,segmento_04,5,true,ibge_pop2024_nominatim,628849
+"Área Central, Aracaju, SE, Brasil",SE,Aracaju,segmento_05,6,true,ibge_pop2024_nominatim,628849
+"Área Comercial, Aracaju, SE, Brasil",SE,Aracaju,segmento_06,7,true,ibge_pop2024_nominatim,628849
+"Área Residencial, Aracaju, SE, Brasil",SE,Aracaju,segmento_07,8,true,ibge_pop2024_nominatim,628849
+"Centro, Nossa Senhora do Socorro, SE, Brasil",SE,Nossa Senhora do Socorro,centro,1,true,ibge_pop2024_nominatim,202450
+"Centro, Itabaiana, SE, Brasil",SE,Itabaiana,centro,1,true,ibge_pop2024_nominatim,108408
+"Centro, Lagarto, SE, Brasil",SE,Lagarto,centro,1,true,ibge_pop2024_nominatim,105558
+"Centro, São Cristóvão, SE, Brasil",SE,São Cristóvão,centro,1,true,ibge_pop2024_nominatim,100360
+"Centro, Palmas, TO, Brasil",TO,Palmas,centro,1,true,ibge_pop2024_nominatim,323625
+"Centro, Araguaína, TO, Brasil",TO,Araguaína,centro,1,true,ibge_pop2024_nominatim,181493

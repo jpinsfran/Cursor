@@ -1,0 +1,27 @@
+{
+  "rio branco|AC": {
+    "lat": -9.9765362,
+    "lon": -67.8220778,
+    "address": "Rio Branco, Região Geográfica Imediata de Rio Branco, Região Geográfica Intermediária de Rio Branco, Acre, Região Norte, Brasil"
+  },
+  "porto velho|RO": {
+    "lat": -8.7494525,
+    "lon": -63.8735438,
+    "address": "Porto Velho, Região Geográfica Imediata de Porto Velho, Região Geográfica Intermediária de Porto Velho, Rondônia, Região Norte, Brasil"
+  },
+  "ji-parana|RO": {
+    "lat": -10.8778148,
+    "lon": -61.9277854,
+    "address": "Ji-Paraná, Região Geográfica Imediata de Ji-Paraná, Região Geográfica Intermediária de Ji-Paraná, Rondônia, Região Norte, Brasil"
+  },
+  "ariquemes|RO": {
+    "lat": -9.9076522,
+    "lon": -63.033069,
+    "address": "Ariquemes, Região Geográfica Imediata de Ariquemes, Região Geográfica Intermediária de Porto Velho, Rondônia, Região Norte, Brasil"
+  },
+  "vilhena|RO": {
+    "lat": -12.7368536,
+    "lon": -60.1465555,
+    "address": "Vilhena, Região Geográfica Imediata de Vilhena, Região Geográfica Intermediária de Ji-Paraná, Rondônia, Região Norte, Brasil"
+  }
+}

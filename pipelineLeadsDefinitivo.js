@@ -17,6 +17,7 @@
  *   node pipelineLeadsDefinitivo.js --from-todos      (usa ifoodLeads_todos.csv; só etapas 2, 3, 4)
  *   node pipelineLeadsDefinitivo.js SP --limit 5     (teste: limita unificação Instagram a 5 linhas)
  *   node pipelineLeadsDefinitivo.js "São José dos Campos" SP --ddd 12   (opcional: fallback DDD se inferência por cidade falhar)
+ *   node pipelineLeadsDefinitivo.js --from-todos --no-sync   (não sincroniza Supabase nas etapas 2 e 4)
  *
  * Pré-requisito: node scrapeInstagram.js --login (uma vez)
  */
@@ -43,6 +44,8 @@ function getArgs() {
   const argv = process.argv.slice(2).filter((a) => a && !a.startsWith("--"));
   const skipIfood = process.argv.includes("--skip-ifood");
   const fromTodos = process.argv.includes("--from-todos");
+  const resumeInstagram = process.argv.includes("--resume-instagram");
+  const noSync = process.argv.includes("--no-sync");
   const limitIdx = process.argv.indexOf("--limit");
   const limit = limitIdx !== -1 && process.argv[limitIdx + 1] ? parseInt(process.argv[limitIdx + 1], 10) : 0;
   const dddIdx = process.argv.indexOf("--ddd");
@@ -71,7 +74,7 @@ function getArgs() {
   }
 
   const unificadoPath = comContatoPath.replace(/(\.csv)?$/i, "_unificado.csv");
-  return { address, suffix, csvPath, comContatoPath, unificadoPath, skipIfood, fromTodos, limit, ddd };
+  return { address, suffix, csvPath, comContatoPath, unificadoPath, skipIfood, fromTodos, limit, ddd, resumeInstagram, noSync };
 }
 
 function runNode(script, args = []) {
@@ -88,7 +91,7 @@ function runNode(script, args = []) {
 }
 
 async function main() {
-  const { address, suffix, csvPath, comContatoPath, unificadoPath, skipIfood, fromTodos, limit, ddd } = getArgs();
+  const { address, suffix, csvPath, comContatoPath, unificadoPath, skipIfood, fromTodos, limit, ddd, resumeInstagram, noSync } = getArgs();
 
   console.log("=== Pipeline Leads Definitivo ===\n");
   if (fromTodos) {
@@ -99,6 +102,8 @@ async function main() {
   console.log("CSV iFood:", csvPath);
   console.log("Com contato:", comContatoPath);
   console.log("Planilha definitiva:", unificadoPath);
+  if (resumeInstagram) console.log("Instagram resume:", "ativado (--resume-instagram)");
+  if (noSync) console.log("Supabase sync:", "desativado (--no-sync)");
   console.log("");
 
   if (!fromTodos && !skipIfood) {
@@ -127,7 +132,9 @@ async function main() {
 
   console.log("Etapa 2/4: Atualizando telefones/e-mail por CNPJ (Brasil API)...");
   try {
-    await runNode("atualizaTelefonePorCnpj.js", [csvPath]);
+    const cnpjArgs = [csvPath];
+    if (noSync) cnpjArgs.push("--no-sync");
+    await runNode("atualizaTelefonePorCnpj.js", cnpjArgs);
   } catch (e) {
     console.error("Falha na atualização por CNPJ:", e.message);
     process.exit(1);
@@ -148,6 +155,8 @@ async function main() {
   console.log("Etapa 4/4: Busca Instagram + análise completa (destaques, unidades, link externo)...");
   const unifyArgs = [comContatoPath];
   if (limit > 0) unifyArgs.push("--limit", String(limit));
+  if (resumeInstagram) unifyArgs.push("--resume");
+  if (noSync) unifyArgs.push("--no-sync");
   try {
     await runNode("unificaIfoodInstagram.js", unifyArgs);
   } catch (e) {

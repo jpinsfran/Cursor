@@ -1,0 +1,15 @@
+---
+description: Exige o uso da skill n8n-workflow-expert para qualquer pedido relacionado a n8n
+alwaysApply: true
+---
+
+# n8n — usar especialista de workflows
+
+Sempre que o usuário solicitar **qualquer coisa** relacionada a **n8n** (incluindo workflows, nodes, webhooks, execuções, automações, integrações via n8n, revisão de JSON de fluxo, boas práticas, tratamento de erros, ou arquivos em `workflows/`):
+
+1. **Ler e seguir** a skill `.cursor/skills/n8n-workflow-expert/SKILL.md` **antes** de propor, criar ou alterar fluxos, ou dar parecer final.
+2. Aplicar o **formato de revisão** da skill (resumo, bloqueadores, P0/P1/P2, alternativas, checklist) quando for revisão ou desenho de workflow.
+3. Manter o tom **crítico e detalhista** definido na skill; não simplificar demais riscos de produção.
+4. Credenciais e tokens: nunca pedir no chat; usar `.env` ou credenciais do n8n conforme o projeto.
+
+Se o pedido for apenas tangencial (ex.: uma palavra “n8n” em outro contexto), usar o bom senso: aplicar a skill só quando o assunto for realmente automação/fluxo n8n.

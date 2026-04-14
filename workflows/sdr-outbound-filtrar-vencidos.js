@@ -7,9 +7,13 @@
  * (cadência, reforço ou retomada). Sem isso, reforcoDue ficava true a cada 15min após +1h da primeira msg.
  *
  * Inbound: se ultima_inbound_at > ultima_outbound_at (e não for flag_resposta_bot), não enfileira novo/em_cadencia.
+ *
+ * em_conversa: 3h sem resposta do lead após último inbound → até 2 mensagens QUEBRA_SILENCIO (3h entre elas);
+ * com 2 tentativas feitas, não enfileira mais (volta à cadência só após Prepare marcar após a 2ª).
  */
 const now = Date.now();
-const MS_48H = 48 * 60 * 60 * 1000;
+/** Silêncio do lead (em_conversa) antes de tentar quebrar; 3h entre cada tentativa nossa. */
+const MS_3H = 3 * 60 * 60 * 1000;
 const MS_72H = 72 * 60 * 60 * 1000;
 const MS_1H = 60 * 60 * 1000;
 const out = [];
@@ -43,11 +47,26 @@ for (const item of $input.all()) {
   }
   if (d.status === "em_conversa" && d.ultima_inbound_at) {
     const silenceMs = now - new Date(d.ultima_inbound_at).getTime();
-    if (silenceMs >= MS_48H && minSinceLastOutbound) {
-      d.status = "em_cadencia";
-      d.cadencia_pausada = false;
-      d._retomada = true;
-      out.push({ json: d });
+    const tent = Number(d.quebra_silencio_tentativas || 0);
+    if (tent >= 2 || !minSinceLastOutbound) {
+      continue;
+    }
+    if (tent === 0) {
+      if (silenceMs >= MS_3H) {
+        d._retomada = true;
+        d._quebra_silencio_indice = 1;
+        out.push({ json: d });
+      }
+      continue;
+    }
+    if (tent === 1) {
+      const sinceOurLast = lastOut ? now - lastOut : 0;
+      const leadStillSilent = lastIn < lastOut;
+      if (leadStillSilent && sinceOurLast >= MS_3H && silenceMs >= MS_3H) {
+        d._retomada = true;
+        d._quebra_silencio_indice = 2;
+        out.push({ json: d });
+      }
     }
   }
 }

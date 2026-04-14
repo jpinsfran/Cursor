@@ -1,0 +1,48 @@
+{
+  "generatedAt": "2026-04-08T19:36:01.843Z",
+  "sessions": 192,
+  "messages": {
+    "total": 525,
+    "inbound": 100,
+    "outbound": 425,
+    "ratio_out_per_in": 4.25
+  },
+  "falha_envio_count": 1,
+  "lead_respondeu_alguma_vez": {
+    "count": 22,
+    "pct": 11.5
+  },
+  "byStatus": {
+    "em_conversa": 19,
+    "em_cadencia": 88,
+    "novo": 85
+  },
+  "heuristics": {
+    "ghost": {
+      "description": "1+ outbound real, 0 inbound",
+      "count": 86,
+      "pct": 44.8
+    },
+    "fizzle": {
+      "description": "ate 3 inbound curtos, mais out que troca",
+      "count": 2,
+      "pct": 1
+    },
+    "engaged": {
+      "description": "2+ inbound OU 1 inbound > 25 chars",
+      "count": 16,
+      "pct": 8.3
+    }
+  },
+  "duplicate_phones": {
+    "numbers_with_multiple_sessions": 8,
+    "sessions_affected": 16
+  },
+  "touchpoint_outbound": {
+    "LEAD_ENTRY": 190,
+    "D1_WA": 107,
+    "(sem_tp)": 93,
+    "D3_WA": 24,
+    "D7_WA": 11
+  }
+}

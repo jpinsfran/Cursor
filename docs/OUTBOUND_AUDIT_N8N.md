@@ -6,6 +6,21 @@
 
 Para cada `session_id`, deve existir **no máximo um** “dono” do próximo envio imediato: **orquestrador SDR Outbound**, **agente Outbound v2**, ou **nenhum** (pausa / encerrado). Fluxos paralelos (anti-no-show, métricas) não devem competir com cadência sem checagem de `status` e timestamps.
 
+## Anti-rajada e janela (orquestrador — repo)
+
+- **Lease (migration 015):** o nó **Claim dispatch lease** chama a RPC `try_claim_outbound_session` via credencial Supabase (`this.getCredentials('supabaseApi')` + `helpers.httpRequest`). TTL padrão **300 s**. O IF **Dispatch claim OK?** só segue para **Preparar touchpoint** quando `_dispatch_claimed === true`; caso contrário volta ao **Um lead por vez** sem preparar envio (evita corrida entre execuções do Cron 15 min).
+- **Liberação do lease:** os nós Supabase **atualizar sessão**, **reagendar skip** e **reagendar após falha** zera `outbound_dispatch_lease_until` e `outbound_dispatch_lease_execution_id` (equivalente a liberar a reserva após processar o item).
+- **Janela 8–18h America/Sao_Paulo:** **Preparar touchpoint** marca `skip: true` e `skipReason: fora_janela_08_18_sp` com `proximo_envio_at` no próximo início de janela para: reforço 1h, follow-up D+1 9h, quebra de silêncio e **todos** touchpoints WhatsApp da cadência (não só D1 inicial).
+- **Publicar código no n8n:** `node workflows/sync-sdr-outbound-workflow.cjs` → `node scripts/build-sdr-outbound-code-push.mjs` → `node scripts/n8nPushPartialFromFile.mjs workflows/.n8n-sdr-code-push.json` (usa `~/.cursor/mcp.json` → credenciais Supabase para PUT do workflow).
+
+### Agente Outbound v2 (instância — checklist manual)
+
+Respostas **ao webhook** de mensagem recebida seguem o fluxo conversacional. Para **evitar colisão** com o orquestrador no mesmo minuto, ao implementar qualquer envio **proativo** pelo agente (não correlacionado a uma mensagem inbound imediata): consultar `outbound_cadencia_sessions` e **não enviar** se `outbound_dispatch_lease_until > now()` ou se a política de `status` / `cadencia_pausada` exigir pausa (ver [`OUTBOUND_IMPL_MINIMA_PENDENTES.md`](../OUTBOUND_IMPL_MINIMA_PENDENTES.md)).
+
+### Anti No-Show
+
+O workflow **Anti No-Show** deve operar só em sessões **agendadas** (ex. `status` coerente com reunião marcada) e **não** competir com a mesma linha de cadência fria sem filtro por telefone/sessão. Revisar o filtro da query na instância quando houver lembretes no mesmo número que ainda está em `em_cadencia` com `proximo_envio_at` ativo.
+
 ## Inventário por arquivo (Git)
 
 | Arquivo | Nome típico no export | Gatilho / papel | Colisão com SDR? |

@@ -12,6 +12,10 @@ node_modules/
 # Dados locais / temp
 instagram_chrome_profile/
 instagram_temp/
+data/conversas-export/
+
+# Piloto outbound — dados personalizados (telefone real)
+pilot-test-leads.custom.json
 
 # Planilhas com dados sensíveis (opcional; descomente se não quiser versionar)
 # *.csv

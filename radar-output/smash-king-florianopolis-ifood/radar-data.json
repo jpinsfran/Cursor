@@ -1,0 +1,116 @@
+{
+  "lead": {
+    "name": "Smash King | FLORIANOPOLIS | iFood",
+    "url": "https://www.ifood.com.br/delivery/florianopolis-sc/smash-king-pantanal/3ec78f8c-ba9d-4335-b2e5-85e9e1d94740",
+    "phone": "4896686663",
+    "cnpj": "32762746000129",
+    "streetAddress": "RUA DEPUTADO ANTONIO EDU VIEIRA 1890",
+    "neighborhood": "PANTANAL",
+    "zipcode": "88036700",
+    "rating": 4.9,
+    "email": "www.joelmello@gmail.com",
+    "cuisine": "Lanches",
+    "priceRange": "$$",
+    "regiao": "Florianópolis",
+    "instagramUrl": "https://www.instagram.com/smashkingburger/",
+    "instagram_profile_url": "https://www.instagram.com/smashkingburger/",
+    "instagram_user_id": "14648135213",
+    "seguidores": 2035,
+    "perfil_do_lead": "Smash King é um estabelecimento especializado em lanches localizado em Florianópolis, no bairro Pantanal. A operação inclui a preparação de hambúrgueres artesanais, destacando-se pelo cuidado na montagem e na apresentação dos pratos, como mostrado em suas imagens de hambúrgueres suculentos e bem preparados.",
+    "punch_line": "Gancho: elogie a apresentação impecável dos hambúrgueres no último post."
+  },
+  "context": {
+    "totalRestaurantesBairro": 6,
+    "totalMesmoCuisineBairro": 1,
+    "ratingMedioBairro": 4.8,
+    "ratingMedioCuisine": 4.7823529411764705,
+    "posicaoRatingBairro": 1,
+    "priceRangePredominante": "$$",
+    "digitalBenchmark": 2109
+  },
+  "scores": {
+    "reputacao": 82,
+    "digital": 22,
+    "competitivo": 95,
+    "financeiro": 40,
+    "geral": 58,
+    "nivel": "Boa Base"
+  },
+  "financial": {
+    "benchmark": {
+      "label": "Lanches",
+      "cmvIdeal": 30,
+      "cmvMedio": 39,
+      "faturamento": {
+        "$": [
+          25000,
+          50000
+        ],
+        "$$": [
+          50000,
+          100000
+        ]
+      },
+      "ratingMercado": 4.1,
+      "ratingIcp": 4.5,
+      "ratingDestaque": 4.8
+    },
+    "faturamentoMin": 50000,
+    "faturamentoMax": 100000,
+    "gapCmv": 9,
+    "vazamentoPercentual": 13,
+    "oportunidadeMin": 4550,
+    "oportunidadeMax": 13000,
+    "oportunidadeAnualMin": 54600,
+    "oportunidadeAnualMax": 156000,
+    "score": 40,
+    "warning": ""
+  },
+  "recommendations": [
+    {
+      "priority": 100,
+      "title": "Mapear CMV real dos 10 pratos mais vendidos",
+      "description": "É o atalho mais direto para validar onde a margem pode estar escapando. O potencial observado neste perfil fica entre R$ 4.550 - R$ 13.000 por mês."
+    },
+    {
+      "priority": 90,
+      "title": "Implantar DRE mensal com rotina de caixa",
+      "description": "Sem fechamento recorrente, o resultado aparece tarde demais. O objetivo é enxergar a margem antes do dinheiro sumir no operacional."
+    },
+    {
+      "priority": 70,
+      "title": "Ativar fidelização via WhatsApp",
+      "description": "Hoje 2.035 seguidores ainda não parecem totalmente monetizados. O foco é trazer recompra e frequência, não só alcance."
+    }
+  ],
+  "redFlags": [
+    {
+      "color": "warn",
+      "text": "Você tem uma vantagem competitiva rara no bairro, mas sem base recorrente isso pode ser fácil de perder quando surgir outro player."
+    }
+  ],
+  "roadmap": {
+    "month1": "R$ 1.820 - R$ 5.200",
+    "month2": "R$ 2.958 - R$ 8.450",
+    "month3": "R$ 3.868 - R$ 11.050",
+    "total90": "R$ 11.603 - R$ 33.150"
+  },
+  "question": "Você tem 2.035 no Instagram. Quantas dessas pessoas voltaram a comprar no último mês?",
+  "warnings": [],
+  "hubspotData": {
+    "radar_score_geral": 58,
+    "radar_score_reputacao": 82,
+    "radar_score_digital": 22,
+    "radar_score_competitivo": 95,
+    "radar_score_financeiro": 40,
+    "radar_nivel": "Boa Base",
+    "radar_oportunidade_mensal_min": 4550,
+    "radar_oportunidade_mensal_max": 13000,
+    "radar_oportunidade_anual_min": 54600,
+    "radar_oportunidade_anual_max": 156000,
+    "radar_bairro": "PANTANAL",
+    "radar_regiao": "Florianópolis",
+    "radar_cuisine": "Lanches",
+    "radar_price_range": "$$"
+  }
+}

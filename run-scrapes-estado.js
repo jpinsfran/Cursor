@@ -1,11 +1,12 @@
 /**
  * Roda o scrape do iFood para todos os endereços de um estado.
  * Fonte preferida: Supabase (relevant_addresses). Fallback: lista estática ENDERECOS_POR_ESTADO.
- * Cada endereço acumula no mesmo CSV (ifoodLeads_UF.csv); o scrapeIfoodLeads.js já desduplica por URL.
+ * Cada endereço acumula no mesmo CSV (ifoodLeads_<sufixo>.csv); o scrapeIfoodLeads.js já desduplica por URL.
  *
  * Uso: node run-scrapes-estado.js SP
  *      node run-scrapes-estado.js RJ
- *      node run-scrapes-estado.js SP --limit 3   (só os N primeiros endereços)
+ *      node run-scrapes-estado.js SP --limit 3                (só os N primeiros endereços)
+ *      node run-scrapes-estado.js SP --csv-suffix todos       (acumula no CSV geral ifoodLeads_todos.csv)
  *
  * Env: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY (opcional; se ausente, usa lista estática).
  */
@@ -15,8 +16,11 @@ import { spawnSync } from "child_process";
 import path from "path";
 import { fileURLToPath } from "url";
 import { createClient } from "@supabase/supabase-js";
+import { existsSync } from "fs";
+import { readFile, writeFile } from "fs/promises";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const CHECKPOINT_PATH = path.join(__dirname, "run-scrapes-checkpoints.json");
 
 /** Lista estática: fallback quando Supabase indisponível ou tabela vazia (fonte: PLANO_SCRAPE_ESTADOS.md). */
 const ENDERECOS_POR_ESTADO = {
@@ -50,29 +54,108 @@ const ENDERECOS_POR_ESTADO = {
 };
 
 const UFS_VALIDOS = Object.keys(ENDERECOS_POR_ESTADO).sort();
+let _supportsSearchStatus = null;
 
-/** Busca endereços ativos do Supabase para a UF, ordenados por execution_order. */
+/** Notificação sonora simples para chamar atenção ao concluir uma busca. */
+function playNotificationSound() {
+  try {
+    if (process.platform === "win32") {
+      // Freq/tempo seguros no PowerShell do Windows.
+      spawnSync("powershell", ["-NoProfile", "-Command", "[console]::beep(950,250)"], {
+        stdio: "ignore",
+        windowsHide: true,
+      });
+    } else {
+      process.stdout.write("\x07");
+    }
+  } catch (_) {}
+}
+
+function checkpointKey(uf, csvSuffix) {
+  return `${uf}|${csvSuffix}`;
+}
+
+async function readCheckpoints() {
+  if (!existsSync(CHECKPOINT_PATH)) return {};
+  try {
+    const raw = await readFile(CHECKPOINT_PATH, "utf8");
+    return JSON.parse(raw || "{}");
+  } catch (_) {
+    return {};
+  }
+}
+
+async function writeCheckpoints(data) {
+  try {
+    await writeFile(CHECKPOINT_PATH, JSON.stringify(data, null, 2), "utf8");
+  } catch (_) {}
+}
+
+/** Busca endereços ativos e pendentes do Supabase para a UF, ordenados por execution_order. */
 async function fetchAddressesFromSupabase(uf) {
   const url = process.env.SUPABASE_URL;
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_KEY;
   if (!url || !key) return null;
   try {
     const supabase = createClient(url, key, { auth: { persistSession: false } });
-    const { data, error } = await supabase
+    let query = supabase
       .from("relevant_addresses")
-      .select("address, execution_order")
+      .select("id, address, execution_order, search_status")
       .eq("uf", uf)
       .eq("is_active", true)
       .order("execution_order", { ascending: true });
+
+    if (_supportsSearchStatus !== false) {
+      query = query.not("search_status", "eq", "done");
+    }
+    let { data, error } = await query;
+
+    if (error && String(error.message || "").includes("search_status")) {
+      _supportsSearchStatus = false;
+      const fallback = await supabase
+        .from("relevant_addresses")
+        .select("id, address, execution_order")
+        .eq("uf", uf)
+        .eq("is_active", true)
+        .order("execution_order", { ascending: true });
+      data = fallback.data;
+      error = fallback.error;
+    }
     if (error) {
       console.warn("[run-scrapes-estado] Supabase error:", error.message);
       return null;
     }
+    _supportsSearchStatus = _supportsSearchStatus == null ? true : _supportsSearchStatus;
     if (!data || data.length === 0) return [];
-    return data.map((r) => r.address);
+    return data.map((r) => ({
+      id: r.id,
+      address: r.address,
+    }));
   } catch (e) {
     console.warn("[run-scrapes-estado] Supabase unavailable:", e.message);
     return null;
+  }
+}
+
+async function updateAddressSearchStatus(id, status, foundCount = 0) {
+  const url = process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_KEY;
+  if (!url || !key || !id || _supportsSearchStatus === false) return;
+  try {
+    const supabase = createClient(url, key, { auth: { persistSession: false } });
+    const payload = {
+      search_status: status,
+      last_found_count: foundCount || 0,
+      last_searched_at: new Date().toISOString(),
+    };
+    const { error } = await supabase.from("relevant_addresses").update(payload).eq("id", id);
+    if (error && String(error.message || "").includes("search_status")) {
+      _supportsSearchStatus = false;
+      console.warn("[run-scrapes-estado] Colunas de status ainda não existem no Supabase. Aplique a migration 003.");
+      return;
+    }
+  } catch (e) {
+    console.warn("[run-scrapes-estado] Falha ao atualizar status:", e.message);
   }
 }
 
@@ -81,6 +164,10 @@ function main() {
   const uf = (argv[0] || "").toUpperCase().trim();
   const limitIdx = process.argv.indexOf("--limit");
   const limit = limitIdx !== -1 && process.argv[limitIdx + 1] ? parseInt(process.argv[limitIdx + 1], 10) : null;
+  const suffixIdx = process.argv.indexOf("--csv-suffix");
+  const csvSuffixRaw = suffixIdx !== -1 && process.argv[suffixIdx + 1] ? process.argv[suffixIdx + 1] : uf;
+  const csvSuffix = String(csvSuffixRaw || uf).trim();
+  const resetCheckpoint = process.argv.includes("--reset-address-checkpoint");
 
   if (!uf || !ENDERECOS_POR_ESTADO[uf]) {
     console.error("Uso: node run-scrapes-estado.js <UF> [--limit N]");
@@ -91,39 +178,88 @@ function main() {
   const scriptPath = path.join(__dirname, "scrapeIfoodLeads.js");
 
   (async () => {
+    const key = checkpointKey(uf, csvSuffix);
+    const checkpoints = await readCheckpoints();
+    if (resetCheckpoint) {
+      delete checkpoints[key];
+      await writeCheckpoints(checkpoints);
+      console.log("[run-scrapes-estado] Checkpoint de endereços resetado para", key);
+    }
+
     let enderecos = await fetchAddressesFromSupabase(uf);
     if (enderecos == null) {
       console.log("[run-scrapes-estado] Supabase não configurado ou indisponível; usando lista estática.\n");
-      enderecos = ENDERECOS_POR_ESTADO[uf];
+      enderecos = ENDERECOS_POR_ESTADO[uf].map((address) => ({ id: null, address }));
     } else if (enderecos.length === 0) {
       console.log("[run-scrapes-estado] Nenhum endereço ativo no Supabase para " + uf + "; usando lista estática.\n");
-      enderecos = ENDERECOS_POR_ESTADO[uf];
+      enderecos = ENDERECOS_POR_ESTADO[uf].map((address) => ({ id: null, address }));
     } else {
-      console.log("[run-scrapes-estado] Endereços carregados do Supabase (relevant_addresses).\n");
+      console.log("[run-scrapes-estado] Endereços pendentes carregados do Supabase (relevant_addresses).\n");
     }
 
-    const toRun = limit ? enderecos.slice(0, limit) : enderecos;
+    const savedIndex = Number.isInteger(checkpoints[key]?.nextIndex) ? checkpoints[key].nextIndex : 0;
+    const startIndex = Math.min(Math.max(savedIndex, 0), enderecos.length);
+    const baseList = enderecos.slice(startIndex);
+    const toRun = limit ? baseList.slice(0, limit) : baseList;
     let failed = 0;
 
-    console.log(`Estado: ${uf} | Endereços: ${toRun.length} de ${enderecos.length} | CSV: ifoodLeads_${uf}.csv`);
+    console.log(`Estado: ${uf} | Endereços: ${toRun.length} de ${enderecos.length} | Início: ${startIndex + 1} | CSV: ifoodLeads_${csvSuffix}.csv`);
     console.log("Cada rodada acumula no mesmo CSV (desduplicação por URL).\n");
 
     for (let i = 0; i < toRun.length; i++) {
-      const endereco = toRun[i];
+      const item = toRun[i];
+      const endereco = item.address;
+      const absoluteIndex = startIndex + i;
+      const csvPath = path.join(__dirname, `ifoodLeads_${csvSuffix}.csv`);
+      let beforeLines = 0;
+      try {
+        const content = await readFile(csvPath, "utf8");
+        beforeLines = content.split(/\r?\n/).filter(Boolean).length;
+      } catch (_) {}
+
       console.log(`[${i + 1}/${toRun.length}] ${endereco}`);
-      const result = spawnSync("node", [scriptPath, endereco, uf], {
+      const result = spawnSync("node", [scriptPath, endereco, csvSuffix], {
         stdio: "inherit",
         cwd: __dirname,
-        shell: true,
       });
+
+      let afterLines = 0;
+      try {
+        const content = await readFile(csvPath, "utf8");
+        afterLines = content.split(/\r?\n/).filter(Boolean).length;
+      } catch (_) {}
+      const foundSomething = afterLines > beforeLines;
+
       if (result.status !== 0) {
         failed++;
         console.error(`[FALHA] Endereço ${i + 1} (exit ${result.status}). Continuando... O CSV já salvo mantém o que foi coletado.`);
+        await updateAddressSearchStatus(item.id, "error", 0);
+      } else if (item.id) {
+        if (foundSomething) {
+          await updateAddressSearchStatus(item.id, "done", Math.max(0, afterLines - beforeLines));
+        } else {
+          await updateAddressSearchStatus(item.id, "pending", 0);
+          console.log("[run-scrapes-estado] Sem novos resultados; endereço permanece pendente.");
+        }
       }
+
+      checkpoints[key] = {
+        nextIndex: absoluteIndex + 1,
+        updatedAt: new Date().toISOString(),
+      };
+      await writeCheckpoints(checkpoints);
+
+      playNotificationSound();
       if (i < toRun.length - 1) console.log("");
     }
 
-    console.log(`\nConcluído: ${toRun.length} endereços para ${uf}. Sucesso: ${toRun.length - failed}, Falhas: ${failed}. Arquivo: ifoodLeads_${uf}.csv`);
+    console.log(`\nConcluído: ${toRun.length} endereços para ${uf}. Sucesso: ${toRun.length - failed}, Falhas: ${failed}. Arquivo: ifoodLeads_${csvSuffix}.csv`);
+    if (!limit || toRun.length < limit) {
+      delete checkpoints[key];
+      await writeCheckpoints(checkpoints);
+      console.log("[run-scrapes-estado] Checkpoint finalizado/limpo para", key);
+    }
+    playNotificationSound();
     process.exit(failed > 0 ? 1 : 0);
   })();
 }

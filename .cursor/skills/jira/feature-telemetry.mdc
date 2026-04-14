@@ -1,0 +1,42 @@
+---
+description: Enforce telemetry events and pilot readiness checklist for all new user-facing features
+alwaysApply: true
+---
+
+# Feature Telemetry & Pilot Readiness
+
+Every user-facing feature MUST ship with telemetry events. This is non-negotiable — without telemetry, the product team has zero visibility into adoption, errors, and rollout health.
+
+## Required Telemetry Events
+
+When building any feature behind a feature flag or config (store-level, brand-level, or user-level), emit these events at the appropriate points:
+
+1. **feature_viewed** — Component/screen rendered and visible to the user
+2. **feature_interacted** — User took the primary action (click, submit, toggle, save)
+3. **feature_completed** — User finished the full flow (confirmed, saved successfully)
+4. **feature_error** — An error occurred during the flow (API failure, validation error)
+
+### Event Payload (minimum fields)
+
+```javascript
+{
+  event: 'feature_viewed',        // or feature_interacted, feature_completed, feature_error
+  feature_key: 'invoice_reconciliation', // maps to the feature flag or config key
+  store_id: '...',
+  brand_id: '...',
+  user_id: '...',
+  timestamp: new Date().toISOString(),
+  context: {}                     // feature-specific data (step, error_type, action_name)
+}
+```
+
+## Before Marking a Story as Done — Checklist
+
+- [ ] Feature flag or config key exists (in FeatureFlagsModal, BrandConfigsModal, or StoreConfigsModal as appropriate)
+- [ ] All 4 telemetry events are emitted at the correct lifecycle points
+- [ ] Error states are handled and emit `feature_error` with `error_type` in context
+- [ ] Feature Knowledge Base brief is written: what it does, step-by-step usage, known limitations (markdown file or Notion page linked in the Jira story)
+
+## What NOT to Instrument
+
+Operational configs that are not pilot features do not need telemetry (e.g., `billing_blocked`, `billing_block_date`). Only features that go through the pilot process (Jira epic reaching "Piloto" status) require the full telemetry suite.

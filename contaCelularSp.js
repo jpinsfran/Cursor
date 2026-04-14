@@ -1,5 +1,5 @@
 /**
- * Conta quantos números em ifoodLeads_SP.csv são celular (11 dígitos, 3º=7,8,9).
+ * Conta quantos números em ifoodLeads_SP.csv são celular (10 ou 11 dígitos com DDD, 3º=7,8,9).
  * Uso: node contaCelularSp.js
  */
 import { readFileSync } from "fs";
@@ -13,7 +13,7 @@ const rows = await csv({ noheader: false }).fromString(content);
 function ehCelular(val) {
   if (val == null || val === "") return false;
   const digits = String(val).replace(/\D/g, "");
-  if (digits.length !== 11) return false;
+  if (digits.length !== 11 && digits.length !== 10) return false;
   const primeiroDoAssinante = digits[2];
   return primeiroDoAssinante === "7" || primeiroDoAssinante === "8" || primeiroDoAssinante === "9";
 }
@@ -38,7 +38,8 @@ for (const row of rows) {
     continue;
   }
   if (digits.length === 10) {
-    fixo10++;
+    if (ehCelular(phone)) celular++;
+    else fixo10++;
     continue;
   }
   if (digits.length === 9) {

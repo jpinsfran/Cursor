@@ -1,0 +1,26 @@
+{
+  "_readme": "1) Copie este arquivo para pilot-test-leads.custom.json  2) Remova a chave _readme  3) Ajuste phone (só dígitos, ex. 5511999999999) e demais campos  4) node pilotValidateOutbound.js insert-custom",
+  "leads": [
+    {
+      "phone": "5511999999999",
+      "phone_e164": "+5511999999999",
+      "tier": "A",
+      "angulo_copy": 1,
+      "nome_lead": "Nome do dono ou contato",
+      "nome_negocio": "Nome do restaurante",
+      "bairro": "Bairro",
+      "regiao": "Cidade / UF",
+      "cuisine": "Tipo de cozinha",
+      "price_range": "$$",
+      "rating": "4.5",
+      "radar_score_geral": 60,
+      "radar_score_reputacao": 65,
+      "radar_score_digital": 50,
+      "radar_score_competitivo": 55,
+      "radar_score_financeiro": 58,
+      "radar_oportunidade_min": 2000,
+      "radar_oportunidade_max": 5000,
+      "radar_url": "https://exemplo.com/radar.pdf"
+    }
+  ]
+}

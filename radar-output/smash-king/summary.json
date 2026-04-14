@@ -1,0 +1,18 @@
+{
+  "htmlPath": "C:\\Users\\jpins\\Documents\\Nola\\radar-output\\smash-king\\radar.html",
+  "jsonPath": "C:\\Users\\jpins\\Documents\\Nola\\radar-output\\smash-king\\radar-data.json",
+  "messagesPath": "C:\\Users\\jpins\\Documents\\Nola\\radar-output\\smash-king\\whatsapp.txt",
+  "scores": {
+    "reputacao": 82,
+    "digital": 22,
+    "competitivo": 95,
+    "financeiro": 40,
+    "geral": 58,
+    "nivel": "Zona de Risco"
+  },
+  "opportunityMonthly": {
+    "min": 4550,
+    "max": 13000
+  },
+  "warnings": []
+}

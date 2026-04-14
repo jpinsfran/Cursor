@@ -9,6 +9,11 @@ import csv from "csvtojson";
 import { promises as fs } from "fs";
 import { json2csv } from "json-2-csv";
 import path from "path";
+import { normalizeLeadRows } from "./lib/leadDataUtils.js";
+import { dedupeRowsByCanonicalPhone } from "./lib/dedupePhoneCsv.js";
+import { fetchIfoodRestaurantRow } from "./lib/ifoodRestaurantFetch.js";
+import { IFOOD_USER_AGENT, runAddressFlow } from "./lib/ifoodAddressAutomation.js";
+import { maybeCompleteHoldChallenge } from "./lib/ifoodHoldVerification.js";
 
 const CHROME_PATH =
   process.platform === "win32"
@@ -16,7 +21,10 @@ const CHROME_PATH =
     : "/usr/bin/google-chrome";
 
 // Ex.: "Av Paulista 1000, São Paulo" SP
-const FETCH_TIMEOUT_MS = 15000;
+const FETCH_TIMEOUT_MS = 35000;
+const GOTO_RETRIES = 3;
+
+const SLOW_MO_MS = Number.parseInt(process.env.IFOOD_SLOW_MO ?? "0", 10) || 0;
 
 const getArgs = () => {
   const argv = process.argv.slice(2).filter((a) => a && !a.startsWith("--"));
@@ -30,6 +38,11 @@ const scrapeIfoodLeads = async () => {
   const { address, filePath, suffix } = getArgs();
   console.log("Address:", address);
   console.log("Output CSV:", filePath.replace(/\\\\/g, "\\"));
+  if (["1", "true", "yes"].includes(String(process.env.IFOOD_MANUAL_ADDRESS || "").toLowerCase())) {
+    console.log(
+      "[ifood] IFOOD_MANUAL_ADDRESS: busca e sugestão serão manuais no navegador; no terminal, pressione Enter após escolher o endereço."
+    );
+  }
   let browser = null;
   try {
     console.log("Launching browser...");
@@ -41,7 +54,7 @@ const scrapeIfoodLeads = async () => {
         "--disable-dev-shm-usage",
         "--disable-web-security",
         "--disable-features=IsolateOrigins,site-per-process",
-        "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        `--user-agent=${IFOOD_USER_AGENT}`,
       ],
       defaultViewport: {
         width: 1920,
@@ -49,109 +62,63 @@ const scrapeIfoodLeads = async () => {
       },
       headless: false,
       ignoreHTTPSErrors: true,
-      slowMo: 250,
+      slowMo: SLOW_MO_MS,
     });
 
-    const [page] = await browser.pages();
+    let [page] = await browser.pages();
+    if (!page) page = await browser.newPage();
+    await page.setUserAgent(IFOOD_USER_AGENT);
+
+    async function gotoWithRetry(url) {
+      for (let attempt = 1; attempt <= GOTO_RETRIES; attempt++) {
+        try {
+          if (attempt > 1) {
+            // Recria a página após detach/frame reset para evitar estado corrompido.
+            try {
+              if (!page.isClosed()) await page.close();
+            } catch (_) {}
+            page = await browser.newPage();
+            await page.setUserAgent(IFOOD_USER_AGENT);
+          }
+          await page.goto(url, { waitUntil: "domcontentloaded", timeout: 65000 });
+          return;
+        } catch (err) {
+          const msg = String(err?.message || "");
+          const retriable =
+            msg.includes("Navigating frame was detached") ||
+            msg.includes("LifecycleWatcher disposed") ||
+            msg.includes("Execution context was destroyed") ||
+            msg.includes("Target closed");
+          if (!retriable || attempt === GOTO_RETRIES) throw err;
+          console.warn(`[retry] page.goto falhou (tentativa ${attempt}/${GOTO_RETRIES}): ${msg}`);
+          await new Promise((r) => setTimeout(r, 1500 * attempt));
+        }
+      }
+    }
 
     console.log("Navigating to ifood...");
-    await page.goto("https://www.ifood.com.br/restaurantes", {
-      waitUntil: "domcontentloaded",
-    });
+    await gotoWithRetry("https://www.ifood.com.br/restaurantes");
     await new Promise((r) => setTimeout(r, 4000));
 
-    // botão "Escolha um endereço" 
-    console.log("Opening address modal...");
-    const addressBtn =
-      'button.delivery-input, .delivery-input, button[class*="address-search-input__button"]';
-    await page.waitForSelector(addressBtn, { timeout: 15000 });
-    await page.click(addressBtn);
-    await new Promise((r) => setTimeout(r, 4000));
-
-    // "Buscar endereço e número" – vários seletores (iFood muda o layout)
-    const modalInputSelectors = [
-      '.address-search-step input.address-search-input__field:not([disabled])',
-      '.address-search-input input.address-search-input__field',
-      'input[placeholder*="endereço" i], input[placeholder*="Endereço"]',
-      'input[placeholder*="buscar" i], input[placeholder*="Buscar"]',
-      '.address-search-input input[type="text"]',
-      '[class*="address-search"] input:not([disabled])',
-      'form input[type="text"]',
-    ];
-    let modalInput = null;
-    for (const sel of modalInputSelectors) {
-      try {
-        modalInput = await page.$(sel);
-        if (modalInput) break;
-      } catch (_) {}
-    }
-    if (!modalInput) {
-      await page.waitForSelector('input[type="text"]', { timeout: 12000 }).catch(() => null);
-      modalInput = await page.$('input[type="text"]');
-    }
-    if (!modalInput) {
-      throw new Error("Campo de endereço não encontrado. O iFood pode ter alterado a página.");
-    }
-    console.log("Address input found.");
-    await modalInput.click();
-    await new Promise((r) => setTimeout(r, 500));
-    await page.keyboard.type(address, { delay: 80 });
-    await new Promise((r) => setTimeout(r, 5000));
-
-    // Aguardar sugestões
-    try {
-      await Promise.race([
-        page.waitForSelector(".address-search-list li", { timeout: 12000 }),
-        page.waitForSelector(".pac-item", { timeout: 12000 }),
-      ]);
-    } catch (_) {}
-    await new Promise((r) => setTimeout(r, 800));
-
-    // Clicar na primeira sugestão
-    console.log("Selecting address suggestion...");
-    const suggestionClicked = await page.evaluate(() => {
-      const pacItem = document.querySelector(".pac-item, .pac-container .pac-item");
-      if (pacItem) {
-        pacItem.click();
-        return true;
-      }
-      const list = document.querySelector(".address-search-list");
-      if (list) {
-        const items = list.querySelectorAll("li a, li button, li [role=button], li");
-        for (const el of items) {
-          const t = (el.textContent || "").toLowerCase();
-          if (t.includes("avenida") || t.includes("rangel") || t.length > 15) {
-            el.click();
-            return true;
-          }
-        }
-        if (items[0]) {
-          items[0].click();
-          return true;
-        }
-      }
-      return false;
+    await runAddressFlow(page, address, {
+      modalOpenWaitMs: 1200,
+      typeDelay: 50,
+      suggestionTimeoutMs: 35000,
     });
-    console.log("Suggestion clicked:", suggestionClicked);
-    await new Promise((r) => setTimeout(r, 8000));
 
-    // Passo "número do endereço" (se aparecer)
-    const numberInput = await page.$('.address-number input, input[name*="number"], input[placeholder*="número" i]');
-    if (numberInput) {
-      const num = (address.match(/\d+/) || ["393"])[0];
-      await numberInput.type(num, { delay: 80 });
-      await new Promise((r) => setTimeout(r, 1500));
-      const confirmBtn = await page.$('.address-number button[type="submit"], .address-number .btn--default, .address-number button.btn');
-      if (confirmBtn) await confirmBtn.click();
-      await new Promise((r) => setTimeout(r, 4000));
+    const holdResult = await maybeCompleteHoldChallenge(page, {
+      waitForFrameMs: 40000,
+      maxTotalMs: 140000,
+    });
+    if (!holdResult.skipped) {
+      console.log("[ifood] Resultado verificação segurar:", holdResult);
     }
 
-    // Aguardar modal fechar e lista carregar
-    await new Promise((r) => setTimeout(r, 6000));
+    await new Promise((r) => setTimeout(r, 2000));
     try {
       await page.waitForFunction(
         () => !document.querySelector(".address-modal-overlay--after-open") || document.querySelector('a[href*="/restaurantes/"], a[href*="/delivery/"]'),
-        { timeout: 20000 }
+        { timeout: 40000 }
       );
     } catch (_) {}
 
@@ -166,7 +133,7 @@ const scrapeIfoodLeads = async () => {
     let urls = [];
     for (const sel of merchantSelectors) {
       try {
-        await page.waitForSelector(sel, { timeout: 25000 });
+        await page.waitForSelector(sel, { timeout: 45000 });
         const handles = await page.$$(sel);
         for (const h of handles) {
           const href = await h.evaluate((el) => el.getAttribute("href"));
@@ -256,154 +223,21 @@ const scrapeIfoodLeads = async () => {
         const chunk = urls.slice(i, i + 10);
         const data = await Promise.all(
           chunk.map(async (url) => {
-            let phone = "";
-            let cnpj = "";
-            let streetAddress = "";
-            let name = "";
-            let neighborhood = "";
-            let zipcode = "";
-            let rating = "";
-            let email = "";
-            let cuisine = "";
-            let priceRange = "";
-            const controller = new AbortController();
-            const to = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
-            return fetch(url, { signal: controller.signal })
-              .then((resp) => resp.text())
-              .then((body) => {
-                try {
-                  phone = body
-                    .split("telephone")[1]
-                    .split(",")[0]
-                    .split('":"')[1]
-                    .split('"')[0];
-                } catch (error) {
-                  console.log("failed to get phone");
-                }
-
-                try {
-                  cnpj = body
-                    .split("CNPJ")[3]
-                    .split('value":"')[1]
-                    .split('"}')[0];
-                } catch (error) {
-                  console.log("failed to get cnpj");
-                }
-
-                try {
-                  streetAddress = body
-                    .split("streetAddress")[1]
-                    .split('":"')[1]
-                    .split('"}')[0];
-                } catch (error) {
-                  console.log("failed to get streetAddress");
-                }
-
-                try {
-                  name = body.split("<title>")[1].split("<")[0];
-                } catch (error) {
-                  console.log("failed to get name");
-                }
-
-                try {
-                  neighborhood = body
-                    .split("district")[1]
-                    .split('":"')[1]
-                    .split('"')[0];
-                } catch (error) {
-                  console.log("failed to get neighborhood");
-                }
-
-                try {
-                  zipcode = body
-                    .split("zipCode")[1]
-                    .split('":"')[1]
-                    .split('"')[0];
-                } catch (error) {
-                  console.log("failed to get zipcode");
-                }
-
-                try {
-                  rating = body
-                    .split("evaluationAverage")[1]
-                    .split(":")[1]
-                    .split(",")[0];
-                } catch (error) {
-                  console.log("failed to get rating");
-                }
-
-                try {
-                  const raw = body.split("otpEmail")[1].split(":")[1].split(",")[0].trim();
-                  email = raw && raw !== "false" && raw !== "null" && /@/.test(raw) ? raw : "";
-                } catch (error) {
-                  console.log("failed to get email");
-                }
-
-                try {
-                  cuisine = body
-                    .split("servesCuisine")[1]
-                    .split(":")[1]
-                    .split(",")[0];
-                } catch (error) {
-                  console.log("failed to get cuisine");
-                }
-
-                try {
-                  priceRange = body
-                    .split("priceRange")[1]
-                    .split(":")[1]
-                    .split(",")[0];
-                } catch (error) {
-                  console.log("failed to get priceRange");
-                }
-
-                console.log("Scraped data", {
-                  name,
-                  url,
-                  phone,
-                  cnpj,
-                  streetAddress,
-                  neighborhood,
-                  zipcode,
-                  rating,
-                  email,
-                  cuisine,
-                  priceRange,
-                });
-
-                clearTimeout(to);
-                return {
-                  name,
-                  url,
-                  phone,
-                  cnpj,
-                  streetAddress,
-                  neighborhood,
-                  zipcode,
-                  rating,
-                  email,
-                  cuisine,
-                  priceRange,
-                  regiao: suffix,
-                };
-              })
-              .catch((err) => {
-                clearTimeout(to);
-                return {
-                  name,
-                  url,
-                  phone,
-                  cnpj,
-                  streetAddress,
-                  neighborhood,
-                  zipcode,
-                  rating,
-                  email,
-                  cuisine,
-                  priceRange,
-                  regiao: suffix,
-                };
-              });
+            const row = await fetchIfoodRestaurantRow(url, { timeoutMs: FETCH_TIMEOUT_MS });
+            console.log("Scraped data", {
+              name: row.name,
+              url: row.url,
+              phone: row.phone,
+              cnpj: row.cnpj,
+              streetAddress: row.streetAddress,
+              neighborhood: row.neighborhood,
+              zipcode: row.zipcode,
+              rating: row.rating,
+              email: row.email,
+              cuisine: row.cuisine,
+              priceRange: row.priceRange,
+            });
+            return row;
           })
         );
         fullData = [...fullData, ...data];
@@ -426,24 +260,60 @@ const scrapeIfoodLeads = async () => {
     });
     console.log("Unique data", uniqueData);
 
-    const allData = [...savedData, ...uniqueData];
+    let allData = normalizeLeadRows([...savedData, ...uniqueData]);
+    allData = dedupeRowsByCanonicalPhone(allData);
     console.log("Total data entries:", allData.length);
 
     console.log("Updating CSV...");
     const leadsContent = await json2csv(allData);
     await fs.writeFile(filePath, "\uFEFF" + leadsContent, "utf8");
+    console.log("CSV gravado:", filePath);
 
-    try {
-      const { isEnabled, upsertEstabelecimento } = await import("./lib/supabaseLeads.js");
-      if (isEnabled()) {
-        let n = 0;
-        for (const row of allData) {
-          const id = await upsertEstabelecimento(row);
-          if (id) n++;
+    const skipSupabase = ["1", "true", "yes"].includes(
+      String(process.env.IFOOD_SKIP_SUPABASE_SYNC || "").toLowerCase()
+    );
+    const urlKey = (row) => String(row?.url ?? row?.ifood_url ?? "").trim();
+    const urlsNovos = new Set(uniqueData.map(urlKey).filter(Boolean));
+    const syncSupabaseFull = ["1", "true", "yes"].includes(
+      String(process.env.IFOOD_SYNC_SUPABASE_FULL || "").toLowerCase()
+    );
+    let rowsParaSupabase = syncSupabaseFull
+      ? allData
+      : allData.filter((row) => urlsNovos.has(urlKey(row)));
+
+    if (skipSupabase) {
+      console.log("[Supabase] Pulado (IFOOD_SKIP_SUPABASE_SYNC).");
+    } else {
+      try {
+        const { isEnabled, upsertEstabelecimento } = await import("./lib/supabaseLeads.js");
+        if (isEnabled()) {
+          if (!syncSupabaseFull && urlsNovos.size === 0) {
+            console.log("[Supabase] Nenhuma URL nova neste scrape; sync ignorado.");
+          } else if (rowsParaSupabase.length === 0) {
+            console.log(
+              "[Supabase] Nenhuma linha correspondente no CSV após dedupe (URLs novas podem ter sido fundidas por telefone duplicado)."
+            );
+          } else {
+            const total = rowsParaSupabase.length;
+            const modo = syncSupabaseFull ? "completo (IFOOD_SYNC_SUPABASE_FULL)" : "somente linhas novas deste scrape";
+            console.log(
+              `[Supabase] Sincronizando ${total} linha(s) (${modo}) em ifood_estabelecimentos...`
+            );
+            let n = 0;
+            for (let i = 0; i < rowsParaSupabase.length; i++) {
+              const row = rowsParaSupabase[i];
+              const id = await upsertEstabelecimento(row);
+              if (id) n++;
+              const done = i + 1;
+              if (done % 250 === 0 || done === total) {
+                console.log(`[Supabase] Progresso: ${done}/${total} (${n} upserts ok)`);
+              }
+            }
+            console.log("[Supabase] Concluído:", n, "estabelecimentos sincronizados.");
+          }
         }
-        if (n > 0) console.log("[Supabase] Sincronizados", n, "estabelecimentos.");
-      }
-    } catch (_) {}
+      } catch (_) {}
+    }
 
     return Promise.resolve("Ifood leads scraped successfully!");
   } catch (error) {

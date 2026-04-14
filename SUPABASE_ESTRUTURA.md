@@ -8,7 +8,7 @@ Todas as tabelas se relacionam por **ifood_estabelecimentos.id**. O identificado
 
 | Tabela | Descrição | Quando é alimentada |
 |--------|-----------|----------------------|
-| **ifood_estabelecimentos** | Todos os estabelecimentos encontrados no scrape do iFood | Após `scrapeIfoodLeads.js` gravar o CSV |
+| **ifood_estabelecimentos** | Todos os estabelecimentos encontrados no scrape do iFood, incluindo `regiao` normalizada e `classificacao` por rating dentro da região | Após `scrapeIfoodLeads.js` gravar o CSV e nas sincronizações com Supabase |
 | **leads_qualificados** | Estabelecimentos em que foi encontrado contato (telefone e/ou email) | Quando há telefone ou email na linha (ex.: após tratamento/atualização por CNPJ ou ao unificar) |
 | **leads_perfil** | Perfil da loja e rapport: Instagram, perfil_do_lead, punch_line | Após `unificaIfoodInstagram.js` preencher perfil_do_lead/punch_line |
 | **cardapio** | Cardápio atual (a ser preenchido pelo seu scrape de menu do iFood) | Por você, quando tiver o scraper de menu; tabela já criada |
@@ -18,6 +18,8 @@ Todas as tabelas se relacionam por **ifood_estabelecimentos.id**. O identificado
 1. No dashboard do Supabase: **SQL Editor** → New query.
 2. Cole o conteúdo de `supabase/migrations/001_schema_leads.sql`.
 3. Execute (Run).
+
+Se o projeto já existe no Supabase, rode também `supabase/migrations/002_add_classificacao_ifood_estabelecimentos.sql` para adicionar a nova coluna `classificacao`.
 
 ## Variáveis de ambiente
 
@@ -39,13 +41,13 @@ SUPABASE_SERVICE_KEY=eyJ...
 
 ## Onde cada etapa grava
 
-- **scrapeIfoodLeads.js** – Após salvar o CSV, faz upsert em `ifood_estabelecimentos` para cada linha (se Supabase estiver configurado).
-- **unificaIfoodInstagram.js** – Após atualizar cada linha no CSV, faz upsert em `ifood_estabelecimentos`, em `leads_perfil` e, se houver phone/email, em `leads_qualificados`.
+- **scrapeIfoodLeads.js** – Após salvar o CSV, normaliza `regiao` e faz upsert em `ifood_estabelecimentos` (se Supabase estiver configurado).
+- **unificaIfoodInstagram.js** – Após atualizar cada linha no CSV, mantém `regiao` normalizada, faz upsert em `ifood_estabelecimentos`, em `leads_perfil` e, se houver phone/email, em `leads_qualificados`.
 - **cardapio** – Você alimenta quando tiver o scrape de menu (use `lib/supabaseLeads.js` → `upsertCardapio(ifoodUrl, payload)`).
 
 ## Script manual de sincronização
 
-O script `syncLeadsToSupabase.js` lê um CSV (ex.: o unificado) e sincroniza todas as linhas para as três tabelas (estabelecimentos, qualificados quando houver contato, perfil quando houver perfil_do_lead/punch_line). Útil para popular o Supabase a partir de uma planilha já pronta.
+O script `syncLeadsToSupabase.js` lê um CSV (ex.: o unificado), normaliza `regiao`, calcula `classificacao` por região apenas em memória e sincroniza todas as linhas para as três tabelas (estabelecimentos, qualificados quando houver contato, perfil quando houver perfil_do_lead/punch_line). Assim a classificação fica só no Supabase, sem precisar existir na planilha.
 
 ```bash
 node syncLeadsToSupabase.js ifoodLeads_unificado.csv

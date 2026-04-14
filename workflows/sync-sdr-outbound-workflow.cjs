@@ -11,6 +11,11 @@ const dir = __dirname;
 const wfPath = path.join(dir, 'sdr-outbound-workflow.json');
 const w = JSON.parse(fs.readFileSync(wfPath, 'utf8'));
 
+/** Credencial Supabase da instância Nola (Outbound_Scraper) — alinhar todos os nós Supabase deste workflow. */
+const SUPABASE_OUTBOUND_SCRAPER = {
+  supabaseApi: { id: 'H6LsO5AnjS3MemKE', name: 'Supabase Outbound_Scraper' },
+};
+
 const filtrar = fs.readFileSync(path.join(dir, 'sdr-outbound-filtrar-vencidos.js'), 'utf8');
 const prep = fs.readFileSync(path.join(dir, 'sdr-outbound-prepare-touchpoint.js'), 'utf8');
 const claim = fs.readFileSync(path.join(dir, 'sdr-outbound-claim-dispatch-lease.js'), 'utf8');
@@ -18,6 +23,7 @@ const claim = fs.readFileSync(path.join(dir, 'sdr-outbound-claim-dispatch-lease.
 for (const n of w.nodes) {
   if (n.name === 'Filtrar vencidos') n.parameters.jsCode = filtrar;
   if (n.name === 'Preparar touchpoint') n.parameters.jsCode = prep;
+  if (n.name === 'Claim dispatch lease') n.parameters.jsCode = claim;
   if (n.name === 'Gerar Msg' && n.parameters?.options?.systemMessage) {
     const sm = n.parameters.options.systemMessage;
     if (!sm.includes('## Saudação (fuso)')) {
@@ -79,8 +85,9 @@ if (!hasClaim) {
   });
 }
 
+/** Split in Batches: saída 0 = loop (cada batch/item); saída 1 = done. Claim deve estar na 0. */
 w.connections['Um lead por vez'] = {
-  main: [[], [{ node: 'Claim dispatch lease', type: 'main', index: 0 }]],
+  main: [[{ node: 'Claim dispatch lease', type: 'main', index: 0 }], []],
 };
 
 w.connections['Claim dispatch lease'] = {
@@ -124,9 +131,15 @@ for (const n of w.nodes) {
   }
 }
 
+for (const n of w.nodes) {
+  if (n.credentials && n.credentials.supabaseApi) {
+    n.credentials = JSON.parse(JSON.stringify(SUPABASE_OUTBOUND_SCRAPER));
+  }
+}
+
 if (w.meta) {
   w.meta.notes =
-    'Cron 15 min. Migration 015 (dispatch lease). Filtrar vencidos: inbound após outbound pausa orquestrador. Variável de ambiente UAZAPI_TOKEN para envio.';
+    'Cron 15 min. Migrations 015 (dispatch lease), 016 (quebra silêncio 3h / 2 tentativas). Filtrar vencidos: inbound após outbound pausa orquestrador. UAZAPI_TOKEN para envio.';
 }
 
 fs.writeFileSync(wfPath, JSON.stringify(w, null, 2) + '\n', 'utf8');

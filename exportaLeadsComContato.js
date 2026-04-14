@@ -15,6 +15,8 @@ import { json2csv } from "json-2-csv";
 import path from "path";
 import { fileURLToPath } from "url";
 import { getDddForRow } from "./ddd-brasil.js";
+import { normalizeLeadRows } from "./lib/leadDataUtils.js";
+import { dedupeRowsByCanonicalPhone } from "./lib/dedupePhoneCsv.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -24,11 +26,12 @@ function soDigitos(val) {
 
 /**
  * Retorna true se o número é celular brasileiro (não fixo).
- * Celular: 11 dígitos (DDD + 9 do assinante) com 3º = 7, 8 ou 9; ou 9 dígitos começando com 7, 8 ou 9.
+ * Celular: 10 ou 11 dígitos (com DDD) com 3º = 7, 8 ou 9; ou 9 dígitos (sem DDD) começando com 7, 8 ou 9.
+ * O nono dígito é obrigatório no Brasil (Anatel, conclusão fev/2017), mas APIs podem retornar 10 dígitos.
  */
 function ehCelular(val) {
   const digits = soDigitos(val);
-  if (digits.length === 11) {
+  if (digits.length === 11 || digits.length === 10) {
     return digits[2] === "7" || digits[2] === "8" || digits[2] === "9";
   }
   if (digits.length === 9) {
@@ -111,6 +114,8 @@ async function main() {
   }
   if (ddd) console.log(`Fallback --ddd: ${ddd}`);
 
+  comContato = normalizeLeadRows(comContato);
+  comContato = dedupeRowsByCanonicalPhone(comContato);
   const csvContent = await json2csv(comContato);
   await fs.writeFile(outputPath, "\uFEFF" + csvContent, "utf8");
 
