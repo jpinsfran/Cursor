@@ -1,0 +1,53 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "temperatura": {
+      "type": "string",
+      "enum": ["quente", "morno", "frio"],
+      "description": "Lead temperature from last user message + agent reply context"
+    },
+    "conversa_fase": {
+      "type": "string",
+      "enum": [
+        "abertura",
+        "radar_enviado",
+        "investigacao",
+        "transicao_nola",
+        "agendamento",
+        "pos_agendamento"
+      ],
+      "description": "Pipeline phase aligned with outbound_cadencia_sessions.conversa_fase CHECK"
+    },
+    "bant_budget": {
+      "type": "string",
+      "enum": ["true", "false"],
+      "description": "Evidence of budget/financial discussion; false if explicitly absent"
+    },
+    "bant_authority": {
+      "type": "string",
+      "enum": ["true", "false"]
+    },
+    "bant_need": {
+      "type": "string",
+      "enum": ["true", "false"]
+    },
+    "bant_timeline": {
+      "type": "string",
+      "enum": ["true", "false"]
+    },
+    "motivo_perda": {
+      "type": "string",
+      "description": "Short reason if cold or opt-out; empty string if none"
+    }
+  },
+  "required": [
+    "temperatura",
+    "conversa_fase",
+    "bant_budget",
+    "bant_authority",
+    "bant_need",
+    "bant_timeline",
+    "motivo_perda"
+  ]
+}

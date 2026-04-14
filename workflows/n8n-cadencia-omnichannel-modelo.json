@@ -1,0 +1,101 @@
+{
+  "name": "Cadência Omnichannel — modelo (divisão D1–D21)",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "description": "Modelo: define os 12 touchpoints em 21 dias conforme Plano_Cadencia_Omnichannel_Detalhado. Importar no n8n (Workflows → Import). Próximo passo: conectar Cron → Supabase (leads) → este Code como biblioteca ou mesclar com orquestrador real."
+  },
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 45
+            }
+          ]
+        }
+      },
+      "id": "cad-schedule-001",
+      "name": "Schedule — cada 45min (teste)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "notesInFlow": true,
+      "notes": "Teste: executa a cada 45min. Guard obrigatório downstream bloqueia fora de 08h-18h (America/Sao_Paulo) e limita 15 disparos/dia combinado."
+    },
+    {
+      "parameters": {
+        "jsCode": "// Biblioteca da cadência 21 dias / 12 touchpoints — fonte: Plano_Cadencia_Omnichannel_Detalhado.md\n// Saída: um item por linha de touchpoint (para Switch/Router downstream)\n\nconst CADENCIA_OMNI = {\n  nome: 'cadencia_21d_12tp',\n  dias_totais: 21,\n  touchpoints_totais: 12,\n  legenda_status: ['CONECTOU', 'SILENCIO', 'OBJECAO', 'OPT_OUT', 'AGENDOU', 'PERDIDO'],\n  touchpoints: [\n    {\n      id: 'D1_WA',\n      dia_relativo: 1,\n      ordem_no_dia: 1,\n      canal: 'whatsapp',\n      formato: 'texto',\n      intensidade: 'leve',\n      objetivo: 'Gerar curiosidade — sem mencionar NOLA/produto; CTA: posso te mandar?',\n      faixa_horario_sugerida: '09:00-11:00',\n      condicao_executar: 'sempre (abertura)',\n      condicao_pular: 'OPT_OUT | AGENDOU | lead já em conversa ativa',\n      paralelo: null\n    },\n    {\n      id: 'D1_IG',\n      dia_relativo: 1,\n      ordem_no_dia: 2,\n      canal: 'instagram',\n      formato: 'interacao',\n      intensidade: 'leve',\n      objetivo: 'Aquecer — curtir 2-3 posts + 1 comentário; sem DM',\n      faixa_horario_sugerida: '14:00-16:00',\n      condicao_executar: 'sempre em paralelo ao D1 (não é cold DM)',\n      condicao_pular: 'sem handle Instagram / opt-out',\n      paralelo: 'D1_WA'\n    },\n    {\n      id: 'D3_WA',\n      dia_relativo: 3,\n      ordem_no_dia: 1,\n      canal: 'whatsapp',\n      formato: 'texto',\n      intensidade: 'media',\n      objetivo: 'Follow-up com dado (ranking/cuisine/bairro)',\n      faixa_horario_sugerida: '09:00-11:00',\n      condicao_executar: 'se NÃO respondeu no D1',\n      condicao_pular: 'respondeu antes | AGENDOU',\n      paralelo: null\n    },\n    {\n      id: 'D5_EMAIL',\n      dia_relativo: 5,\n      ordem_no_dia: 1,\n      canal: 'email',\n      formato: 'texto_pdf',\n      intensidade: 'media',\n      objetivo: 'Radar formal + PDF; canal diferente',\n      faixa_horario_sugerida: '07:00-09:00',\n      condicao_executar: 'se NÃO respondeu em D1 e D3',\n      condicao_pular: 'sem email válido',\n      paralelo: null\n    },\n    {\n      id: 'D7_WA',\n      dia_relativo: 7,\n      ordem_no_dia: 1,\n      canal: 'whatsapp',\n      formato: 'audio',\n      intensidade: 'alta',\n      objetivo: 'Humanizar — áudio 30-40s (ElevenLabs)',\n      faixa_horario_sugerida: '09:00-11:00',\n      condicao_executar: 'se silêncio até aqui em todos os canais',\n      condicao_pular: '—',\n      paralelo: null\n    },\n    {\n      id: 'D8_LI',\n      dia_relativo: 8,\n      ordem_no_dia: 1,\n      canal: 'linkedin',\n      formato: 'convite_nota',\n      intensidade: 'leve',\n      objetivo: 'Autoridade — convite perfil pessoal sócio + nota max 300 chars',\n      faixa_horario_sugerida: '08:00-10:00',\n      condicao_executar: 'se lead tem LinkedIn identificado',\n      condicao_pular: 'sem URL LinkedIn',\n      paralelo: null\n    },\n    {\n      id: 'D10_WA',\n      dia_relativo: 10,\n      ordem_no_dia: 1,\n      canal: 'whatsapp',\n      formato: 'imagem',\n      intensidade: 'media',\n      objetivo: 'Card score + ranking + R$ oportunidade',\n      faixa_horario_sugerida: '14:00-15:30',\n      condicao_executar: 'se NÃO respondeu até D7',\n      condicao_pular: '—',\n      paralelo: null\n    },\n    {\n      id: 'D10_LI_MSG',\n      dia_relativo: 10,\n      ordem_no_dia: 2,\n      canal: 'linkedin',\n      formato: 'mensagem',\n      intensidade: 'media',\n      objetivo: 'Se aceitou conexão D8 — msg follow-up + oferta enviar material no WA',\n      faixa_horario_sugerida: 'paralelo a D10_WA',\n      condicao_executar: 'conexão D8 aceita',\n      condicao_pular: 'não aceitou em D8',\n      paralelo: 'D10_WA'\n    },\n    {\n      id: 'D13_LIG',\n      dia_relativo: 13,\n      ordem_no_dia: 1,\n      canal: 'ligacao',\n      formato: 'voz',\n      intensidade: 'alta',\n      objetivo: 'Breakthrough — APENAS Tier A; VOIP + ElevenLabs ou alerta humano',\n      faixa_horario_sugerida: '09:00-10:30 ou 14:00-16:00',\n      condicao_executar: 'Tier A e silêncio nos outros canais',\n      condicao_pular: 'Tier B/C (economia) | OPT_OUT',\n      paralelo: null\n    },\n    {\n      id: 'D14_WA',\n      dia_relativo: 14,\n      ordem_no_dia: 1,\n      canal: 'whatsapp',\n      formato: 'texto',\n      intensidade: 'media',\n      objetivo: 'Challenger — pergunta CMV + gap R$',\n      faixa_horario_sugerida: '09:00-11:00',\n      condicao_executar: 'se NÃO respondeu até D13 (ou D10 se Tier B pulou ligação)',\n      condicao_pular: '—',\n      paralelo: null\n    },\n    {\n      id: 'D17_EMAIL',\n      dia_relativo: 17,\n      ordem_no_dia: 1,\n      canal: 'email',\n      formato: 'texto',\n      intensidade: 'leve',\n      objetivo: 'Follow-up value — novo dado ou mini case',\n      faixa_horario_sugerida: '08:00-10:00',\n      condicao_executar: 'se NÃO respondeu ao email D5 e ainda na cadência',\n      condicao_pular: '—',\n      paralelo: null\n    },\n    {\n      id: 'D19_WA',\n      dia_relativo: 19,\n      ordem_no_dia: 1,\n      canal: 'whatsapp',\n      formato: 'lista_ou_video_ou_nota',\n      intensidade: 'media',\n      objetivo: 'Último esforço — escolher formato pelo copy testing',\n      faixa_horario_sugerida: '14:00-15:30',\n      condicao_executar: 'silêncio em todos os canais',\n      condicao_pular: '—',\n      paralelo: null\n    },\n    {\n      id: 'D21_WA',\n      dia_relativo: 21,\n      ordem_no_dia: 1,\n      canal: 'whatsapp',\n      formato: 'texto',\n      intensidade: 'leve',\n      objetivo: 'Break-up — porta aberta; marcar PERDIDO se silêncio',\n      faixa_horario_sugerida: '09:00-11:00',\n      condicao_executar: 'sem resposta em nenhum canal em 21 dias',\n      condicao_pular: 'já respondeu | AGENDOU',\n      paralelo: null\n    }\n  ],\n  regras_globais: {\n    max_touchpoints_mesmo_lead_sem_resposta: 5,\n    janela_dias: 21,\n    intervalo_min_entre_envios_seg: 15,\n    intervalo_max_entre_envios_seg: 45,\n    modo_conversa_pausa_cadencia: true,\n    retomar_cadencia_apos_horas_silencio_em_conversa: 48,\n    followup_reforco_1h_ativo: true,\n    followup_d1_9h_ativo: true,\n    timezone_followup: 'America/Sao_Paulo',\n    followup_d1_horario: '09:00',\n    throttle_teste_ativo: true,\n    limite_disparos_dia_combined: 15,\n    janela_envio_inicio_hora: 8,\n    janela_envio_fim_hora_exclusiva: 18,\n    frequencia_gatilho_minutos: 45\n  }\n};\n\nreturn [{ json: { cadencia: CADENCIA_OMNI, gerado_em: new Date().toISOString() } }];"
+      },
+      "id": "cad-code-def-001",
+      "name": "Definição cadência (D1–D21)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        280,
+        0
+      ],
+      "notesInFlow": true,
+      "notes": "Contém o mapa completo. Downstream: filtrar por lead (dia na cadência, tier, canais disponíveis) e despachar sub-workflows por canal."
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "stub",
+              "name": "proximo_passo",
+              "value": "Conectar: Supabase (lead + primeiro_contato_at + touchpoint_atual) → calcular dia_relativo → IF node por id do passo",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "cad-set-stub-001",
+      "name": "Stub — ligar orquestrador",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        520,
+        0
+      ],
+      "notesInFlow": true,
+      "notes": "Substituir por: Get rows Supabase, Merge com saída do Code, Switch por `canal`, Execute Workflow (UAZAPI / Resend / etc.)."
+    }
+  ],
+  "connections": {
+    "Schedule — cada 45min (teste)": {
+      "main": [
+        [
+          {
+            "node": "Definição cadência (D1–D21)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Definição cadência (D1–D21)": {
+      "main": [
+        [
+          {
+            "node": "Stub — ligar orquestrador",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": []
+}

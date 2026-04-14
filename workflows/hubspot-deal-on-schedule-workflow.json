@@ -1,0 +1,151 @@
+{
+  "name": "HubSpot — Criar Deal no Agendamento",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "hubspot-deal-agendamento",
+        "options": {}
+      },
+      "id": "hd-trigger",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.item.json.body || $input.item.json;\n\nconst nome = input.nome_lead || '';\nconst restaurante = input.nome_negocio || '';\nconst phone = input.phone_e164 || input.phone || '';\nconst email = input.email || '';\nconst hubspot_contact_id = input.hubspot_contact_id || '';\nconst session_id = input.session_id || '';\nconst agendamento_data = input.agendamento_data || '';\nconst agendamento_link = input.agendamento_link || '';\nconst bant_budget = input.bant_budget || '';\nconst bant_authority = input.bant_authority || '';\nconst bant_need = input.bant_need || '';\nconst bant_timeline = input.bant_timeline || '';\nconst temperatura = input.temperatura || '';\nconst radar_url = input.radar_url || '';\nconst score_geral = input.radar_score_geral || '';\n\nconst bantSummary = [\n  bant_budget ? `Budget: ${bant_budget}` : '',\n  bant_authority ? `Authority: ${bant_authority}` : '',\n  bant_need ? `Need: ${bant_need}` : '',\n  bant_timeline ? `Timeline: ${bant_timeline}` : ''\n].filter(Boolean).join(' | ');\n\nreturn [{\n  json: {\n    nome,\n    restaurante,\n    phone,\n    email,\n    hubspot_contact_id,\n    session_id,\n    agendamento_data,\n    agendamento_link,\n    temperatura,\n    radar_url,\n    score_geral,\n    bant_summary: bantSummary,\n    deal_name: `Diagnostico ${restaurante} - NOLA`\n  }\n}];"
+      },
+      "id": "hd-prepare",
+      "name": "Preparar Dados",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [200, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.hubapi.com/crm/v3/objects/deals",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "hubspotOAuth2Api",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ ({ properties: { dealname: $json.deal_name, pipeline: 'default', dealstage: 'appointmentscheduled', amount: '550', closedate: $json.agendamento_data, description: 'Radar Score: ' + $json.score_geral + '/100 | Temperatura: ' + $json.temperatura + ' | BANT: ' + $json.bant_summary + ' | Radar: ' + $json.radar_url + ' | Reuniao: ' + $json.agendamento_link } }) }}",
+        "options": {}
+      },
+      "id": "hd-create-deal",
+      "name": "HubSpot — Criar Deal",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [400, 0],
+      "credentials": {
+        "hubspotOAuth2Api": {
+          "id": "CONFIGURE_HUBSPOT_CREDENTIAL_ID",
+          "name": "HubSpot OAuth2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [
+            {
+              "id": "hd-cond-1",
+              "leftValue": "={{ $('Preparar Dados').item.json.hubspot_contact_id }}",
+              "rightValue": "",
+              "operator": { "type": "string", "operation": "notEquals" }
+            }
+          ],
+          "combinator": "and"
+        }
+      },
+      "id": "hd-has-contact",
+      "name": "Tem Contact ID?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [600, 0]
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=https://api.hubapi.com/crm/v3/objects/deals/{{ $('HubSpot — Criar Deal').item.json.id }}/associations/contacts/{{ $('Preparar Dados').item.json.hubspot_contact_id }}/deal_to_contact",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "hubspotOAuth2Api",
+        "options": {}
+      },
+      "id": "hd-associate",
+      "name": "Associar Contact",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [800, -100],
+      "credentials": {
+        "hubspotOAuth2Api": {
+          "id": "CONFIGURE_HUBSPOT_CREDENTIAL_ID",
+          "name": "HubSpot OAuth2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "tableId": "outbound_cadencia_sessions",
+        "filterType": "string",
+        "filterString": "=id=eq.{{ $('Preparar Dados').item.json.session_id }}",
+        "fieldsUi": {
+          "fieldValues": [
+            {
+              "fieldId": "hubspot_deal_id",
+              "fieldValue": "={{ $('HubSpot — Criar Deal').item.json.id }}"
+            },
+            {
+              "fieldId": "agendamento_at",
+              "fieldValue": "={{ $('Preparar Dados').item.json.agendamento_data }}"
+            },
+            {
+              "fieldId": "status",
+              "fieldValue": "agendado"
+            }
+          ]
+        }
+      },
+      "id": "hd-update-session",
+      "name": "Atualizar Session",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [800, 100],
+      "credentials": {
+        "supabaseApi": {
+          "id": "CONFIGURE_SUPABASE_CREDENTIAL_ID",
+          "name": "Supabase"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ success: true, deal_id: $('HubSpot — Criar Deal').item.json.id }) }}"
+      },
+      "id": "hd-respond",
+      "name": "Respond",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1000, 0]
+    }
+  ],
+  "connections": {
+    "Webhook": { "main": [[{ "node": "Preparar Dados", "type": "main", "index": 0 }]] },
+    "Preparar Dados": { "main": [[{ "node": "HubSpot — Criar Deal", "type": "main", "index": 0 }]] },
+    "HubSpot — Criar Deal": { "main": [[{ "node": "Tem Contact ID?", "type": "main", "index": 0 }]] },
+    "Tem Contact ID?": { "main": [
+      [{ "node": "Associar Contact", "type": "main", "index": 0 }],
+      [{ "node": "Atualizar Session", "type": "main", "index": 0 }]
+    ] },
+    "Associar Contact": { "main": [[{ "node": "Atualizar Session", "type": "main", "index": 0 }]] },
+    "Atualizar Session": { "main": [[{ "node": "Respond", "type": "main", "index": 0 }]] }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

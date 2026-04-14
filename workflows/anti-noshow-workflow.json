@@ -1,0 +1,293 @@
+{
+  "name": "Anti No-Show — Lembretes",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 8,
+              "triggerAtMinute": 0
+            }
+          ]
+        }
+      },
+      "id": "ns-cron",
+      "name": "Cron 8h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "const TZ = 'America/Sao_Paulo';\nconst now = new Date();\nconst parts = new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(now);\nconst y = Number(parts.find((p) => p.type === 'year').value);\nconst mo = Number(parts.find((p) => p.type === 'month').value);\nconst day = Number(parts.find((p) => p.type === 'day').value);\nconst todayStartSpUtc = Date.UTC(y, mo - 1, day, 3, 0, 0, 0);\nconst tomorrowStart = todayStartSpUtc + 86400000;\nconst tomorrowEnd = tomorrowStart + 86400000 - 1;\nreturn [{ json: {\n  tomorrow_start: new Date(tomorrowStart).toISOString(),\n  tomorrow_end: new Date(tomorrowEnd).toISOString(),\n  now: now.toISOString(),\n  tipo: 'D-1'\n} }];"
+      },
+      "id": "ns-dates",
+      "name": "Calcular Datas",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [200, 0]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "outbound_cadencia_sessions",
+        "returnAll": true,
+        "filterType": "string",
+        "filterString": "=status=eq.agendado,agendamento_data=gte.{{ $json.tomorrow_start }},agendamento_data=lte.{{ $json.tomorrow_end }}"
+      },
+      "id": "ns-buscar-amanha",
+      "name": "Buscar Agendados Amanhã",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [400, 0],
+      "credentials": {
+        "supabaseApi": {
+          "id": "CONFIGURE_SUPABASE_CREDENTIAL_ID",
+          "name": "Supabase"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [
+            {
+              "id": "ns-cond-1",
+              "leftValue": "={{ $json.phone_e164 }}",
+              "rightValue": "",
+              "operator": { "type": "string", "operation": "notEquals" }
+            }
+          ],
+          "combinator": "and"
+        }
+      },
+      "id": "ns-tem-phone",
+      "name": "Tem telefone?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [600, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "const s = $input.item.json;\nconst agData = new Date(s.agendamento_data);\nconst hora = agData.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo' });\nconst dia = agData.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'America/Sao_Paulo' });\nconst nome = s.nome_lead || s.nome_negocio || 'pessoal';\nconst restaurante = s.nome_negocio || '';\nconst bairro = s.bairro || '';\nconst cuisine = (s.cuisine || '').replace(/\"/g, '');\nconst msg = `Oi ${nome}! Amanha ${dia} as ${hora} tem nosso diagnostico do ${restaurante}. To preparando a analise com os dados reais de ${cuisine} em ${bairro}, vai ser bem completo! Te espero`;\nreturn [{ json: { phone: s.phone_e164 || s.phone, message: msg, session_id: s.id, tipo_lembrete: 'D-1' } }];"
+      },
+      "id": "ns-msg-d1",
+      "name": "Montar Lembrete D-1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [800, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.UAZAPI_URL }}/send/text",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "Authorization", "value": "Bearer {{ $env.UAZAPI_TOKEN }}" }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            { "name": "phone", "value": "={{ $json.phone }}" },
+            { "name": "message", "value": "={{ $json.message }}" },
+            { "name": "delayMessage", "value": "={{ Math.floor(Math.random() * 4000) + 2000 }}" }
+          ]
+        }
+      },
+      "id": "ns-enviar-wa",
+      "name": "UAZAPI — Lembrete",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1000, 0]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "tableId": "outbound_cadencia_eventos",
+        "fieldsUi": {
+          "fieldValues": [
+            { "fieldName": "session_id", "fieldValue": "={{ $json.session_id }}" },
+            { "fieldName": "touchpoint_id", "fieldValue": "={{ $json.tipo_lembrete }}" },
+            { "fieldName": "canal", "fieldValue": "whatsapp" },
+            { "fieldName": "direcao", "fieldValue": "outbound" },
+            { "fieldName": "mensagem_texto", "fieldValue": "={{ $json.message }}" },
+            { "fieldName": "agente_action", "fieldValue": "anti_noshow_lembrete" },
+            { "fieldName": "message_kind", "fieldValue": "resposta_agente" },
+            { "fieldName": "espera_resposta", "fieldValue": "false" },
+            { "fieldName": "n8n_execution_id", "fieldValue": "={{ $execution.id }}" },
+            { "fieldName": "workflow_name", "fieldValue": "Anti No-Show — Lembretes" }
+          ]
+        }
+      },
+      "id": "ns-log",
+      "name": "Log Lembrete",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [1200, 0],
+      "credentials": {
+        "supabaseApi": {
+          "id": "CONFIGURE_SUPABASE_CREDENTIAL_ID",
+          "name": "Supabase"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 30
+            }
+          ]
+        }
+      },
+      "id": "ns-cron30",
+      "name": "Cron 30min",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [0, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const now = new Date();\nconst soon = new Date(now.getTime() + 45 * 60000);\nconst soonEnd = new Date(now.getTime() + 75 * 60000);\nreturn [{ json: {\n  soon_start: soon.toISOString(),\n  soon_end: soonEnd.toISOString(),\n  now: now.toISOString(),\n  tipo: 'D0-30min'\n} }];"
+      },
+      "id": "ns-dates30",
+      "name": "Calcular Próxima Hora",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "outbound_cadencia_sessions",
+        "returnAll": true,
+        "filterType": "string",
+        "filterString": "=status=eq.agendado,agendamento_data=gte.{{ $json.soon_start }},agendamento_data=lte.{{ $json.soon_end }}"
+      },
+      "id": "ns-buscar-soon",
+      "name": "Buscar Agendados em 1h",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [400, 300],
+      "credentials": {
+        "supabaseApi": {
+          "id": "CONFIGURE_SUPABASE_CREDENTIAL_ID",
+          "name": "Supabase"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [
+            {
+              "id": "ns-cond-2",
+              "leftValue": "={{ $json.phone_e164 }}",
+              "rightValue": "",
+              "operator": { "type": "string", "operation": "notEquals" }
+            }
+          ],
+          "combinator": "and"
+        }
+      },
+      "id": "ns-tem-phone2",
+      "name": "Tem telefone? 2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [600, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const s = $input.item.json;\nconst hora = new Date(s.agendamento_data).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit', timeZone: 'America/Sao_Paulo' });\nconst nome = s.nome_lead || s.nome_negocio || 'pessoal';\nconst link = s.agendamento_link || '';\nconst cuisine = (s.cuisine || '').replace(/\"/g, '');\nconst bairro = s.bairro || '';\nconst msg = `Te espero em 30 min! Segue o link ${link}\\n\\nTo com o Radar aberto aqui e mais uns dados que separei sobre ${cuisine} em ${bairro}`;\nreturn [{ json: { phone: s.phone_e164 || s.phone, message: msg, session_id: s.id, tipo_lembrete: 'D0-30min' } }];"
+      },
+      "id": "ns-msg-d0",
+      "name": "Montar Lembrete D0",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [800, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.UAZAPI_URL }}/send/text",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "Authorization", "value": "Bearer {{ $env.UAZAPI_TOKEN }}" }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            { "name": "phone", "value": "={{ $json.phone }}" },
+            { "name": "message", "value": "={{ $json.message }}" },
+            { "name": "delayMessage", "value": "={{ Math.floor(Math.random() * 3000) + 1000 }}" }
+          ]
+        }
+      },
+      "id": "ns-enviar-wa2",
+      "name": "UAZAPI — Lembrete Final",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1000, 300]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "tableId": "outbound_cadencia_eventos",
+        "fieldsUi": {
+          "fieldValues": [
+            { "fieldName": "session_id", "fieldValue": "={{ $json.session_id }}" },
+            { "fieldName": "touchpoint_id", "fieldValue": "D0-30min" },
+            { "fieldName": "canal", "fieldValue": "whatsapp" },
+            { "fieldName": "direcao", "fieldValue": "outbound" },
+            { "fieldName": "mensagem_texto", "fieldValue": "={{ $json.message }}" },
+            { "fieldName": "agente_action", "fieldValue": "anti_noshow_lembrete_final" },
+            { "fieldName": "message_kind", "fieldValue": "resposta_agente" },
+            { "fieldName": "espera_resposta", "fieldValue": "false" },
+            { "fieldName": "n8n_execution_id", "fieldValue": "={{ $execution.id }}" },
+            { "fieldName": "workflow_name", "fieldValue": "Anti No-Show — Lembretes" }
+          ]
+        }
+      },
+      "id": "ns-log2",
+      "name": "Log Lembrete Final",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [1200, 300],
+      "credentials": {
+        "supabaseApi": {
+          "id": "CONFIGURE_SUPABASE_CREDENTIAL_ID",
+          "name": "Supabase"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Cron 8h": { "main": [[{ "node": "Calcular Datas", "type": "main", "index": 0 }]] },
+    "Calcular Datas": { "main": [[{ "node": "Buscar Agendados Amanhã", "type": "main", "index": 0 }]] },
+    "Buscar Agendados Amanhã": { "main": [[{ "node": "Tem telefone?", "type": "main", "index": 0 }]] },
+    "Tem telefone?": { "main": [[{ "node": "Montar Lembrete D-1", "type": "main", "index": 0 }], []] },
+    "Montar Lembrete D-1": { "main": [[{ "node": "UAZAPI — Lembrete", "type": "main", "index": 0 }]] },
+    "UAZAPI — Lembrete": { "main": [[{ "node": "Log Lembrete", "type": "main", "index": 0 }]] },
+    "Cron 30min": { "main": [[{ "node": "Calcular Próxima Hora", "type": "main", "index": 0 }]] },
+    "Calcular Próxima Hora": { "main": [[{ "node": "Buscar Agendados em 1h", "type": "main", "index": 0 }]] },
+    "Buscar Agendados em 1h": { "main": [[{ "node": "Tem telefone? 2", "type": "main", "index": 0 }]] },
+    "Tem telefone? 2": { "main": [[{ "node": "Montar Lembrete D0", "type": "main", "index": 0 }], []] },
+    "Montar Lembrete D0": { "main": [[{ "node": "UAZAPI — Lembrete Final", "type": "main", "index": 0 }]] },
+    "UAZAPI — Lembrete Final": { "main": [[{ "node": "Log Lembrete Final", "type": "main", "index": 0 }]] }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Sao_Paulo"
+  }
+}

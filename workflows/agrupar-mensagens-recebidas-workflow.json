@@ -1,0 +1,269 @@
+{
+  "name": "Agrupar Mensagens Recebidas",
+  "meta": {
+    "instanceWorkflowId": "no6RDsi3HE4Heyqu",
+    "exportedAt": "2026-04-10",
+    "notes": "Subfluxo chamado pelo AGENTE DE OUTBOUND v2 (Call Agrupar Mensagens Recebidas). Redis lista por telefone, Wait 45s, agrupa mensagens; ramo Duplicada quando ainda há mensagens novas. Credenciais Redis: reassociar na importação."
+  },
+  "nodes": [
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            { "name": "phone", "type": "any" },
+            { "name": "mensagem", "type": "any" }
+          ]
+        }
+      },
+      "id": "c8caf050-0bc0-40a6-814f-ce74eb678a32",
+      "typeVersion": 1.1,
+      "name": "Start",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "position": [720, -400]
+    },
+    {
+      "parameters": {
+        "operation": "push",
+        "list": "=buffer_{{ $('Start').item.json.phone }}",
+        "messageData": "={{ $('Start').item.json.mensagem }}"
+      },
+      "id": "v2-redispush",
+      "name": "List_messages",
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [928, -400],
+      "credentials": {
+        "redis": {
+          "id": "CONFIGURE_REDIS_CREDENTIAL_ID",
+          "name": "Redis"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "amount": 45
+      },
+      "id": "v2-wait",
+      "name": "Wait_messages",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [1120, -400],
+      "webhookId": "6a8c57c9-3972-41af-bbe3-e46ea1b43102"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "propertyName": "message",
+        "key": "=buffer_{{ $('Start').item.json.phone }}",
+        "options": {}
+      },
+      "id": "v2-getlast",
+      "name": "get_last_message",
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [1248, -400],
+      "credentials": {
+        "redis": {
+          "id": "CONFIGURE_REDIS_CREDENTIAL_ID",
+          "name": "Redis"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "m1",
+              "leftValue": "={{ Array.isArray($json.message) ? $json.message[$json.message.length - 1] : '' }}",
+              "rightValue": "={{ $('Start').item.json.mensagem }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "v2-multiplas",
+      "name": "Multiplas msg?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [1456, -400],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "g1",
+              "name": "message",
+              "value": "={{ $('get_last_message').item.json.message.join('\\n') }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "v2-group",
+      "name": "group_messages",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [1648, -400]
+    },
+    {
+      "parameters": {},
+      "id": "v2-noop12",
+      "name": "Duplicada",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [1648, -240]
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "key": "=buffer_{{ $('Start').item.json.phone }}"
+      },
+      "id": "v2-redisdel",
+      "name": "Redis",
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [1792, -400],
+      "credentials": {
+        "redis": {
+          "id": "CONFIGURE_REDIS_CREDENTIAL_ID",
+          "name": "Redis"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "6f20f3a9-9210-430e-b2cd-a35b005e701d",
+              "name": "",
+              "value": "={{ $('group_messages').item.json }}",
+              "type": "string"
+            },
+            {
+              "id": "c8b22d49-b597-4abf-a60c-59684fa8627d",
+              "name": "message",
+              "value": "={{ $('group_messages').item.json.message }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [2000, -400],
+      "id": "098dd5fd-fe04-42f6-ae04-c514e82f44e0",
+      "name": "Return"
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "List_messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "List_messages": {
+      "main": [
+        [
+          {
+            "node": "Wait_messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait_messages": {
+      "main": [
+        [
+          {
+            "node": "get_last_message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get_last_message": {
+      "main": [
+        [
+          {
+            "node": "Multiplas msg?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Multiplas msg?": {
+      "main": [
+        [
+          {
+            "node": "group_messages",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Duplicada",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "group_messages": {
+      "main": [
+        [
+          {
+            "node": "Redis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redis": {
+      "main": [
+        [
+          {
+            "node": "Return",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false,
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "kqInTfwLVKetxhH5"
+  }
+}

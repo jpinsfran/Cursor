@@ -1,0 +1,147 @@
+{
+  "name": "Inbound Lead Entry — Outbound Cadência",
+  "meta": {
+    "instanceWorkflowId": "tSjAUJUoY8VAP6qk",
+    "exportedAt": "2026-04-09",
+    "notes": "Espelho da instância n8n.nola.com.br após correção validador (Code retorna [{json}], IF com combinator)."
+  },
+  "nodes": [
+    {
+      "id": "le-webhook",
+      "name": "Webhook Lead Entry",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 0],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "lead-entry-outbound",
+        "options": {}
+      },
+      "webhookId": "236adba4-6abc-479a-af35-16e69dcd8895"
+    },
+    {
+      "id": "le-normalize",
+      "name": "Normalizar Lead",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [220, 0],
+      "parameters": {
+        "jsCode": "const b = $json.body || $json;\n\nconst onlyDigits = (v) => String(v || '').replace(/\\D/g, '');\nconst rawPhone = onlyDigits(b.phone || b.telefone || '');\nlet phone_e164 = '';\nif (rawPhone.length === 11) phone_e164 = `+55${rawPhone}`;\nelse if (rawPhone.length === 13 && rawPhone.startsWith('55')) phone_e164 = `+${rawPhone}`;\nelse if (rawPhone.startsWith('55') && rawPhone.length > 11) phone_e164 = `+${rawPhone}`;\n\nconst requiredMissing = [];\nif (!rawPhone) requiredMissing.push('phone');\nif (!b.nome_negocio) requiredMissing.push('nome_negocio');\n\nconst row = {\n  phone: rawPhone ? (rawPhone.startsWith('55') ? rawPhone : `55${rawPhone}`) : '',\n  phone_e164,\n  nome_lead: b.nome_lead || b.nome || '',\n  nome_negocio: b.nome_negocio || '',\n  bairro: b.bairro || '',\n  regiao: b.regiao || '',\n  cuisine: b.cuisine || '',\n  price_range: b.price_range || '$$',\n  rating: String(b.rating || ''),\n  tier: b.tier || 'B',\n  angulo_copy: Number(b.angulo_copy || 1),\n  radar_score_geral: Number(b.radar_score_geral || 0),\n  radar_score_reputacao: Number(b.radar_score_reputacao || 0),\n  radar_score_digital: Number(b.radar_score_digital || 0),\n  radar_score_competitivo: Number(b.radar_score_competitivo || 0),\n  radar_score_financeiro: Number(b.radar_score_financeiro || 0),\n  radar_oportunidade_min: Number(b.radar_oportunidade_min || 0),\n  radar_oportunidade_max: Number(b.radar_oportunidade_max || 0),\n  radar_url: b.radar_url || '',\n  status: 'novo',\n  proximo_touchpoint_id: 'D1_WA',\n  proximo_envio_at: new Date().toISOString(),\n  metadata: {\n    source: b.source || 'webhook-lead-entry',\n    tag: b.tag || 'manual_real',\n    created_by: 'lead-entry-workflow'\n  },\n  missing: requiredMissing,\n};\nreturn [{ json: row }];"
+      }
+    },
+    {
+      "id": "le-valid",
+      "name": "Dados mínimos OK?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [460, 0],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "c1",
+              "leftValue": "={{ $json.missing.length }}",
+              "rightValue": 0,
+              "operator": {
+                "type": "number",
+                "operation": "equals"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "le-create",
+      "name": "Criar Sessão Outbound",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [700, -80],
+      "parameters": {
+        "tableId": "outbound_cadencia_sessions",
+        "fieldsUi": {
+          "fieldValues": [
+            { "fieldId": "phone", "fieldValue": "={{ $json.phone }}" },
+            { "fieldId": "phone_e164", "fieldValue": "={{ $json.phone_e164 }}" },
+            { "fieldId": "nome_lead", "fieldValue": "={{ $json.nome_lead }}" },
+            { "fieldId": "nome_negocio", "fieldValue": "={{ $json.nome_negocio }}" },
+            { "fieldId": "bairro", "fieldValue": "={{ $json.bairro }}" },
+            { "fieldId": "regiao", "fieldValue": "={{ $json.regiao }}" },
+            { "fieldId": "cuisine", "fieldValue": "={{ $json.cuisine }}" },
+            { "fieldId": "price_range", "fieldValue": "={{ $json.price_range }}" },
+            { "fieldId": "rating", "fieldValue": "={{ $json.rating }}" },
+            { "fieldId": "tier", "fieldValue": "={{ $json.tier }}" },
+            { "fieldId": "angulo_copy", "fieldValue": "={{ $json.angulo_copy }}" },
+            { "fieldId": "radar_score_geral", "fieldValue": "={{ $json.radar_score_geral }}" },
+            { "fieldId": "radar_score_reputacao", "fieldValue": "={{ $json.radar_score_reputacao }}" },
+            { "fieldId": "radar_score_digital", "fieldValue": "={{ $json.radar_score_digital }}" },
+            { "fieldId": "radar_score_competitivo", "fieldValue": "={{ $json.radar_score_competitivo }}" },
+            { "fieldId": "radar_score_financeiro", "fieldValue": "={{ $json.radar_score_financeiro }}" },
+            { "fieldId": "radar_oportunidade_min", "fieldValue": "={{ $json.radar_oportunidade_min }}" },
+            { "fieldId": "radar_oportunidade_max", "fieldValue": "={{ $json.radar_oportunidade_max }}" },
+            { "fieldId": "radar_url", "fieldValue": "={{ $json.radar_url }}" },
+            { "fieldId": "status", "fieldValue": "novo" },
+            { "fieldId": "proximo_touchpoint_id", "fieldValue": "D1_WA" },
+            { "fieldId": "proximo_envio_at", "fieldValue": "={{ $json.proximo_envio_at }}" },
+            { "fieldId": "metadata", "fieldValue": "={{ $json.metadata }}" }
+          ]
+        }
+      },
+      "credentials": {
+        "supabaseApi": {
+          "id": "CONFIGURE_SUPABASE_CREDENTIAL_ID",
+          "name": "Supabase"
+        }
+      }
+    },
+    {
+      "id": "le-ok",
+      "name": "Resposta OK",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [940, -80],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ success: true, message: 'Lead criado na cadência', session_id: $json.id || null, next_touchpoint: 'D1_WA' }) }}"
+      }
+    },
+    {
+      "id": "le-bad",
+      "name": "Resposta Erro",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [700, 120],
+      "parameters": {
+        "respondWith": "json",
+        "responseCode": 400,
+        "responseBody": "={{ JSON.stringify({ success: false, error: 'Campos obrigatórios ausentes', missing: $json.missing, required: ['phone','nome_negocio'] }) }}"
+      }
+    }
+  ],
+  "connections": {
+    "Webhook Lead Entry": {
+      "main": [[{ "node": "Normalizar Lead", "type": "main", "index": 0 }]]
+    },
+    "Normalizar Lead": {
+      "main": [[{ "node": "Dados mínimos OK?", "type": "main", "index": 0 }]]
+    },
+    "Dados mínimos OK?": {
+      "main": [
+        [{ "node": "Criar Sessão Outbound", "type": "main", "index": 0 }],
+        [{ "node": "Resposta Erro", "type": "main", "index": 0 }]
+      ]
+    },
+    "Criar Sessão Outbound": {
+      "main": [[{ "node": "Resposta OK", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
